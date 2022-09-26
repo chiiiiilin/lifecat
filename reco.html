@@ -4,13 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>貓體工學| 貓星人推薦</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="reco.css">
     <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="recommendation.css">
+
+
 </head>
 <body>
+    <header>
+        <input type="checkbox" name="" id="menu_switch">
+        <div class="navbar">
+            <div class="logo">
+                <a href="homepage.html"><img src="pictures/logo.svg" alt="貓體工學"></a>
+            </div>
+            <label>
+                <input type="search" placeholder="搜尋"></input>
+            </label>
+            <label for="menu_switch" class="hb">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="main_nav">
+                <ul>
+                    <li><a href="shoppingpage.html">所有商品</a></li>
+                    <li><a href="">實體店面</a></li>
+                    <li><a href="reco.html">貓星人的推薦</a></li>
+                    <li><a href="">常見問題</a></li>
+                </ul>
+                <ul>
+                    <li><a href=""><img src="pictures/profileIcon.svg" alt=""></a></li>
+                    <li><a href=""><img src="pictures/cartIcon.svg" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div class="top">
         <div class="img">
             <img src="pictures/recommendation.jpg" alt="">
@@ -19,14 +50,52 @@
             <h1>貓星人推薦</h1>
         </div>
     </div>
-    <div class="category">
-        <nav>
-            <ul>
-                <li><a href="">貍貍是隻貓｜鎖牆式貓跳台</a></li>
-                <li><a href="">奶茶不能喝｜落地式貓跳台</a></li>
-                <li><a href="">妞妞扭一扭｜貓砂櫃</a></li>
-            </ul>
-        </nav>
-    </div>
+    <ul class="category">
+        <li>
+            <a href="#riri">貍貍是隻貓｜鎖牆式貓跳台</a>
+        </li>
+        <li>
+            <a href="">奶茶不能喝｜落地式貓跳台</a>
+        </li>
+        <li>
+            <a href="">妞妞扭一扭｜貓砂櫃</a>
+        </li>
+    </ul>
+    <main>
+        <div class="container">
+            <section class="riri" id="riri">
+               <div>
+                <div class="img">
+                    <img src="pictures/riri.png" alt="貍貍使用心得">
+                </div>
+                <div class="txt">
+                    <h2>嗨!我是貍貍!
+                        <br>我用貓體工學跑跑跳跳!
+                    </h2>
+                    <div>
+                        <strong>
+                        自從在家裡裝了貓體工學的貓跳台，<br>我覺得貍貍變得更有活力了。
+                        </strong>
+                        <p>一直租在10坪套房裡的我們兩貓兩口，一直以來我們一直很擔心貍貍的身體健康。</p>
+                        <p>他是一隻非常貪吃的貓貓，但套房內空間太狹小，一般的玩具也沒辦法提起他的興趣，導致他越來越胖，看起來也越來越沒有精神。</p>
+                        <p>去年決定購入落地式的貓跳台，不僅占的空間非常小(其實人類根本不會待在角落啦)，如果需要退租房子的話拆卸也很容易，有時還能順便當我的置物架XD</p>
+                        <p>貍貍感覺很滿意這樣的空間，能看著他在上面跑跑跳跳，偶而躺在上面睡午覺，真的讓我很滿意我做的決定!</p>
+                    </div>
+                </div>
+               </div>
+            </section>
+            <section class="photowall">
+                <div class="wrap">
+                    <div><img src="pictures/reco1.jpg" alt=""></div>
+                    <div><img src="pictures/reco5.jpg" alt=""></div>
+                    <div><img src="pictures/reco6.jpg" alt=""></div>
+                    <div><img src="pictures/reco2.png" alt=""></div>
+                </div>
+                <div>
+                    <p>Life with my cats.</p>
+                    <p>從居家生活創造一點一滴小小的美好。</p>
+                </div>
+            </section>
+        </div>
+    </main>
 </body>
-</html>

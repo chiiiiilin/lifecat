@@ -1,4 +1,6 @@
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     /* font-family: 'Noto Serif TC', serif; */
     color: var(--color_gray);
@@ -8,19 +10,20 @@ h1{
     font-size: 4.2rem;
     color: white;
 }
-h2{
-    font-size: 2.4rem;
-}
+
 a{
     color: inherit;
     text-decoration: none;
+}
+.main_nav ul:first-child li:nth-child(3) a{
+    border-bottom: solid 7px var(--color_greengray);
 }
 .top{
     width: 100%;
 }
 .top .img{
     width: 100%;
-    height: 500px;
+    height: 350px;
 }
 .top .img img{
     height: 100%;
@@ -43,9 +46,122 @@ a{
     box-shadow: 0 0 10px;
 
 }
-.category ul{
+
+.category{
     display: flex;
+    /* justify-content: space-evenly; */
+    width: 70%;
+    margin: 0 auto;
+    padding: 70px;
 }
-.category ul li{
-    margin: 0 5%;
+.category a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    display: block;
+}
+.category li{
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 2px;
+    width: 100%;
+    z-index: 1;
+    margin: 0 2%;
+    background-color: #F3F0DF;
+}
+.category li:hover{
+    background-color: var(--color_yellow);
+}
+
+main .riri>div{
+    display: flex;
+    
+}
+.riri>div{
+    height: 50%;
+    width: 80%;
+    background-color: rgba(246, 195, 117, .6);
+    margin-left: 20%;
+    margin-top: 10%;
+}
+.riri .img{
+    margin-top: -13%;
+    width: 20%;
+
+}
+.img img{
+    object-fit: cover;
+    filter: drop-shadow(2px 2px 4px rgba(26, 25, 25, 0.3));
+}
+.riri .txt{
+    width: 55%;
+    margin-left: 10%;
+    color: rgb(33, 33, 33);
+}
+
+.riri h2{
+    font-size: 4.2rem;
+    margin-top: -10%;
+    line-height: 1.2;
+}
+.riri .txt div{
+    margin-top: 3%;
+    margin-left: 10%;
+}
+.riri .txt div p{
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-top: 3%;
+}
+
+strong{
+    font-size: 1.4rem;
+    font-weight: 700; 
+    margin-top: 5%;
+    line-height: 1.4;
+    letter-spacing: .5px;
+
+}
+.photowall{
+    margin-top:10%;
+    width: 100%;
+    height: 100%;
+}
+.photowall .wrap{
+    width: 80%;
+    height: 600px;
+    display: flex;
+    margin: 30% auto;
+}
+.wrap{
+    padding-left: 30%;
+}
+.wrap div{
+    margin: .5%;
+    box-shadow: 4px 4px 5px var(--color_gray);
+}
+.wrap div:nth-child(1){
+    width: 100%;
+    height: 80%;
+}
+.wrap div:nth-child(2){
+    width: 80%;
+    height: 50%;
+    transform: translate(0,-40%);
+}
+.wrap div:nth-child(3){
+    width: 80%;
+    height: 60%;
+    transform: translate(-104%,53%);
+}
+.wrap div:nth-child(4){
+    width: 100%;
+    height: 50%;
+    transform: translate(-83%, 50%);
+}
+.wrap div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

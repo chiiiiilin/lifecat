@@ -1,8 +1,9 @@
 :root{
     --color_green: #E6EBE9;
     --color_gray: #61616D;
-    --color_yellow: #f6c375;
+    --color_yellow: rgb(246, 195, 117);
     --color_greengray: #747d78;
+    --color_pink: #fae9ea;
 }
 html {
     /* cursor: url('pictures/move.png') 10 5, move; */

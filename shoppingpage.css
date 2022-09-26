@@ -1,4 +1,6 @@
-
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     /* font-family: 'Noto Serif TC', serif; */
@@ -84,6 +86,7 @@ a{
 }
 .category ol li{
     border-bottom: solid .5px #F3F0DF;
+    
 }
 
 
@@ -99,13 +102,13 @@ main .container{
 }
 main h2{
     font-size: 1.6rem;
-    padding: 50px;
+    padding: 80px 0 20px 0;
 }
-main h2::after{
-    content: '___';
-    position: absolute;
-    left: 49%;
-    top: 10%;
+main .col-12 a::after{
+    content: '　';
+    position: relative;
+    left: 0%;
+    top: -20%;
     border-bottom-width: 3px;
     border-bottom-style: solid;
     border-color: var(--color_yellow);
