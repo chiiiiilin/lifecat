@@ -1,0 +1,51 @@
+
+body{
+    /* font-family: 'Noto Serif TC', serif; */
+    color: var(--color_gray);
+    padding-top: 60px;
+}
+h1{
+    font-size: 4.2rem;
+    color: white;
+}
+h2{
+    font-size: 2.4rem;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.top{
+    width: 100%;
+}
+.top .img{
+    width: 100%;
+    height: 500px;
+}
+.top .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: .9;
+
+}
+.top .txt{
+    width: 25%;
+    height: 150px;
+    line-height: 150px;
+    background-color: var(--color_greengray);
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    margin-top: -5%;
+    margin-left: 18%;
+    /* opacity: .9; */
+    box-shadow: 0 0 10px;
+
+}
+.category ul{
+    display: flex;
+}
+.category ul li{
+    margin: 0 5%;
+}

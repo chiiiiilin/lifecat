@@ -1,0 +1,239 @@
+
+
+body{
+    /* font-family: 'Noto Serif TC', serif; */
+    color: var(--color_gray);
+    padding-top: 60px;
+}
+h1{
+    font-size: 3.6rem;
+    color: white;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.main_nav ul:first-child li:first-child a{
+    border-bottom: solid 7px var(--color_greengray);
+}
+.top{
+    width: 100%;
+}
+.top .img{
+    width: 100%;
+    height: 350px;
+}
+.top .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: .9;
+
+}
+.top .txt{
+    width: 25%;
+    height: 100px;
+    line-height: 100px;
+    background-color: var(--color_greengray);
+    text-align: center;
+    position: relative;
+    margin-top: -5%;
+    margin-left: 16%;
+    box-shadow: 0 0 10px;
+
+}
+.category{
+    display: flex;
+    /* justify-content: space-evenly; */
+    width: 70%;
+    margin: 0 auto;
+    padding: 70px;
+}
+.category a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    display: block;
+}
+.category li{
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 2px;
+    width: 100%;
+    z-index: 1;
+}
+.category>li{
+    margin: 0 2%;
+    background-color: #F3F0DF;
+}
+.category>li:first-child{
+    background-color: var(--color_yellow);
+}
+.category ol{
+    display: none;
+    width: 100%;
+    z-index: 1;
+}
+.category li:hover{
+    background-color: var(--color_yellow);
+}
+.category li:hover ol{
+    display: block;
+}
+
+
+main{
+    /* background-color: #F3F0DF; */
+    width: 100%;
+    margin: auto;
+    position: relative;
+    border-radius: 20px 40px 40px 40px;
+}
+main .container{
+    text-align: center;
+}
+main h2{
+    font-size: 1.6rem;
+    padding: 50px;
+}
+main h2::after{
+    content: '___';
+    position: absolute;
+    left: 49%;
+    top: 10%;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-color: var(--color_yellow);
+    color: var(--color_yellow);
+}
+main .wrap{
+    width: 70%;
+    position: relative;
+    margin: auto;
+}
+.card{
+    backdrop-filter: blur(4px);
+    background-color: rgba(243, 243, 243, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #d9d9d9;
+    transition: 2s;
+    margin: 5%;
+    
+}
+.card:hover{
+    box-shadow: 0 0 10px #ababab;
+    background-color: rgba(116, 125, 120, 0.6);
+}
+.card .item{
+    position: relative;
+    height: 90%;
+}
+.item img{
+    width: 70%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 1;
+    transition: .5s;
+}
+.item img:nth-child(2){
+    position: absolute;
+    top: 10%;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    
+}
+.card:hover .item img:nth-child(1){
+    opacity: 0;
+}
+.card:hover .item img:nth-child(2){
+    opacity: 1;
+}
+.card:hover .txt{
+    opacity: 0;
+}
+.card:hover .add{
+    opacity: 1;
+}
+.card .txt{
+    opacity: 1;
+}
+.card .txt p{
+    line-height: 1.2;
+}
+.card .txt p:nth-child(1){
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.card .txt p:nth-last-child(1){
+    font-size: 1.6rem;
+    color: var(--color_yellow);
+    line-height: 1.6;
+    font-weight: 900;
+}
+.card .add{
+    padding: 5%;
+    margin-top: -15%;
+    background-color: var(--color_yellow);
+    color: white;
+    font-weight: 700;
+    opacity: 0;
+    transition: .5s;
+    border-radius: 0 0 10px 10px;
+}
+footer{
+    margin-top: 200px;
+    padding: 50px;
+    background-color: var(--color_green);
+}
+
+.footer_nav{
+    width: 100%;
+    margin: auto;
+}
+
+.footer_icon{
+    display: flex;
+    width: 100%;
+    margin: 5% 0;
+}
+.footer_icon img{
+    width: 50%;
+}
+.footer_info p{
+    line-height: 1.4rem;
+}
+.footer-info span{
+    font-weight: 600;
+}
+.footer_nav h5{
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 5%;
+    border-bottom: solid 3px var(--color_greengray);
+}
+.footer_nav ul{
+    padding: 5%;
+}
+.footer_nav li{
+    line-height: 1.4rem;
+}
+fotter a{
+    color: var(--color_gray);
+}
+footer a:hover{
+    font-weight: 700;
+    color: var(--color_greengray);
+}
+.notice{
+    text-align: center;
+    padding: 2% 0;
+    margin-top: 5%;
+    margin-bottom: -50px;
+    border-top: solid .5px black;
+}
+.notice p{
+    color: var(--color_gray);
+}
