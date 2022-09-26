@@ -82,6 +82,9 @@ a{
 .category li:hover ol{
     display: block;
 }
+.category ol li{
+    border-bottom: solid .5px #F3F0DF;
+}
 
 
 main{
@@ -113,14 +116,16 @@ main .wrap{
     position: relative;
     margin: auto;
 }
+.col{
+    padding: 15px;
+}
 .card{
     backdrop-filter: blur(4px);
     background-color: rgba(243, 243, 243, 0.6);
     border-radius: 10px;
     box-shadow: 0 0 10px #d9d9d9;
     transition: 2s;
-    margin: 5%;
-    
+    height: 100%;    
 }
 .card:hover{
     box-shadow: 0 0 10px #ababab;
@@ -128,7 +133,8 @@ main .wrap{
 }
 .card .item{
     position: relative;
-    height: 90%;
+    height: 70%;
+    flex-grow: 1;
 }
 .item img{
     width: 70%;
@@ -159,6 +165,7 @@ main .wrap{
 }
 .card .txt{
     opacity: 1;
+    height: 30%;
 }
 .card .txt p{
     line-height: 1.2;
