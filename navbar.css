@@ -182,7 +182,7 @@ footer{
     width: 50%;
 }
 .footer_info p{
-    line-height: 1.4rem;
+    line-height: 1.6rem;
 }
 .footer-info span{
     font-weight: 600;
@@ -197,7 +197,7 @@ footer{
     padding: 5%;
 }
 .footer_nav li{
-    line-height: 1.4rem;
+    line-height: 1.6rem;
 }
 
 footer a:hover{

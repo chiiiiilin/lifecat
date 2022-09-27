@@ -33,7 +33,7 @@ section{
 
 .wrap{
     position:relative;
-    top: 60%;
+    top: 65%;
 }
 
 .card{
@@ -41,83 +41,52 @@ section{
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
     box-shadow: 0 0 10px #d9d9d9;
-    padding: 10% 10% 0 10%;
+    padding: 10%;
     height: 75%;
 }
 .card:hover{
     box-shadow: 0 0 10px #ababab;
-    transform: scale(1.03);
 }
 .card .item{
-    height: 80%;
+    height: 100%;
 }
-
-.wrapper_living{
-    width: 100%;
-    height: 700px;
-    position: relative;
-}
-
-.wrapper_living img:nth-child(1){
-    filter: blur(4px);
-    opacity: .3;
-    position: absolute;
-    padding: 100px;
-   
-}
-.wrapper_living img:nth-child(2){
-    border: solid 1px white;
-    border-radius: 10px;
-    position: absolute;
-    margin-left: 620px;
-    margin-top: 170px;
-    opacity: 0.2;
-    transition-duration: 1s;
-    cursor: pointer;
-}
-.wrapper_living img:nth-child(2):hover{
-    opacity: 1;
-}
-.wrapper_living .txt{
-    position: relative;
-    margin-left: 450px;
-    top: 680px;
-    color: black;
-}
-.wrapper_living h2{
-    font-size: 2.4rem;
-    margin-bottom: 10px;
-}
-h2 strong{
-    font-size: 4.2rem;
-}
-.wrapper_verdical{
+.space{
     max-width: 1200px;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
+    margin: auto;
+    margin-top: 10%;
 }
-.wrapper_verdical img{
-    width: 400px;
-    position: sticky;
-    top: 100px;
+.space .img{
+    width: 40%;
 }
-.wrapper_verdical p{
-    padding: 200px 50px;
+.space img{
+    width: 100%;
+    margin-left: 10%;
 }
-.wrapper_verdical p strong{
-    font-size: 2.4rem;
-    writing-mode: vertical-rl;
-    margin-top: 20px;
-    transform: translate(50%);
-    letter-spacing: 20px;
+.space .txt{
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size: 1.4rem;
+    width: 50%;
 }
-
+.space .txt p{
+    font-family: 'Noto Serif TC', serif;
+    line-height: 1.2;
+    margin: 10%;
+}
+.space .txt strong{
+    writing-mode: vertical-lr;
+    margin-top: 10%;
+    letter-spacing: 1.5rem;
+}
 main{
     margin-top: 100px;
 }
+main h2{
+    font-size: 2.4rem;
+}
 .background{
     display: flex;
+    position: sticky;
 }
 .background img{
     width: 55%;
@@ -162,9 +131,9 @@ main h2{
 }
 .item .card{
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    object-fit: cover;
+}
+.card .item{
+    height: 80%;
 }
 .item .img{
     width: 100%;
@@ -175,16 +144,62 @@ main h2{
     height: 100%;
     object-fit: contain;
 }
-.item .txt p:nth-child(3){
-    margin: 20px;
+
+.card{
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #d9d9d9;
+    padding: 10% 10% 0 10%;
+    height: 75%;
+}
+.card:hover{
+    box-shadow: 0 0 10px #ababab;
+    transform: scale(1.03);
+}
+
+.card .txt p{
+    line-height: 1.2;
+}
+.card .txt p:nth-child(1){
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.card .txt p:nth-child(3){
     font-size: 1.6rem;
+    color: var(--color_yellow);
+    line-height: 1.6;
+    font-weight: 900;
 }
-.item .txt p:nth-last-child(1){
-    position: relative;
-    margin-right: -90%;
-    text-decoration: none;
-    color: var(--color_gray);
-}
-
-
-
+.more{
+    text-align: right;
+    margin-left: 80%;
+ }
+ .more p{
+     font-size: 1.2rem;
+     font-weight: 500;
+     display: inline-block;
+     position: absolute; 
+     transform: translate(50%, 55%);
+     z-index: 1;
+ }
+ .more a{
+     font-weight: 900;
+     color: white;
+     display: inline-block;
+     font-size: 1.2rem;
+ }
+ .more_go{
+     background-color: var(--color_yellow);
+     border-radius: 50%;
+     padding: 50%;
+     width: 100%;
+     box-shadow: 2px 2px 4px rgba(26, 25, 25, 0.3);
+     transition: 1s;
+     /* right: 10px; */
+     
+ }
+ .more_go:hover{
+     width: 980%;
+     border-radius: 50px;
+ }
