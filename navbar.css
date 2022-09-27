@@ -10,12 +10,24 @@ html {
     overflow-x: hidden;
     font-size: 15px;
 }
+body{
+    color: var(--color_gray);
+    padding-top: 60px;
+    font-family: "Noto Sans TC" , serif;
+}
+h1, h2, h3, h4, h5, nav, ul{
+    font-family: 'Noto Serif TC', serif;
+}
+
 @media screen and (max-width: 767px){
     html{
         font-size: 10px;
     }
 }
-
+a{
+    color: inherit;
+    text-decoration: none;
+}
 .navbar{
     display: flex;
     justify-content: center;
@@ -148,4 +160,57 @@ input{
         justify-content: right;
     }
     
+}
+
+footer{
+    margin-top: 200px;
+    padding: 50px;
+    background-color: var(--color_green);
+}
+
+.footer_nav{
+    width: 100%;
+    margin: auto;
+}
+
+.footer_icon{
+    display: flex;
+    width: 100%;
+    margin: 5% 0;
+}
+.footer_icon img{
+    width: 50%;
+}
+.footer_info p{
+    line-height: 1.4rem;
+}
+.footer-info span{
+    font-weight: 600;
+}
+.footer_nav h5{
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 5%;
+    border-bottom: solid 3px var(--color_greengray);
+}
+.footer_nav ul{
+    padding: 5%;
+}
+.footer_nav li{
+    line-height: 1.4rem;
+}
+
+footer a:hover{
+    font-weight: 700;
+    color: var(--color_greengray);
+}
+.notice{
+    text-align: center;
+    padding: 2% 0;
+    margin-top: 5%;
+    margin-bottom: -50px;
+    border-top: solid .5px black;
+}
+.notice p{
+    color: var(--color_gray);
 }
