@@ -155,7 +155,6 @@ main h2{
 }
 .card:hover{
     box-shadow: 0 0 10px #ababab;
-    transform: scale(1.03);
 }
 
 .card .txt p{
@@ -173,21 +172,23 @@ main h2{
 }
 .more{
     text-align: right;
-    margin-left: 80%;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 88%;
  }
  .more p{
      font-size: 1.2rem;
      font-weight: 500;
      display: inline-block;
      position: absolute; 
-     transform: translate(50%, 55%);
+     transform: translate(-150%, 55%);
      z-index: 1;
  }
  .more a{
-     font-weight: 900;
-     color: white;
+     font-weight: 500;
      display: inline-block;
      font-size: 1.2rem;
+     transition: color,.5s;
  }
  .more_go{
      background-color: var(--color_yellow);
@@ -195,11 +196,15 @@ main h2{
      padding: 50%;
      width: 100%;
      box-shadow: 2px 2px 4px rgba(26, 25, 25, 0.3);
-     transition: 1s;
-     /* right: 10px; */
+     transition: width,1s;
+     margin: 0 0 0 auto;
+     float: right;
      
  }
- .more_go:hover{
+ .more:hover .more_go{
      width: 980%;
      border-radius: 50px;
+ }
+ .more:hover a{
+    color: white;
  }

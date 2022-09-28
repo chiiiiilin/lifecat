@@ -106,7 +106,7 @@ main .col-12 a::after{
     position: relative;
     left: 0%;
     top: -20%;
-    border-bottom-width: 3px;
+    border-bottom-width: 4px;
     border-bottom-style: solid;
     border-color: var(--color_yellow);
     color: var(--color_yellow);

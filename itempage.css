@@ -1,0 +1,140 @@
+.top{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+.itempictures{
+    width: 80%;
+    margin: auto;
+}
+.itempictures .img{
+    box-shadow: 2px 2px 4px rgba(158, 158, 158, 0.3);
+    cursor: pointer;
+}
+.itempictures .img:hover{
+    box-shadow: 2px 2px 4px rgba(26, 25, 25, 0.3);
+}
+.itempictures .col-12 .img{
+    height: 100%;
+    width: 100%;
+}
+.itempictures .row-cols-4{
+    margin-top: 10px;
+}
+.itempictures .row-cols-4 .img{
+    width: 100%;
+    height: 100%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.iteminfo{
+    width: 80%;
+    /* margin-top: 10%; */
+
+}
+.iteminfo h1{
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin: 5% 0 ;
+}
+.iteminfo p{
+    line-height: 1.6rem;
+}
+.free{
+    margin: 5% 0;
+    padding: 0 3%;
+    font-weight: 500;
+    border-left: solid 3px var(--color_yellow);
+}
+.price p:nth-child(1){
+    font-size: 1.6rem;
+    color: var(--color_yellow);
+    font-weight: 500;
+}
+.price p:nth-child(2), .iteminfo>p:nth-of-type(2){
+    font-size: .8rem;
+    color: gray;
+    margin-top: 5%;
+}
+.amout{
+    border: solid .5px gray;
+    width: 60%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+}
+.amout input{
+    background-color: inherit;
+    border-radius: 0;
+    height: 20px;
+    border: 0;
+    outline: none;
+    text-align: center;
+}
+.amout span{
+    padding: 0 3%;
+    height: 20px;
+    vertical-align: middle;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.amout span:hover{
+    color: var(--color_yellow);
+}
+.amout span:nth-child(1):hover{
+    border-right: solid .5px gray;
+}
+.amout span:nth-of-type(2):hover{
+    border-left: solid .5px gray;
+}
+.iteminfo>p:nth-of-type(2){
+    
+}
+.add{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.add label{
+    margin-right: 10px;
+}
+.add input{
+    width: 80%;
+}
+.add .img{
+    width: 15%;
+    height: 15%;
+    margin-right: 10px;
+}
+.add p{
+    
+}
+.add span:nth-of-type(1){
+    text-decoration: line-through;
+}
+.add span:nth-of-type(2){
+    color: var(--color_yellow);
+}
+.iteminfo>input{
+    margin-top: 5%;
+    background-color: var(--color_yellow);
+    border-radius: 5px;
+    border: none;
+    width: 80%;
+    height: 35px;
+    color: white;
+    font-size: 1.2rem;
+}
+.iteminfo>input:hover{
+    background-color: rgba(0,0,0,0);
+    border: solid 1px var(--color_yellow);
+    color: var(--color_yellow);
+    cursor: pointer;
+}

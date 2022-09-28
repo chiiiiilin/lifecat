@@ -230,7 +230,6 @@ strong{
 }
 .card:hover{
     box-shadow: 0 0 10px #ababab;
-    transform: scale(1.03);
 }
 
 .card .txt p{
@@ -247,34 +246,40 @@ strong{
     font-weight: 900;
 }
 .more{
-   text-align: right;
-   margin-left: 80%;
-}
-.more p{
-    font-size: 1.2rem;
-    font-weight: 500;
-    display: inline-block;
-    position: absolute; 
-    transform: translate(70%, 55%);
-    z-index: 1;
-}
-.more a{
-    font-weight: 900;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 90%;
+ }
+ .more p{
+     font-size: 1.2rem;
+     font-weight: 500;
+     display: inline-block;
+     position: absolute; 
+     transform: translate(-170%, 55%);
+     z-index: 1;
+ }
+ .more a{
+     font-weight: 500;
+     display: inline-block;
+     font-size: 1.2rem;
+     transition: color,.5s;
+ }
+ .more_go{
+     background-color: var(--color_yellow);
+     border-radius: 50%;
+     padding: 50%;
+     width: 100%;
+     box-shadow: 2px 2px 4px rgba(26, 25, 25, 0.3);
+     transition: width,1s;
+     margin: 0 0 0 auto;
+     float: right;
+     
+ }
+ .more:hover .more_go{
+     width: 800%;
+     border-radius: 50px;
+ }
+ .more:hover a{
     color: white;
-    display: inline-block;
-    font-size: 1.2rem;
-}
-.more_go{
-    background-color: var(--color_yellow);
-    border-radius: 50%;
-    padding: 50%;
-    width: 100%;
-    box-shadow: 2px 2px 4px rgba(26, 25, 25, 0.3);
-    transition: 1s;
-    /* right: 10px; */
-    
-}
-.more_go:hover{
-    width: 980%;
-    border-radius: 50px;
-}
+ }
