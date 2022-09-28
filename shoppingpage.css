@@ -1,4 +1,5 @@
 
+
 body{
     /* font-family: 'Noto Serif TC', serif; */
     color: var(--color_gray);
@@ -121,7 +122,7 @@ main .wrap{
     background-color: rgba(243, 243, 243, 0.6);
     border-radius: 10px;
     box-shadow: 0 0 10px #d9d9d9;
-    transition: 2s;
+    transition: .5s;
     height: 100%;    
 }
 .card:hover{
@@ -155,13 +156,17 @@ main .wrap{
     opacity: 1;
 }
 .card:hover .txt{
-    opacity: 0;
+    visibility: hidden;
 }
 .card:hover .add{
     opacity: 1;
 }
+.card .add:hover{
+    background-color: var(--color_yellow);
+    color: white;
+}
 .card .txt{
-    opacity: 1;
+    visibility: visible;
     height: 30%;
 }
 .card .txt p{
@@ -180,10 +185,10 @@ main .wrap{
 .card .add{
     padding: 5%;
     margin-top: -15%;
-    background-color: var(--color_yellow);
-    color: white;
+    background-color: var(--color_brightyellow);
     font-weight: 500;
+    color: inherit;
     opacity: 0;
-    transition: .5s;
+    transition: opacity .5s, color, .2s;
     border-radius: 0 0 10px 10px;
 }

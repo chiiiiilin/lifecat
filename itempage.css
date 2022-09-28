@@ -268,7 +268,10 @@ p{
     background-color: inherit;
     border: solid 3px var(--color_pink);
     outline: none;
+    letter-spacing: 2px;
+    transition: color, .5s;
 }
 .saySomething input:hover{
     background-color: var(--color_pink);
+    
 }
