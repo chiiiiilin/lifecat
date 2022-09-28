@@ -1,7 +1,8 @@
 :root{
     --color_green: #E6EBE9;
     --color_gray: #61616D;
-    --color_yellow: rgb(246, 195, 117);
+    --color_yellow: #f6c375;
+    --color_brightyellow: #fcefcf;
     --color_greengray: #747d78;
     --color_pink: #fae9ea;
 }
@@ -9,6 +10,7 @@ html {
     /* cursor: url('pictures/move.png') 10 5, move; */
     overflow-x: hidden;
     font-size: 15px;
+    scroll-behavior: smooth;
 }
 body{
     color: var(--color_gray);
@@ -214,3 +216,4 @@ footer a:hover{
 .notice p{
     color: var(--color_gray);
 }
+

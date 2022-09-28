@@ -41,7 +41,7 @@ img{
     font-weight: 500;
     margin: 5% 0 ;
 }
-.iteminfo p{
+p{
     line-height: 1.6rem;
 }
 .free{
@@ -68,6 +68,7 @@ img{
     justify-content: space-between;
     align-items: center;
     border-radius: 3px;
+    user-select: none;
 }
 .amout input{
     background-color: inherit;
@@ -88,15 +89,13 @@ img{
 .amout span:hover{
     color: var(--color_yellow);
 }
-.amout span:nth-child(1):hover{
+.amout .num_minus:hover{
     border-right: solid .5px gray;
 }
-.amout span:nth-of-type(2):hover{
+.amout .num_plus:hover{
     border-left: solid .5px gray;
 }
-.iteminfo>p:nth-of-type(2){
-    
-}
+
 .add{
     display: flex;
     height: 100%;
@@ -137,4 +136,139 @@ img{
     border: solid 1px var(--color_yellow);
     color: var(--color_yellow);
     cursor: pointer;
+}
+.category{
+    display: flex;
+    /* justify-content: space-evenly; */
+    width: 70%;
+    margin: 5% auto;
+    padding: 70px;
+}
+.category a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    display: block;
+}
+.category li{
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 2px;
+    width: 100%;
+    z-index: 1;
+    margin: 0 2%;
+    background-color: #F3F0DF;
+}
+.category li:hover{
+    background-color: var(--color_yellow);
+}
+.info{
+    width: 70%;
+    margin: auto;
+}
+.info .img{
+    width: 90%;
+}
+.info .txt{
+    margin-top: 25%;
+}
+.info .txt span{
+    font-size: 1.6rem;
+    font-family: 'Noto Serif TC', serif;
+    margin: auto;
+    margin-top: 50%;
+    line-height: 2.4rem;
+}
+.info p{
+    margin: 2% 0;
+}
+.info .row{
+    margin: 10% 0;
+}
+.payment{
+    width: 70%;
+    margin: auto;
+    /* padding-top: 10%; */
+}
+.payment .title{
+    margin-left: 20%;
+    padding-top: 20%;
+}
+.payment .title div{
+    background-color: var(--color_brightyellow);
+    height: 120px;
+}
+.title h2{
+    font-size: 2.4rem;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.payment .title h2{
+    transform: translate(10%,-20%);
+}
+.payment .title img{
+    width: 40%;
+    margin-top: -30%;
+    margin-left: -15%;
+}
+.payment .txt h3{
+    font-size: 1.6rem;
+    margin: 3% 0;
+}
+.payment .txt li{
+    line-height: 1.4rem;
+}
+.comment{
+    padding-top: 5%;
+    margin: 5% 0;
+}
+.comment .col{
+    padding: 0;
+}
+.comment .title div{
+    background-color: var(--color_pink);
+    height: 70px;
+    margin-left: 40%;
+    right: 0;
+}
+.comment .title h2{
+    transform: translate(-2%,-25%);
+}
+.comment .title img{
+    width: 10%;
+    margin-top: -10%;
+    margin-left: 50%;
+    
+}
+.oneComment{
+    width: 70%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.oneComment img{
+    width: 40%;
+    float: right;
+    object-fit: contain;
+}
+.oneComment h4{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.saySomething{
+    width: 60%;
+    margin: auto;
+    margin-top: 5%;
+}
+.saySomething input{
+    width: 100%;
+    height: 80px;
+    background-color: inherit;
+    border: solid 3px var(--color_pink);
+    outline: none;
+}
+.saySomething input:hover{
+    background-color: var(--color_pink);
 }
