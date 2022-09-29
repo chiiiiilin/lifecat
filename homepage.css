@@ -7,32 +7,35 @@ body{
 .top{
     display: flex;
     background-image: url(pictures/homepage.jpg);
-    background-position: right bottom;
-    background-size: 50%;
+    background-position: right;
+    background-size: 45% auto;
     background-repeat: no-repeat;
+    padding: 5% 0;
 }
-
+.top .txt{
+  margin-left: 15%;
+  display: flex;
+}
 .top h1{
     /* border: solid 1px black; */
     font-size: 12vmin;
     writing-mode: vertical-rl;
-    letter-spacing: 30px;
-    padding-top: 25%;
-    margin-left: 50%;
+    letter-spacing: 1.6rem;
 }
 .top p{
     font-size: 3vmin;
     letter-spacing: 0.3rem;
     color: var(--color_gray);
     position: absolute;
-    bottom: 45%;
-    z-index: 1;
-    right: 52%;
+    display: inline-block;
+    left: 25%;
+    top: 50%
 }
 
 .wrap{
     position:relative;
     top: 65%;
+    width: 90%;
 }
 
 .card{
@@ -45,9 +48,6 @@ body{
 }
 .card:hover{
     box-shadow: 0 0 10px #ababab;
-}
-.card .item{
-    height: 100%;
 }
 .space{
     max-width: 1200px;
@@ -81,7 +81,7 @@ main{
     margin-top: 100px;
 }
 h2{
-    font-size: 3.6rem;
+    font-size: 5vmin;
     margin: 20px;
   }
 .background{
@@ -276,7 +276,7 @@ main .container{
     width: calc(360px * 8);
     justify-content: space-between;
   }
-  @keyframes scroll {
+  @keyframes scroll{
     0% {
       transform: translateX(0);
     }
@@ -335,7 +335,7 @@ main .container{
     letter-spacing: 3px;
   }
   .reco .txt .col-4 p{
-    font-size: 2.4rem;
+    font-size: 4vmin;
     line-height: 1.6;
     letter-spacing: 10px;
     writing-mode:vertical-rl;
@@ -378,7 +378,7 @@ main .container{
     background-color: var(--color_gray);
     width: 25%;
     backdrop-filter: blur(4px);
-    padding: 8%;
+    padding: 5%;
     opacity: 0;
     transition: .5s;
   }
