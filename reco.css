@@ -218,6 +218,7 @@ strong{
     width: 100%;
     height: 100%;
     object-fit: contain;
+    transition: 1.5s;
 }
 
 .card{
@@ -231,7 +232,12 @@ strong{
 .card:hover{
     box-shadow: 0 0 10px #ababab;
 }
-
+.item .img{
+    overflow: hidden;
+}
+.card:hover img{
+    transform: scale(1.2);
+}
 .card .txt p{
     line-height: 1.2;
 }

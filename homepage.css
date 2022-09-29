@@ -6,7 +6,7 @@ section{
 }
 .top{
     display: flex;
-    background-image: url(pictures/homepageimg.png);
+    background-image: url(pictures/homepage.jpg);
     background-position: right bottom;
     background-size: 780px;
     background-repeat: no-repeat;
