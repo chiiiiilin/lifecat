@@ -14,14 +14,14 @@ body{
 
 .top h1{
     /* border: solid 1px black; */
-    font-size: 6.4rem;
+    font-size: 12vmin;
     writing-mode: vertical-rl;
     letter-spacing: 30px;
     padding-top: 25%;
     margin-left: 50%;
 }
 .top p{
-    font-size: 1.6rem;
+    font-size: 3vmin;
     letter-spacing: 0.3rem;
     color: var(--color_gray);
     position: absolute;
@@ -317,8 +317,8 @@ main .container{
     background-image: url(pictures/catjump.gif);
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 100%;
-    height: 750px;
+    width: 100vw;
+    height: 100vh;
   }
   .reco .txt{
     width: 90%;
@@ -346,20 +346,23 @@ main .container{
   .reco_cats{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     text-align: center;
   }
   .reco_cats .img{
     width: 33%;
     height: 550px;
-    margin-top: 0.333333%;
+    margin: 0.333333%;
     background-size: 100%;
     filter: grayscale(80%);
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     transition: .5s;
-    
+  }
+  .reco_cats .img:hover{
+    filter: grayscale(0);
+    width: 40%;
   }
   .reco_cats .img:first-child{
     background-image: url(pictures/riri.jpg);
@@ -394,10 +397,6 @@ main .container{
     font-size: 1.2rem;
     color: white;
     padding: 15px 0;
-  }
-  .reco_cats .img:hover{
-    filter: grayscale(0);
-    width: 35%;
   }
   .reco_cats .img:hover .txt{
     opacity: .9;
