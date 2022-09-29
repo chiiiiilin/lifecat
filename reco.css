@@ -2,12 +2,11 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    /* font-family: 'Noto Serif TC', serif; */
     color: var(--color_gray);
     padding-top: 60px;
 }
 h1{
-    font-size: 4.2rem;
+    font-size: 6vmin;
     color: white;
 }
 
@@ -30,15 +29,14 @@ h1{
 }
 .top .txt{
     width: 25%;
-    height: 150px;
-    line-height: 150px;
+    height: 100px;
+    line-height: 100px;
     background-color: var(--color_greengray);
     text-align: center;
     vertical-align: middle;
     position: relative;
     margin-top: -5%;
-    margin-left: 18%;
-    /* opacity: .9; */
+    margin-left: 16%;
     box-shadow: 0 0 10px;
 
 }
@@ -96,7 +94,7 @@ main .riri>div{
 .riri .txt{
     width: 55%;
     margin-left: 10%;
-    color: rgb(33, 33, 33);
+    color: rgb(49, 49, 49);
 }
 
 .riri h2{
@@ -236,7 +234,7 @@ strong{
     overflow: hidden;
 }
 .card:hover img{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .card .txt p{
     line-height: 1.2;
