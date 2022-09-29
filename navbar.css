@@ -47,23 +47,15 @@ a{
 }
 .logo{
     width: 20%;
+    height: 90%;
     display: flex;
-    vertical-align: middle;
 }
 .logo img:nth-of-type(1){
-    width: 110%;
-    height: 110%;
-    margin-top: 8px;
+    height: 130%;
+    margin-right: 10px;
 }
-.logo a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.logo a:nth-of-type(2) img{
-    object-fit: contain;
-    width: 80%;
-    height: 80%;
+.logo img:nth-last-of-type(1){
+    margin-top: 5%;
 }
 label{
     height: 50px;

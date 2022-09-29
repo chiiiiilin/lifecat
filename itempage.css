@@ -112,9 +112,6 @@ p{
     height: 15%;
     margin-right: 10px;
 }
-.add p{
-    
-}
 .add span:nth-of-type(1){
     text-decoration: line-through;
 }

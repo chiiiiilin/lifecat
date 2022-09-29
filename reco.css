@@ -12,7 +12,7 @@ h1{
 }
 
 .main_nav ul:first-child li:nth-child(3) a{
-    border-bottom: solid 7px var(--color_greengray);
+    border-bottom: solid 9px var(--color_greengray);
 }
 .top{
     width: 100%;
