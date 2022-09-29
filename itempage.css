@@ -261,17 +261,41 @@ p{
     width: 60%;
     margin: auto;
     margin-top: 5%;
+    display: flex;
+    align-items: center;
 }
-.saySomething input{
-    width: 100%;
+.saySomething input:first-child{
+    width: 80%;
     height: 80px;
     background-color: inherit;
     border: solid 3px var(--color_pink);
     outline: none;
     letter-spacing: 2px;
     transition: color, .5s;
+    margin: 0 5%;
+    box-shadow: 2px 2px 2px rgba(253, 107, 131, .8);
+
 }
-.saySomething input:hover{
+.saySomething input:first-child:hover{
     background-color: var(--color_pink);
     
+}
+.saySomething input:last-child{
+    width: 10%;
+    height: 40px;
+    background-color: var(--color_pink);
+    outline: none;
+    border: none;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    color: rgb(253, 107, 131);
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(253, 107, 131, .8);
+}
+.saySomething input:last-child:hover{
+    box-shadow: 4px 4px 4px rgba(253, 107, 131, .8);
+}
+.saySomething input:last-child:active{
+    box-shadow: inset 4px 4px 4px rgba(253, 107, 131, .8);
 }

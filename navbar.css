@@ -41,15 +41,29 @@ a{
     z-index: 10;
     box-shadow: 0 0 10px var(--color_gray);
 }
-nav{
-    align-items: center;
+.navbar{
+    align-content: center;
+    vertical-align: middle;
 }
 .logo{
-    margin: 0 40px;
+    width: 20%;
+    display: flex;
+    vertical-align: middle;
 }
-.logo img{
+.logo img:nth-of-type(1){
+    width: 110%;
+    height: 110%;
+    margin-top: 8px;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo a:nth-of-type(2) img{
     object-fit: contain;
-    height: 60px;
+    width: 80%;
+    height: 80%;
 }
 label{
     height: 50px;
@@ -71,9 +85,10 @@ input{
     margin-top: auto;
     height: 85%;
 }
-.main_nav li:hover{
+.main_nav ul:not(:nth-child(2)) li:hover{
     background-color: var(--color_greengray);
     color: white;
+    stroke: white;
     font-weight: 700;
 }
 
@@ -90,6 +105,8 @@ input{
 }
 .navbar ul li img{
     height: 25px;
+    margin-top: 70%;
+
 }
 
 @media screen and (max-width: 767px){
