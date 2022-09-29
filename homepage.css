@@ -271,9 +271,9 @@ main .container{
   }
 
   .slider .slide-track {
-    animation: scroll 60s linear infinite;
+    animation: scroll 40s linear infinite;
     display: flex;
-    width: calc(360px * 8);
+    width: calc(360px * 16);
     justify-content: space-between;
   }
   @keyframes scroll{
@@ -281,7 +281,7 @@ main .container{
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-370px * 4));
+      transform: translateX(calc(-360px * 8));
     }
   }
   .slider::before, .slider::after {
