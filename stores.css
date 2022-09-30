@@ -1,0 +1,152 @@
+.main_nav ul:first-child li:nth-child(2) a{
+    border-bottom: solid 9px var(--color_greengray);
+}
+h1{
+    font-size: 5vmin;
+    margin: 30% 5%;
+}
+h2{
+    font-size: 2.4rem;
+}
+h3{
+    font-size: 1.2rem;
+    line-height: 2;
+}
+.top h1:nth-child(1){
+    color: var(--color_greengray);
+    transform: translate(15%, -120%);
+}
+.top h1:nth-child(2){
+    transform: translate(80%, -380%);
+}
+.top .background{
+    width: 80%;
+    height: 180px;
+    margin-top: 20%;
+    background-color: var(--color_greengray);
+    position: relative;
+}
+.background>img{
+    width: 360px;
+    border-radius: 5px;
+    position: absolute;
+    bottom:-30%;
+    left: 60%;
+    box-shadow: 4px 4px 4px rgb(104, 103, 103);
+}
+.top a{
+    display: flex;
+    margin-left: 30%;
+    margin-top: 20px;
+}
+.top a:hover{
+    font-weight: 500;
+}
+.top a p{
+    font-family: 'Noto Serif TC', serif;
+    writing-mode: vertical-lr;
+    letter-spacing: 10px;
+    margin: 10px;
+}
+.stores{
+    padding-top: 10%;
+    width: 88%;
+    margin-left: auto;
+}
+.storespictures{
+    width: 80%;
+    margin: auto;
+}
+.storespictures .img{
+    box-shadow: 2px 2px 4px rgba(158, 158, 158, 0.3);
+    cursor: pointer;
+}
+.storespictures .img:hover{
+    box-shadow: 2px 2px 4px rgba(26, 25, 25, 0.3);
+}
+.storespictures .img{
+    width: 100%;
+}
+.storespictures .row-cols-4{
+    margin-top: 10px;
+}
+.storespictures img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.place .info{
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+.info a:hover{
+    color:rgba(0, 0, 0, 0.9);
+}
+.info img{
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+.storesinfo>span{
+    display: block;
+    height: 50px;
+    border-left: solid 1px gray;
+    margin: 40px 10px;
+}
+.storesinfo .place{
+    margin-bottom: 10%;
+}
+.introduce{
+    width: 100%;
+    margin-top: 100px;
+}
+.introduce .img{
+    width: 70%;
+    height: auto;
+}
+.introduce .txt p{
+    padding: 10%;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 30%;
+    font-family: 'Noto Serif TC', serif;
+}
+.introduce .img img, .card .img img{
+    height: 100%; 
+    width: 100%;
+    object-fit: contain;
+}
+.ideas{
+    padding-top: 100px;
+}
+.card{
+    display: flex;
+    width: 60%;
+    height: 250px;
+    margin: 50px auto;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(60px);
+    background-color: rgba(243, 243, 243, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #d9d9d9;
+    padding: 5%;
+    position: sticky;
+    top: 15%;
+}
+.card .img{
+    width: 90%;
+    height: 300px;
+}
+.card .txt h2, .card .txt h3{
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 2;
+    font-weight: 500;
+}
+.card .txt{
+    width: 70%;
+    line-height: 2;
+    font-family: 'Noto Serif TC', serif;
+}

@@ -1,10 +1,4 @@
-html{
-    scroll-behavior: smooth;
-}
-body{
-    color: var(--color_gray);
-    padding-top: 60px;
-}
+
 h1{
     font-size: 6vmin;
     color: white;
@@ -70,7 +64,7 @@ h1{
 
 main .riri>div{
     display: flex;
-    
+    position: relative;
 }
 .riri{
     padding-top: 10%;
@@ -83,7 +77,8 @@ main .riri>div{
     margin-top: 10%;
 }
 .riri .img{
-    margin-top: -13%;
+    position: absolute;
+    bottom: 0;
     width: 20%;
 
 }
@@ -93,7 +88,7 @@ main .riri>div{
 }
 .riri .txt{
     width: 55%;
-    margin-left: 10%;
+    margin-left: 30%;
     color: rgb(49, 49, 49);
 }
 
