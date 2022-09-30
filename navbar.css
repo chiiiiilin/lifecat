@@ -17,7 +17,7 @@ body{
     padding-top: 60px;
     font-family: "Noto Sans TC" , serif;
 }
-h1, h2, h3, h4, h5, nav, ul{
+h1, h2, h3, h4, h5, nav, ul, th{
     font-family: 'Noto Serif TC', serif;
 }
 
@@ -47,15 +47,11 @@ a{
 }
 .logo{
     width: 20%;
-    height: 90%;
-    display: flex;
+    height: 100%;
 }
-.logo img:nth-of-type(1){
-    height: 130%;
+.logo img{
+    height: 110%;
     margin-right: 10px;
-}
-.logo img:nth-last-of-type(1){
-    margin-top: 5%;
 }
 label{
     height: 50px;

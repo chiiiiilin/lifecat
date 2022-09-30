@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貓體工學|帳戶資訊</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="menu_switch">
+        <div class="navbar">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="pictures/logologo.svg" alt="貓體工學">
+                </div>
+            </a>
+            <label for="menu_switch" class="hb">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="main_nav">
+                <ul>
+                    <li><a href="shoppingpage.html">所有商品</a></li>
+                    <li><a href="stores.html">實體店面</a></li>
+                    <li><a href="reco.html">貓星人的推薦</a></li>
+                    <li><a href="question.html">訂製諮詢</a></li>
+                </ul>
+                <ul>
+                    <li><a href="account.html"><img src="pictures/profileIcon.svg" alt=""></a></li>
+                    <li><a href="cart.html"><img src="pictures/cartIcon.svg" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            <div class="row">
+                <div class="col-9">
+                    <section id="center">
+                        <div class="card ordercard" >
+                            <div class="card_top">
+                                <h2>訂單追蹤</h2>
+                            </div>
+                            <div class="card_body">
+                                <table>
+                                    <tr>
+                                        <th>訂單日期</th>
+                                        <th>訂單編號</th>
+                                        <th>訂單狀態</th>
+                                        <th>總金額</th>
+                                        <th>付款狀態</th>
+                                    </tr>
+                                    <tr>
+                                        <td>2022/09/20</td>
+                                        <td><a href="">#09202222</a></td>
+                                        <td>處理中</td>
+                                        <td>NT$5800</td>
+                                        <td>待付款</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2022/09/11</td>
+                                        <td><a href="">#09992322</a></td>
+                                        <td>已出貨</td>
+                                        <td>NT$2800</td>
+                                        <td>已付款</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2022/03/10</td>
+                                        <td><a href="">#03205922</a></td>
+                                        <td>已完成</td>
+                                        <td>NT$16000</td>
+                                        <td>已付款</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2021/07/31</td>
+                                        <td><a href="">#07248221</a></td>
+                                        <td>已完成</td>
+                                        <td>NT$1800</td>
+                                        <td>已付款</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-3">
+                    <section class="register">
+                        <div class="card" id="loginCard">
+                            <ul class="card_top">
+                                <li class="login">
+                                    <a onclick="TurnToLogin()">
+                                        <h2>登入</h2>
+                                        <h2>Log in</h2>
+                                    </a>
+                                </li>
+                                <li class="signup">
+                                    <a onclick="TurnToSignup()">
+                                        <h2>註冊</h2>
+                                        <h2>Sign up</h2>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="card_body">
+                                <input type="text" placeholder="請輸入電子信箱/手機號碼">
+                                <input type="text" placeholder="請輸入密碼">
+                                <a href="">忘記密碼?</a>
+                                <input type="submit" onclick="TrunToCenter()" value="登入" >
+                            </div>
+                            <div class="card_foot">
+                                <p>以其他方式登入</p>
+                                <div class="icon">
+                                    <a href=""><img src="pictures/googleIcon.svg" alt="以google帳號登入"></a>
+                                    <a href=""><img src="pictures/facebookIcon.svg" alt="以facebook帳號登入"></a>
+                                    <a href=""><img src="pictures/lineIcon.svg" alt="以line帳號登入"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" id="signupCard">
+                            <ul class="card_top">
+                                <li class="login">
+                                    <a onclick="TurnToLogin()">
+                                        <h2>登入</h2>
+                                        <h2>Log in</h2>
+                                    </a>
+                                </li>
+                                <li class="signup">
+                                    <a onclick="TurnToSignup()">
+                                        <h2>註冊</h2>
+                                        <h2>Sign up</h2>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="card_body">
+                                <input type="text" placeholder="請輸入電子信箱/手機號碼">
+                                <input type="text" placeholder="請設定6~12位數英數混和密碼">
+                                <input type="text" placeholder="請輸入信箱/簡訊驗證碼">
+                                <a href="">重寄驗證碼</a>
+                                <input type="submit" onclick="TurnToLogin()" value="註冊">
+                            </div>
+                            <div class="card_foot">
+                                <p>以其他方式註冊<p>
+                                <div class="icon">
+                                    <a href=""><img src="pictures/googleIcon.svg" alt="以google帳號登入"></a>
+                                    <a href=""><img src="pictures/facebookIcon.svg" alt="以facebook帳號登入"></a>
+                                    <a href=""><img src="pictures/lineIcon.svg" alt="以line帳號登入"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" id="memberCard">
+                            <a onclick="TurnToLogin()"><img src="pictures/leaveIcon.svg" alt=""></a>
+                            <div class="card_top">
+                                <h2>會員資料</h2>
+                            </div>
+                            <div class="card_body">
+                                <ul>
+                                    <li>軟綿貓</li>
+                                    <li>電子信箱: 1234ccc@gmail.com</li>
+                                    <li>手機號碼: 0911223456</li>
+                                    <li>密碼: <a href="">重設新密碼</a></li>
+                                    <li>性別: 女</li>
+                                </ul>
+                            </div>
+                            <div class="card_foot">
+                                <p>已登入成功<p>
+                                
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        function TurnToLogin(){
+            document.getElementById('loginCard').style.display = "block";
+            document.getElementById('signupCard').style.display = "none";
+            document.getElementById('memberCard').style.display = "none";
+            document.getElementById('center').style.display = "none";
+    }
+        function TurnToSignup(){
+            document.getElementById('signupCard').style.display = "block";
+            document.getElementById('loginCard').style.display = "none";
+    }
+        function TrunToCenter(){
+            document.getElementById('center').style.display = "block";
+            document.getElementById('memberCard').style.display = "block";
+            document.getElementById('loginCard').style.display = "none";
+    }
+        
+    </script>
+</body>
+</html>

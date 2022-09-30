@@ -1,0 +1,148 @@
+body{
+    background-image: url(pictures/loginimg2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: bottom;
+}
+
+.row{
+    width: 95%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+#loginCard{
+    display: block;
+}
+#signupCard, #center, #memberCard{
+    display: none;
+}
+
+.card{
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #d9d9d9;
+    padding: 10%;
+}
+.card>a{
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 5% 0;
+}
+.card>a img{
+    width: 60%;
+}
+.card_top{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+}
+.card li{
+    cursor: pointer;
+}
+.card a{
+    opacity: .7;
+}
+.card a:hover{
+    opacity: 1;
+}
+#loginCard .login a, #signupCard .signup a, #memberCard h2, #center h2{
+    font-weight: 900;
+    opacity: 1;
+} 
+.card_top h2:nth-of-type(1){
+    font-size: 1.2rem;
+    line-height: 2;
+}
+.card_top h2:nth-of-type(2){
+    font-size: .6rem;
+    line-height: 2;
+}
+.card_top h2:nth-of-type(1)::after{
+    content: '　'; 
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: gray;
+    position: absolute;
+    width: 120px;
+    transform: translate(-65%, 0);
+}
+#memberCard h2:after, #center h2:after{
+    transform: translate(-80%, 0);
+}
+.card_body{
+    margin-top: 10%;
+}
+.card_body input{
+    background-color: inherit;
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px auto;
+    padding: 5px;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 2px rgba(183, 181, 181, 0.8);
+}
+.card_body input:last-child:active{
+    box-shadow: inset 2px 2px 2px rgba(183, 181, 181, 0.8);
+}
+.card_body input:last-child{
+    cursor: pointer;
+}
+.register .card_body a{
+    font-size: .8rem;
+    float: right;
+}
+.card_foot{
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: solid 1px gray;
+}
+.card_foot .icon{
+    width: 60%;
+    padding-top: 5%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#center .card{
+    margin: 5% 0;
+}
+#memberCard .card_body li{
+    cursor:auto;
+}
+#memberCard .card_body li:first-child{
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+#memberCard .card_body li+li{
+    font-size: 1rem;
+    line-height: 1.6rem;
+}
+#memberCard a, #center a{
+    float: none;
+    cursor:pointer;
+}
+#center .card{
+    padding: 3%;
+}
+#center .card_body{
+    margin-top: 3%;
+}
+table{
+    width: 90%;
+    text-align: center;
+}
+tr{
+    line-height: 2.2rem;
+}
+th{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
