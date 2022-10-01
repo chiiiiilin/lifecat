@@ -255,7 +255,7 @@ strong{
      font-weight: 500;
      display: inline-block;
      position: absolute; 
-     /* transform: translate(-170%, 55%); */
+     transform: translate(-170%, 55%);
      z-index: 1;
  }
  .more a{

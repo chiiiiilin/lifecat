@@ -5,7 +5,9 @@ body{
     background-size: 100%;
     background-position: bottom;
 }
-
+.main_nav ul:nth-child(2) li:first-child a{
+    border-bottom: solid 9px var(--color_greengray);
+}
 .row{
     width: 95%;
     height: 100vh;
@@ -83,12 +85,15 @@ body{
     border-radius: 5px;
     width: 100%;
     margin: 10px auto;
-    padding: 5px;
+    padding: 10px;
     outline: none;
     border: none;
     box-shadow: 2px 2px 2px rgba(183, 181, 181, 0.8);
 }
-.card_body input:last-child:active{
+.card_body input:not(:last-child){
+    width: 95%;
+}
+.card_body input:active{
     box-shadow: inset 2px 2px 2px rgba(183, 181, 181, 0.8);
 }
 .card_body input:last-child{

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貓體工學| 購物車</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="menu_switch">
+        <div class="navbar">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="pictures/logologo.svg" alt="貓體工學">
+                </div>
+            </a>
+            <label for="menu_switch" class="hb">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="main_nav">
+                <ul>
+                    <li><a href="shoppingpage.html">所有商品</a></li>
+                    <li><a href="stores.html">實體概念店</a></li>
+                    <li><a href="reco.html">貓星人的推薦</a></li>
+                    <li><a href="question.html">訂製諮詢</a></li>
+                </ul>
+                <ul>
+                    <li><a href="account.html"><img src="pictures/profileIcon.svg" alt=""></a></li>
+                    <li><a href="cart.html"><img src="pictures/cartIcon.svg" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>購物車</h1>
+        <section class="card cartcard" >
+            <div class="card_body">
+                <table>
+                    <tr>
+                        <th colspan="2">商品資訊</th>
+                        <th>商品單價</th>
+                        <th>商品數量</th>
+                        <th>移除</th>
+                    </tr>
+                    <tr>
+                        <td class="itempic">
+                            <img src="pictures/item5use.webp" alt="">
+                        </td>
+                        <td class="itemname"><a href="itempage.html">月亮跳台</a></td>
+                        <td class="itemprice">NT$5500</td>
+                        <td class="itemamout">
+                            <span class="num_minus">一</span>
+                            <input type="text" class="input_num" value="1" min="1">
+                            <span class="num_plus">十</span>
+                        </td>
+                        <td class="itemdel">
+                            <a href="">
+                                <img src="pictures/deleateIcon.svg" alt="移除">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="itempic">
+                            <img src="pictures/item10use.png" alt="">
+                        </td>
+                        <td class="itemname"><a href="itempage.html">太空艙小窩</a></td>
+                        <td class="itemprice">NT$3000</td>
+                        <td class="itemamout">
+                            <span class="num_minus">一</span>
+                            <input type="text" class="input_num" value="1" min="1">
+                            <span class="num_plus">十</span>
+                        </td>
+                        <td class="itemdel">
+                            <a href="">
+                                <img src="pictures/deleateIcon.svg" alt="移除">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card_foot">
+                <div class="fee">
+                    <label><input type="radio" name="deliveryFee">台北概念店自取，運費 0 元</label>
+                    <label><input type="radio" name="deliveryFee">宅配，運費 120 元</label>
+                    <label><input type="radio" name="deliveryFee">宅配(加安裝)，運費 600 元</label>
+                </div>
+                <div class="total">
+                    <ul>
+                        <li>
+                            <p>小計</p>
+                            <p>NT$8500</p>
+                        </li>
+                        <li>
+                            <p>運費</p>
+                            <p>NT$120</p>
+                        </li>
+                        <li>
+                            <p>總金額</p>
+                            <p>NT$8620</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <h2>收件資訊</h2>
+        <section class="card infocard">
+            <div class="card_body">
+                <ul>
+                    <li>
+                        <label><input type="checkbox">與會員資料相同</label>
+                    </li>
+                    <li>
+                        <p>收件人姓名</p>
+                        <input required type="text" placeholder="請輸入真實姓名">
+                    </li>
+                    <li>
+                        <p>手機號碼</p>
+                        <input required type="tel" maxlength="10" placeholder="請輸入10位數手機號碼，不需輸入標點符號">
+                    </li>
+                    <li>
+                        <p>收件地址</p>
+                        <input required type="text" placeholder="請輸入完整地址">
+                    </li>
+                    <li>
+                        <p>指定到貨日期(僅能盡量安排，無法保證時間)</p>
+                        <input type="date">
+                    </li>
+                    <li>
+                        <p>備註</p>
+                        <input type="text" placeholder="如有特殊需求請在此備註，建議可先詢問線上客服">
+                    </li>
+                </ul>
+            </div>
+            <div class="card_foot">
+                <input type="submit" value="送出">
+            </div>
+        </section>
+        <h2>付款方式</h2>
+        <section class="card paymentcard">
+            <div class="card_body">
+                <ul>
+                    <li>
+                        <label><input type="radio" name="payment">ATM轉帳</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="payment">信用卡(支援Visa, Master, JCB)</label>
+                    </li>
+                    <li>
+                        <p>信用卡卡號</p>
+                        <input type="text" placeholder="0000" maxlength="4">
+                        <input type="text" placeholder="0000" maxlength="4">
+                        <input type="text" placeholder="0000" maxlength="4">
+                        <input type="text" placeholder="0000" maxlength="4">
+                    </li>
+                    <li>
+                        <p>有效日期</p>
+                        <input type="text" placeholder="MM/YY" maxlength="4">
+                    </li>
+                    <li>
+                        <p>安全碼</p>
+                        <input type="text" placeholder="000" maxlength="3">
+                    </li>
+                
+            </div>
+            <div class="card_foot">
+                <input type="submit" value="確認付款">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

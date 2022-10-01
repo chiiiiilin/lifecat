@@ -1,4 +1,7 @@
 
+.main_nav ul:first-child li:first-child a{
+    border-bottom: solid 9px var(--color_greengray);
+}
 .top{
     max-width: 1200px;
     margin: auto;

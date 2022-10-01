@@ -54,12 +54,12 @@ a{
     height: 110%;
     margin-right: 10px;
 }
-label{
+header label{
     height: 50px;
     margin-top: auto;
     margin-right: 50px;
 }
-input{
+header input{
     backdrop-filter: blur(3px);
     border: solid 1px var(--color_gray);
     border-radius: 10px;
