@@ -221,6 +221,10 @@ p{
 .payment .txt li{
     line-height: 1.4rem;
 }
+.payment .txt li a{
+    color: var(--color_yellow);
+    font-weight: 500;
+}
 .comment{
     padding-top: 5%;
     margin: 5% 0;
