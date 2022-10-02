@@ -46,6 +46,12 @@ body{
 .card:hover{
     box-shadow: 0 0 10px #ababab;
 }
+.card img{
+  transition: 1.5s;
+}
+.card:hover img{
+    transform: scale(1.1);
+}
 .space{
     max-width: 1200px;
     margin: auto;
