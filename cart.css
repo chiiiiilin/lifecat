@@ -15,21 +15,22 @@ main{
 section+h2{
     margin-top: 3%;
 }
-h1, h2, .card{
+.card{
     width: 50%;
     box-shadow: 0 0 10px #d9d9d9;
     backdrop-filter: blur(10px);
     border-radius: 10px;
 }
 h1, h2{
-    padding: 10px 20px;
-    text-align: center;
+    padding: 0 20px;
+    margin: 20px 0;
+    /* text-align: center; */
     font-size: 1.6rem;
-    background-color: var(--color_greengray);
-    color: white;
+    border-left: solid 4px var(--color_yellow);
+    font-weight: 700;
 }
 .card{
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.75);
     padding: 25px 20px;
     margin-top: 20px;
 }
@@ -55,7 +56,6 @@ tr:last-child{
 }
 th{
     font-size: 1.2rem;
-    font-weight: 700;
 }
 td{
     vertical-align: middle;
@@ -122,28 +122,42 @@ td{
 .infocard li+li input, .paymentcard li+li+li input, .infocard .card_foot input, .paymentcard .card_foot input{
     background-color: inherit;
     border-radius: 5px;
-    width: 90%;
+    width: 40%;
     margin: 5px 15px;
     padding: 10px;
     outline: none;
     border: none;
-    box-shadow: 2px 2px 2px rgba(183, 181, 181, 0.8);
+}
+::placeholder{
+    opacity: .6;
+}
+.infocard .card_body li:last-child input{
+    width: 80%;
+}
+.infocard li label, .paymentcard li label{
+    margin: 15px 5px;
+    display: block;
 }
 .paymentcard li+li+li input{
-    width: 15%;
+    width: 10%;
 }
 .infocard p, .paymentcard p{
     margin: 0 15px;
     padding: 10px; 
 }
 .infocard li+li input:focus, .paymentcard li+li+li input:focus{
-    box-shadow: 2px 2px 2px rgba(137, 137, 137, 0.8);
+    box-shadow: 2px 2px 2px  rgba(212, 212, 212, 0.8)
 }
 .infocard .card_foot input, .paymentcard .card_foot input{
     width: 15%;
-    box-shadow: 2px 2px 2px rgba(137, 137, 137, 0.8);
-    border: solid .5px rgb(192, 190, 190);
+    border: solid .5px var(--color_yellow);
+    background-color: var(--color_yellow);
+    color: white
+}
+.infocard .card_foot input:hover, .paymentcard .card_foot input:hover{
+    background-color: transparent;
+    color: var(--color_yellow);
 }
 .infocard .card_foot input:active, .paymentcard .card_foot input:active{
-    box-shadow: inset 2px 2px 2px rgba(137, 137, 137, 0.8);
+    box-shadow: inset 2px 2px 2px var(--color_yellow);
 }

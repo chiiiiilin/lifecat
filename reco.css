@@ -13,6 +13,11 @@ h1{
 .top .img{
     width: 100%;
     height: 350px;
+    background-image: url(pictures/recommendation.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
 }
 .top .img img{
     height: 100%;
@@ -60,8 +65,9 @@ h1{
 }
 .category li:hover{
     background-color: var(--color_yellow);
+}.category li:first-child{
+    background-color: var(--color_yellow);
 }
-
 main .riri>div{
     display: flex;
     position: relative;
@@ -103,7 +109,7 @@ main .riri>div{
 }
 .riri .txt div p{
     font-size: 1rem;
-    line-height: 1.2;
+    line-height: 1.6;
     margin-top: 3%;
 }
 
@@ -128,7 +134,7 @@ strong{
 
 .wrap div{
     margin: .5%;
-    box-shadow: 4px 4px 5px var(--color_gray);
+    box-shadow: 4px 4px 10px #818181;;
     overflow: hidden;
     border-radius: 5px;
     
@@ -162,10 +168,8 @@ strong{
     transform: scale(1.2);
 }
 .photowall>div:nth-child(2){
-    /* padding: 1% 0; */
     width: 45%;
     background-color: var(--color_greengray);
-    box-shadow: 2px 2px 4px rgba(26, 25, 25, 0.3);
     position: absolute;
     margin-top: -8%;
 }

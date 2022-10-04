@@ -20,14 +20,13 @@ h1{
 .top .img{
     width: 100%;
     height: 350px;
+    background-image: url(pictures/shoppingpage.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
 }
-.top .img img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    opacity: .9;
 
-}
 .top .txt{
     width: 25%;
     height: 100px;
@@ -73,14 +72,17 @@ h1{
     width: 100%;
     z-index: 1;
 }
-.category li:hover{
+.category ul li:hover{
     background-color: var(--color_yellow);
 }
 .category li:hover ol{
     display: block;
 }
+.category ol li:hover a{
+    color: var(--color_yellow);
+}
 .category ol li{
-    border-bottom: solid .5px #F3F0DF;
+    border-bottom: solid .5px var(--color_brightyellow);
     
 }
 
@@ -160,10 +162,10 @@ main .wrap{
 }
 .card:hover .add{
     opacity: 1;
+    color: white;
 }
 .card .add:hover{
     background-color: var(--color_yellow);
-    color: white;
 }
 .card .txt{
     visibility: visible;
@@ -185,8 +187,7 @@ main .wrap{
 .card .add{
     padding: 5%;
     margin-top: -15%;
-    background-color: var(--color_brightyellow);
-    font-weight: 500;
+    background-color: rgb(247, 192, 110);
     color: inherit;
     opacity: 0;
     transition: opacity .5s, color, .2s;
