@@ -1,4 +1,4 @@
-.main_nav ul:first-child li:last-child a{
+.main_nav li:last-child a{
     border-bottom: solid 9px var(--color_greengray);
 }
 
@@ -8,14 +8,16 @@
     margin-top: 25%;
     background-color: var(--color_greengray);
     position: relative;
+    animation: backgroundmove 2s ease-out;
 }
-.img{
+.top .img{
     position: absolute;
     bottom: 0;
     left: 20%; 
     width: 50%;
+    animation: opacity 1s linear;
 }
-.img img{
+.top .img img{
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -25,17 +27,20 @@ h1{
     font-size: 5vmin;
     line-height: 1.6;
     color: var(--color_greengray);
-    float: right;
-    padding-bottom: 100%;
     position: absolute;
     top: -100%;
     left: 60%;
     z-index: 1;
+    animation: opacity 1.5s linear;
 }
 .top a{
     display: flex;
     margin-left: 20%;
     margin-top: 20px;
+}
+.top a img{
+    animation: arraymove 2s ease-in;
+    height: 20vmin;
 }
 .top a:hover{
     font-weight: 500;
@@ -44,7 +49,23 @@ h1{
     font-family: 'Noto Serif TC', serif;
     writing-mode: vertical-lr;
     letter-spacing: 10px;
-    margin: 10px;
+    margin: 0 10px;
+    animation: opacity 3s linear;
+}
+@keyframes backgroundmove{
+    0%{width: 0%;}
+    50%{width: 85%;}
+    100%{width: 80%;}
+}
+@keyframes opacity{
+    0%{opacity: 0%;}
+    50%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+@keyframes arraymove{
+    0%{height: 0vmin;}
+    50%{height: 25vmin;}
+    100%{height: 20vmin;}
 }
 .category{
     display: flex;
@@ -167,3 +188,38 @@ main a:hover{
 ::placeholder{
     opacity: .6;
 }
+@media  screen and (max-width: 1023px) {
+    .top h1{
+        font-size: 3vmin;
+        top: -70%;
+        left: 55%;
+    }
+    .category{
+        padding: 5vh 0;
+        width: 85%;
+        font-size: .8rem;
+    }
+    .category ul li:checked{
+        background-color: var(--color_yellow);
+    }
+    
+ }
+ @media screen and (max-width: 779px){
+    .top .background{
+        height: 100px;
+        margin-top: 50%;
+    }
+    section:not(.top) {
+        padding: 20px 5%;
+    }
+    main h3, main ul{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .top a p{
+        letter-spacing: 5px;
+    }
+    .top a img{
+        height: 25vmin;
+    }
+ }

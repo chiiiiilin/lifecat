@@ -5,7 +5,7 @@ body{
     background-size: 100%;
     background-position: bottom;
 }
-.main_nav ul:nth-child(2) li:first-child a{
+.main_nav_icon li:first-child a{
     border-bottom: solid 9px var(--color_greengray);
 }
 .row{
@@ -161,4 +161,15 @@ tr{
 th{
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+@media screen and (max-width: 1199px) {
+    body{
+        background-blend-mode: multiply;
+        background-color: #F0F3EA;
+        padding-top: 120px;
+    }
+    .row{
+        height: 100%;
+    }
 }

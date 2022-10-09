@@ -5,7 +5,7 @@ body{
     background-size: 100%;
     background-position: left;
 }
-.main_nav ul:nth-child(2) li:last-child a{
+.main_nav_icon li:last-child a{
     border-bottom: solid 9px var(--color_greengray);
 }
 main{
@@ -43,27 +43,31 @@ h1, h2{
 .card_body{
     margin: auto;
 }
-table{
-    width: 100%;
-    text-align: center;
-    table-layout: fixed;
-}
-tr{
+.cartcard .card_body ul{
+    display: flex;
     justify-content: space-around;
 }
-tr:last-child{
+.cartcard .card_body ul:last-child{
     border-bottom: solid .3px gray;
 }
-th{
-    font-size: 1.2rem;
-}
-td{
-    vertical-align: middle;
+.cartcard li, .itemname{
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
+.iteminfo{
+    display: flex;
+    width: 40%;
+}
+.iteminfo .itempic{
+    width: 50%;
+    /* float: right; */
+}
 .itempic img{
-    width: 80%;
-    float: right;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 
 .itemamout{
@@ -83,7 +87,7 @@ td{
     text-align: center;
 }
 .itemamout span{
-    padding: 0 2%;
+    padding: 0 50%;
     vertical-align: middle;
     font-size: 1rem;
     font-weight: 500;
@@ -95,7 +99,7 @@ td{
 }
 
 .itemdel img{
-    width: 10%;
+    width: 50%;
 }
 .card_foot{
     display: flex;
@@ -160,4 +164,30 @@ td{
 }
 .infocard .card_foot input:active, .paymentcard .card_foot input:active{
     box-shadow: inset 2px 2px 2px var(--color_yellow);
+}
+
+@media  screen and (max-width: 1199px) {
+    body{
+        background-position: top;
+        background-color: #E5EEF3;
+        background-attachment: fixed;
+    }
+    main{
+        padding-top: 30%;
+    }
+    .card{
+        width: 80%;
+    }
+    .infocard .card_foot input, .paymentcard .card_foot input{
+        width: fit-content;
+    }
+    .card_foot{
+        flex-direction: column;
+    }
+    .fee{
+        width: 90%;
+    }
+    .total{
+        margin-left: 25px;
+    }
 }

@@ -1,5 +1,5 @@
 
-.main_nav ul:first-child li:first-child a{
+.main_nav li:first-child a{
     border-bottom: solid 9px var(--color_greengray);
 }
 .top{
@@ -307,4 +307,9 @@ p{
 }
 .saySomething input:last-child:active{
     box-shadow: inset 2px 2px 2px var(--color_yellow);
+}
+@media  screen and (max-width: 1199px) {
+    .top .img{
+        background-position: center;
+    }
 }

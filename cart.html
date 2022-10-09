@@ -12,79 +12,63 @@
 </head>
 <body>
     <header>
-        <input type="checkbox" name="" id="menu_switch">
         <div class="navbar">
+            <label for="switch" class="hb"><img src="pictures/hb.svg" alt="選單"></label>
+            <input type="checkbox" id="switch">
             <a href="index.html">
                 <div class="logo">
                     <img src="pictures/logologo.svg" alt="貓體工學">
                 </div>
             </a>
-            <label for="menu_switch" class="hb">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <nav class="main_nav">
-                <ul>
+            <nav>
+                <ul class="main_nav">
                     <li><a href="shoppingpage.html">所有商品</a></li>
                     <li><a href="stores.html">實體概念店</a></li>
                     <li><a href="reco.html">貓星人的推薦</a></li>
                     <li><a href="question.html">常見問題</a></li>
                 </ul>
-                <ul>
-                    <li><a href="account.html"><img src="pictures/profileIcon.svg" alt=""></a></li>
-                    <li><a href="cart.html"><img src="pictures/cartIcon.svg" alt=""></a></li>
+                <ul class="main_nav_icon">
+                    <li><a href="account.html">
+                        <div class="img">
+                            <img src="pictures/profileIcon.svg" alt="會員登入">
+                        </div>
+                        <p>會員登入</p>
+                    </a></li>
+                    <li><a href="cart.html">
+                        <div class="img">
+                            <img src="pictures/cartIcon.svg" alt="購物車">
+                        </div>
+                        <p>購物車</p>
+                    </a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        
         <section class="card cartcard" >
             <h1>購物車</h1>
             <div class="card_body">
-                <table>
-                    <tr>
-                        <th colspan="2">商品資訊</th>
-                        <th>商品單價</th>
-                        <th>商品數量</th>
-                        <th>移除</th>
-                    </tr>
-                    <tr>
-                        <td class="itempic">
-                            <img src="pictures/item5use.webp" alt="">
-                        </td>
-                        <td class="itemname"><a href="itempage.html">月亮跳台</a></td>
-                        <td class="itemprice">NT$5500</td>
-                        <td class="itemamout">
-                            <span class="num_minus">一</span>
-                            <input type="text" class="input_num" value="1" min="1">
-                            <span class="num_plus">十</span>
-                        </td>
-                        <td class="itemdel">
+                <div class="cart_content">
+                    <ul>
+                        <li class="iteminfo">
+                            <div class="itempic">
+                                <img src="pictures/item5use.webp" alt="">
+                            </div>
+                            <div class="itemname"><a href="itempage.html">月亮跳台</a></div>
+                        </li>
+                        <li class="itemprice">NT$5500</li>
+                        <li class="itemamout">
+                            <span id="num_minus">-</span>
+                            <input type="text" class="input_num" id="input_num" value="1" min="1">
+                            <span id="num_plus">+</span>
+                        </li>
+                        <li class="itemdel">
                             <a href="">
                                 <img src="pictures/deleateIcon.svg" alt="移除">
                             </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="itempic">
-                            <img src="pictures/item10use.png" alt="">
-                        </td>
-                        <td class="itemname"><a href="itempage.html">太空艙小窩</a></td>
-                        <td class="itemprice">NT$3000</td>
-                        <td class="itemamout">
-                            <span class="num_minus">一</span>
-                            <input type="text" class="input_num" value="1" min="1">
-                            <span class="num_plus">十</span>
-                        </td>
-                        <td class="itemdel">
-                            <a href="">
-                                <img src="pictures/deleateIcon.svg" alt="移除">
-                            </a>
-                        </td>
-                    </tr>
-                </table>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="card_foot">
                 <div class="fee">
@@ -136,7 +120,7 @@
                     </li>
                     <li>
                         <p>備註</p>
-                        <input type="text" placeholder="如有特殊需求請在此備註，建議可先詢問線上客服">
+                        <input type="text" placeholder="如有特殊需求請在此備註">
                     </li>
                 </ul>
             </div>
@@ -177,5 +161,26 @@
             </div>
         </section>
     </main>
+    
+    <script>
+        var num_plus = document.getElementById("num_plus");
+        var num_minus = document.getElementById("num_minus");
+        var input_num = document.getElementById("input_num");
+
+        num_plus.onclick = function() {
+
+            input_num.value = parseInt(input_num.value) + 1;
+        }
+
+        num_minus.onclick = function() {
+
+            if(input_num.value <= 1) {
+                input_num.value = 1;
+            } else {
+
+                input_num.value = parseInt(input_num.value) - 1;
+            }
+        }
+    </script>
 </body>
 </html>

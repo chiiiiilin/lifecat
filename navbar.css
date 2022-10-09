@@ -1,6 +1,7 @@
+/* 所有檔案共通 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap');
 :root{
-    --color_green: #E6EBE9;
+    --color_green: #e6ebe9;
     --color_gray: #61616D;
     --color_yellow: rgb(243, 181, 90);
     --color_brightyellow: #fcefcf;
@@ -17,22 +18,33 @@ html {
 }
 body{
     color: var(--color_gray);
-    padding-top: 60px;
     font-family: "Noto Sans TC" , serif;
 }
 h1, h2, h3, h4, h5, nav, ul, th{
     font-family: 'Noto Serif TC', serif;
 }
-
-@media screen and (max-width: 767px){
-    html{
-        font-size: 10px;
-    }
-}
 a{
     color: inherit;
     text-decoration: none;
 }
+body::-webkit-scrollbar{
+    height: auto;
+}
+body::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(45deg, #d5e4dc, #E6EBE9);
+}
+body::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(45deg, #bac6c0, #c4d8d1);
+}
+@media screen and (max-width: 1199px){
+    html{
+        font-size: 10px;
+    }
+}
+/* navbar */
 .navbar{
     display: flex;
     justify-content: center;
@@ -57,71 +69,145 @@ a{
     margin-right: 10px;
 }
 header label{
-    height: 50px;
-    margin-top: auto;
-    margin-right: 50px;
+    height: 100%;
+    width: 30px;
+    /* margin-top: auto; */
+    /* margin-right: 50px; */
+    float: right;
+    display: none;
 }
-header input{
-    backdrop-filter: blur(3px);
-    border: solid 1px var(--color_gray);
-    border-radius: 10px;
-    height: 30px;
-    width: 150px;
-    background-color: var(--color_green);
+header label img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
-
-.main_nav a{
+.navbar nav a{
     display: block;
     padding: 0 20px;
     margin-top: auto;
     height: 85%;
 }
-.main_nav ul:not(:nth-child(2)) li:hover{
+.main_nav li:hover{
     background-color: var(--color_greengray);
     color: white;
     stroke: white;
-    font-weight: 700;
+    font-weight: 500;
 }
 
-#menu_switch{
+#switch{
     display: none;
 }
-.navbar ul{
-    display: flex;
-    justify-content: space-evenly;
-}
-.navbar ul li{
+
+.main_nav li{
     color: var(--color_gray);
     line-height: 60px;
 }
-.navbar ul li img{
-    height: 25px;
-    margin-top: 70%;
 
-}
-
-@media screen and (max-width: 767px){
-    .main_nav{
-        /* display: none; */
+@media screen and (max-width: 1199px){
+    nav{
+        display: none;
         position: absolute;
-        background-color: rgb(248, 217, 153);
-        width: 100%;
-        left: -100%;
+        background-color: rgba(230, 235, 233, .8);
+        backdrop-filter: blur(6px);
+        width: 100vw;
+        height: 60vh;
         top: 100%;
-        opacity: 0;
-        transition: opacity 1s, left 0s 1s;
+        animation: navopen 1s ease-out;
     }
-}
-@media screen and (min-width: 768px){
+    @keyframes navopen{
+        0%{
+            height: 0vh;
+            opacity: 0;
+        }
+        50%{
+            height: 65vh;
+            opacity: .9;
+        }
+        100%{
+            height: 60vh;
+            opacity: 1;
+        }
+    }
+    input:checked ~ nav{
+        display: block;
+    }
+    header label{
+        display: block;
+        margin-right: 5%;
+    }
+    .logo{
+        left: 0;
+        position: absolute;
+        margin-left: 5%;
+        width: 35%;
+    }
+    .logo img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+    .hb{
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+    }
+    nav li{
+        margin-left: 5%;
+        text-align: center;
+    }
     .main_nav{
+        order: 1;
+        margin-top: 10%;
+    }
+    nav a{
+        font-size: 4vmin;
+    }
+    .main_nav_icon{
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+    }
+    .navbar .main_nav_icon a{
+       display: flex;
+       border-bottom: solid 5px var(--color_greengray);
+       width: fit-content;
+       padding: 5px 0;
+    }
+    .main_nav_icon .img{
+        width: 20%;
+    }
+    .main_nav_icon img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .main_nav_icon p{
+        align-self: center;
+        margin-left: 15px;
+    }
+    
+}
+@media screen and (min-width: 1200px){
+    .navbar nav{
         display: flex;
         position: relative;
         width: 60%;
         justify-content: right;
     }
-    
+    .navbar ul{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .main_nav_icon img{
+        height: 25px;
+        margin-top: 70%;
+    }
+    .main_nav_icon p{
+        display: none;
+    }
 }
 
+/* footer */
 footer{
     margin-top: 50px;
     padding: 50px;
@@ -176,4 +262,3 @@ footer a:hover{
     line-height: 1.2rem;
     font-size: .8rem;
 }
-
