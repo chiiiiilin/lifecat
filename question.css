@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 .main_nav li:last-child a{
     border-bottom: solid 9px var(--color_greengray);
 }
@@ -162,7 +165,7 @@ main a:hover{
     padding: 10px 0;
     margin: 10px 0;
     border-radius: 5px;
-    width: 60%;
+    width: 80%;
     outline: none;
 }
 .card input:focus{
@@ -189,10 +192,9 @@ main a:hover{
     opacity: .6;
 }
 @media  screen and (max-width: 1023px) {
-    .top h1{
-        font-size: 3vmin;
-        top: -70%;
-        left: 55%;
+    .main_nav li:last-child{
+        background-color:  var(--color_greengray);
+        color: white;
     }
     .category{
         padding: 5vh 0;
@@ -202,24 +204,46 @@ main a:hover{
     .category ul li:checked{
         background-color: var(--color_yellow);
     }
-    
- }
- @media screen and (max-width: 779px){
     .top .background{
-        height: 100px;
         margin-top: 50%;
     }
-    section:not(.top) {
-        padding: 20px 5%;
+    .top .img{
+        left: -10%;
+        width: 80%;
     }
-    main h3, main ul{
-        margin-left: 0;
-        margin-top: 20px;
+    .top h1{
+        position: absolute;
+        width: 90%;
+        left: 50%;
+    }
+ }
+ @media screen and (max-width: 779px){
+    body{
+        padding-top: 0;
+    }
+    .top .background{
+        margin-top: 80%;
+        height: 20vh;
+    }
+    .top .img{
+        left: -20%;
+        width: 100%;
     }
     .top a p{
         letter-spacing: 5px;
     }
-    .top a img{
-        height: 25vmin;
+    .category{
+        padding: 10vh 0;
+        width: 85%;
+    }
+    section:not(.top){
+        padding:0;
+    }
+    main h2:not(first-child){
+        margin: 0;
+        margin-top: 10%;
+    }
+    main h3:not(first-child){
+        margin-top: 10%;
     }
  }

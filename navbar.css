@@ -39,7 +39,7 @@ body::-webkit-scrollbar-thumb{
 body::-webkit-scrollbar-thumb:hover{
     background: linear-gradient(45deg, #bac6c0, #c4d8d1);
 }
-@media screen and (max-width: 1199px){
+@media screen and (max-width: 1023px){
     html{
         font-size: 12px;
     }
@@ -103,7 +103,7 @@ header label img{
     line-height: 60px;
 }
 
-@media screen and (max-width: 1199px){
+@media screen and (max-width: 1023px){
     nav{
         display: none;
         position: absolute;
@@ -186,7 +186,7 @@ header label img{
     }
     
 }
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1024px){
     .navbar nav{
         display: flex;
         position: relative;

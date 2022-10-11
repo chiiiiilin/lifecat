@@ -46,6 +46,7 @@ h1, h2{
 .cartcard .card_body ul{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .cartcard .card_body ul:last-child{
     border-bottom: solid .3px gray;
@@ -71,7 +72,7 @@ h1, h2{
 }
 
 .itemamout{
-    height: 10rem;
+    height: 5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -87,7 +88,7 @@ h1, h2{
     text-align: center;
 }
 .itemamout span{
-    padding: 0 50%;
+    padding: 20% 50%;
     vertical-align: middle;
     font-size: 1rem;
     font-weight: 500;
@@ -100,6 +101,7 @@ h1, h2{
 
 .itemdel img{
     width: 50%;
+    float: right;
 }
 .card_foot{
     display: flex;
@@ -126,8 +128,8 @@ h1, h2{
 .infocard li+li input, .paymentcard li+li+li input, .infocard .card_foot input, .paymentcard .card_foot input{
     background-color: inherit;
     border-radius: 5px;
-    width: 40%;
-    margin: 5px 15px;
+    width: 80%;
+    margin: 15px;
     padding: 10px;
     outline: none;
     border: none;
@@ -166,20 +168,23 @@ h1, h2{
     box-shadow: inset 2px 2px 2px var(--color_yellow);
 }
 
-@media  screen and (max-width: 1199px) {
+@media  screen and (max-width: 1023px) {
     body{
-        background-position: top;
+        background-position: bottom;
         background-color: #E5EEF3;
         background-attachment: fixed;
     }
     main{
-        padding-top: 30%;
+        padding: 10% 5% 50% 5%;
+        margin-left: 0;
     }
     .card{
-        width: 80%;
+        width: 90%;
+        padding: 5%;
     }
     .infocard .card_foot input, .paymentcard .card_foot input{
         width: fit-content;
+        height: 5vh;
     }
     .card_foot{
         flex-direction: column;
@@ -189,5 +194,32 @@ h1, h2{
     }
     .total{
         margin-left: 25px;
+    }
+    .iteminfo{
+        width: 70%;
+    }
+    .iteminfo .itemname{
+        width: 30%;
+        margin-left: 5%;
+    }
+    .itemname a{
+        font-size: 1.2rem;
+    }
+    .itemprice{
+        width: 20%;
+        font-size: 1.2rem;
+    }
+    .itemamout{
+        width: 25%;
+        order: 1;
+    }
+    .itemdel{
+        width: 10%;
+    }
+    .total{
+        width: 100%;
+    }
+    .total ul{
+        width: 40%;
     }
 }

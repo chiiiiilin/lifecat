@@ -213,7 +213,7 @@ main .wrap{
     transition: opacity .5s, color, .2s;
     border-radius: 0 0 10px 10px;
 }
-@media  screen and (max-width: 1179px) {
+@media  screen and (max-width: 1023px) {
     .main_nav li:first-child {
         background-color:  var(--color_greengray);
         color: white;

@@ -53,10 +53,10 @@
                             <div class="itempictures">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="img"><img src="pictures/luna1.jfif" alt="貓體工學月亮跳台"></div>
+                                        <div class="img"><img id="largeImg" src="pictures/luna1.jfif" alt="貓體工學月亮跳台"></div>
                                     </div>
                                 </div>
-                                <div class="row row-cols-4 row-cols-md-4">
+                                <div class="row row-cols-4 row-cols-md-4" id="smallPanel">
                                     <div class="col">
                                         <div class="img"><img src="pictures/luna4.jfif" alt=""></div>
                                     </div>
@@ -336,6 +336,20 @@
         </div>
     </footer>
     <script>
+        //點小圖看大圖
+        function showLarge(e){
+          let small = e.target;
+          document.getElementById("largeImg").src = small.src;
+        }
+        
+        function init(){
+            let imgs = document.querySelectorAll("#smallPanel img");
+            for(let i=0; i<imgs.length; i++){
+                imgs[i].onclick = showLarge;
+            }
+        }
+        window.addEventListener("load", init, false);
+        //購物數量
         var num_plus = document.getElementById("num_plus");
         var num_minus = document.getElementById("num_minus");
         var input_num = document.getElementById("input_num");

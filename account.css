@@ -135,11 +135,11 @@ body{
 }
 #memberCard .card_body li:first-child{
     font-size: 1.2rem;
-    line-height: 2rem;
+    line-height: 2.4rem;
 }
 #memberCard .card_body li+li{
     font-size: 1rem;
-    line-height: 1.6rem;
+    line-height: 2rem;
 }
 #memberCard a, #center a{
     float: none;
@@ -163,13 +163,31 @@ th{
     font-weight: 700;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1023px) {
     body{
         background-blend-mode: multiply;
         background-color: #F0F3EA;
         padding-top: 120px;
+        padding-bottom: 50%;
     }
     .row{
         height: 100%;
+    }
+    .card{
+        width: 90%;
+        padding: 5%;
+    }
+    #center .card{
+        padding: 0;
+        width: 100%;
+    }
+    table{
+        width: 100%;
+    }
+    tr th{
+        font-size: 1rem;
+    }
+    .card_body input:last-child{
+        height: 5vh;
     }
 }

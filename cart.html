@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>貓體工學| 購物車</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="navbar.css">
+    
 </head>
 <body>
     <header>
@@ -141,10 +142,10 @@
                     </li>
                     <li>
                         <p>信用卡卡號</p>
-                        <input type="text" placeholder="0000" maxlength="4">
-                        <input type="text" placeholder="0000" maxlength="4">
-                        <input type="text" placeholder="0000" maxlength="4">
-                        <input type="text" placeholder="0000" maxlength="4">
+                        <input type="text" name="N1" maxlength="4" size="4" placeholder="0000" onKeyUp="next(this)">-  
+                    	<input type="text" name="N2" maxlength="4" size="4" placeholder="0000" onKeyUp="next(this)">-  
+                    	<input type="text" name="N3" maxlength="4" size="4" placeholder="0000" onKeyUp="next(this)">-  
+                    	<input type="text" name="N4" maxlength="4" size="4" placeholder="0000" onKeyUp="next(this)">
                     </li>
                     <li>
                         <p>有效日期</p>
@@ -163,6 +164,7 @@
     </main>
     
     <script>
+        //數量
         var num_plus = document.getElementById("num_plus");
         var num_minus = document.getElementById("num_minus");
         var input_num = document.getElementById("input_num");
@@ -181,6 +183,18 @@
                 input_num.value = parseInt(input_num.value) - 1;
             }
         }
+        //信用卡卡號自動換格
+        function next(obj) {  
+	    if (obj.value.length == obj.maxLength) {  
+	        do {  
+	            obj = obj.nextSibling;  
+	        } while (obj.nodeName != "INPUT");  
+	        obj.focus();  
+	    }         
+	}  
+	 
+	document.forms[0].N1.focus();  
+
     </script>
 </body>
 </html>
