@@ -101,6 +101,7 @@ h1{
     width: 100%;
     z-index: 1;
 }
+
 .category ul li:hover{
     background-color: var(--color_yellow);
 }
@@ -125,12 +126,10 @@ main h2{
 main .col-12 a::after{
     content: '　';
     position: relative;
-    left: 0%;
     top: -20%;
     border-bottom-width: 4px;
     border-bottom-style: solid;
     border-color: var(--color_yellow);
-    color: var(--color_yellow);
 }
 main .wrap{
     width: 70%;
@@ -215,11 +214,15 @@ main .wrap{
     border-radius: 0 0 10px 10px;
 }
 @media  screen and (max-width: 1179px) {
+    .main_nav li:first-child {
+        background-color:  var(--color_greengray);
+        color: white;
+    }
     .top .img{
         background-position: top;
     }
     .category{
-        padding: 5vh 0;
+        padding: 10vh 0;
         width: 85%;
     }
     .category ul li:checked{
@@ -231,18 +234,15 @@ main .wrap{
     .category ol li:checked a{
         color: var(--color_yellow);
     }
-    main h2{
-        padding: 65px 0 10px 0;
-    }
-    .card .item{
-        height: 60%;
-    }
     .card .add{
-        margin-top: -8px;
+        display: none;
     }
     .card:focus{
         box-shadow: 0 0 10px #ababab;
         background-color: rgba(116, 125, 120, 0.6);
+    }
+    main .wrap {
+        width: 80%;
     }
    
 }
@@ -255,5 +255,21 @@ main .wrap{
     }
     .top .txt{
         padding: 3vw 5vw;
+    }
+    main .wrap {
+        width: 100%;
+    }
+    main h2{
+        padding: 45px 0 20px 0;
+    }
+    main .col-12 a h2::before {
+    content: '　';
+    font-size: 1.2rem;
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-color: var(--color_yellow);
+    }
+    main .col-12 a::after {
+        border-bottom-style: none;
     }
 }

@@ -41,7 +41,7 @@ body::-webkit-scrollbar-thumb:hover{
 }
 @media screen and (max-width: 1199px){
     html{
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 /* navbar */
@@ -107,12 +107,12 @@ header label img{
     nav{
         display: none;
         position: absolute;
-        background-color: rgba(230, 235, 233, .8);
-        backdrop-filter: blur(6px);
+        background-color: rgba(230, 235, 233, .95);
+        backdrop-filter: blur(4px);
         width: 100vw;
         height: 60vh;
         top: 100%;
-        animation: navopen 1s ease-out;
+        animation: navopen .3s ease-out;
     }
     @keyframes navopen{
         0%{
@@ -169,7 +169,6 @@ header label img{
     }
     .navbar .main_nav_icon a{
        display: flex;
-       border-bottom: solid 5px var(--color_greengray);
        width: fit-content;
        padding: 5px 0;
     }
@@ -261,4 +260,16 @@ footer a:hover{
     color: var(--color_gray);
     line-height: 1.2rem;
     font-size: .8rem;
+}
+@media screen and (max-width: 1199px) {
+    .footer_nav .row .col:not(:first-child){
+        display: none;
+    }
+    .footer_nav .row .col:first-child{
+        width: 100%;
+        text-align: center;
+    }
+    .footer_icon{
+        justify-content: center;
+    }
 }

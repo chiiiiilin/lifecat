@@ -12,17 +12,17 @@ h2{
     font-size: 2.4rem;
 }
 h3{
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     line-height: 2;
 }
 .top h1:nth-child(1){
     color: var(--color_greengray);
     transform: translate(15%, -120%);
-    animation: opacity 1.5s linear;
+    animation: opacity 1s linear;
 }
 .top h1:nth-child(2){
     transform: translate(80%, 600%);
-    animation: opacity 1.5s linear;
+    animation: opacity 1s linear;
 }
 .top .background{
     width: 80%;
@@ -30,7 +30,7 @@ h3{
     margin-top: 20%;
     background-color: var(--color_greengray);
     position: relative;
-    animation: backgroundmove 2s ease-out;
+    animation: backgroundmove 1.5s ease-out;
 }
 @keyframes backgroundmove{
     0%{width: 0%;}
@@ -44,7 +44,7 @@ h3{
     bottom:-30%;
     left: 60%;
     box-shadow: 4px 4px 10px #818181;
-    animation: opacity 3s linear;
+    animation: opacity 1.5s linear;
 }
 @keyframes opacity{
     0%{opacity: 0%;}
@@ -55,6 +55,7 @@ h3{
     display: flex;
     margin-left: 30%;
     margin-top: 20px;
+    width: fit-content;
 }
 @keyframes arraymove{
     0%{height: 0vmin;}
@@ -106,6 +107,7 @@ h3{
     width: 80%;
     display: flex;
     align-items: center;
+    font-size: 1.2rem;
 }
 .info a:hover{
     color:rgba(0, 0, 0, 0.9);
@@ -126,7 +128,6 @@ h3{
 }
 .introduce{
     width: 100%;
-    margin-top: 100px;
 }
 .introduce .img{
     width: 70%;
@@ -177,34 +178,83 @@ h3{
     line-height: 2;
     font-family: 'Noto Serif TC', serif;
 }
-@media  screen and (max-width: 1023px) {
-    .top h1{
-        font-size: 3vmin;
+@media  screen and (max-width: 1199px) {
+    body{
+        overflow-x: hidden;
     }
-    .background>img{
-        width: 30vw;
-        bottom: 20%;
-        left: 50%;
+    .main_nav li:nth-child(2){
+        background-color:  var(--color_greengray);
+        color: white;
     }
-    .top h1:nth-child(2){
-        transform: translate(80%, 650%);
-    }
+    
  }
- @media screen and (max-width: 779px){
+ @media screen and (max-width: 767px){
     body{
         padding-top: 0;
     }
     .top .background{
-        height: 100px;
-        margin-top: 50%;
+        height: 10%;
+        margin-top: 70%;
+    }
+    .top h1{
+        font-size: 5vmin;
+    }
+    .background>img{
+        width: 50vw;
+        bottom: 20%;
+        left: 50%;
+    }
+    .top h1:nth-child(1){
+        writing-mode: vertical-rl;
+        position: relative;
+        padding-left: 25%;
+        transform: translate(0, -100%);
     }
     .top h1:nth-child(2){
-        transform: translate(70%, 800%);
+        transform: translate(80%, 650%);
+    }
+    .top a {
+        margin-left: 20%;
+    }
+    .stores{
+        width: 100%;
+    }
+    .storespictures{
+        width: 100%;
+    }
+    .storesinfo{
+        padding: 5%;
+    }
+    .place .info:first-child a{
+        color:rgba(0, 0, 0, 0.9);
+        font-weight: 500;
+    }
+    .top h1:nth-child(2){
+        transform: translate(65%, 150%);
     }
     .top a p{
         letter-spacing: 5px;
     }
     .top a img{
         height: 25vmin;
+    }
+    .introduce .row .col:first-child{
+        order: 1;
+    }
+    .introduce .img{
+        width: 100%;
+    }
+    .introduce .txt p {
+        margin-top: 0;
+        padding: 0;
+    }
+    .card{
+        width: 90%;
+        height: 45vh;
+        padding: 10px;
+    }
+    .card .img{
+        width: 40%;
+        padding: 5%;
     }
  }
