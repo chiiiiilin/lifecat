@@ -234,8 +234,8 @@ main .wrap{
     .category ol li:checked a{
         color: var(--color_yellow);
     }
-    .card .add{
-        display: none;
+    .card{
+        height: 28vh;
     }
     .card:focus{
         box-shadow: 0 0 10px #ababab;

@@ -113,8 +113,6 @@ header label img{
         width: 100vw;
         height: 60vh;
         top: 100%;
-        /* animation: navopen .3s ease-out; */
-        /* animation: navclose .3s ease-out; */
     }
     @keyframes navopen{
         0%{
