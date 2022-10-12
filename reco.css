@@ -3,7 +3,6 @@ h1{
     font-size: 6vmin;
     color: white;
 }
-
 .main_nav li:nth-child(3) a{
     border-bottom: solid 9px var(--color_greengray);
 }
@@ -98,8 +97,6 @@ main .riri>div{
     padding-top: 10%;
 }
 .riri>div{
-    height: 50%;
-    width: 80%;
     background-color: var(--color_pink);
     margin-left: 20%;
     margin-top: 10%;
@@ -107,12 +104,16 @@ main .riri>div{
 .riri .img{
     position: absolute;
     bottom: 0;
-    width: 20%;
+    left: 0;
+    width: 40%;
+    height: 150%;
 
 }
 .img img{
     object-fit: cover;
     filter: drop-shadow(2px 2px 4px rgba(26, 25, 25, 0.3));
+    width: 100%;
+    height: 100%;
 }
 .riri .txt{
     width: 55%;
@@ -121,7 +122,7 @@ main .riri>div{
 }
 
 .riri h2{
-    font-size: 4.2rem;
+    font-size: 5vmin;
     margin-top: -10%;
     line-height: 1.2;
 }
@@ -136,12 +137,12 @@ main .riri>div{
 }
 
 strong{
-    font-size: 1.4rem;
+    font-size: 3vmin;
     font-weight: 500; 
     margin-top: 5%;
     line-height: 1.4;
     letter-spacing: .5px;
-
+    display: inline-block;
 }
 .photowall{
     width: 100%;
@@ -222,14 +223,12 @@ strong{
     font-size: 1.6rem;
     margin-bottom: 5%;
 }
-.reco h3::after{
+.reco h3::before{
     content: '　';
-    position: relative;
-    left: -7%;
-    border-bottom-width: 4px;
-    border-bottom-style: solid;
+    border-left-width: 4px;
+    border-left-style: solid;
     border-color: var(--color_yellow);
-    color: var(--color_yellow);
+    font-size: 1.2rem;
 }
 
 .item .card{
@@ -321,6 +320,10 @@ strong{
     .top .img{
         background-position: top;
     }
+    .main_nav li:nth-child(3) a {
+        background-color:var(--color_greengray);
+        color: white;
+    }
     .category{
         padding: 5vh 0;
         width: 100%;
@@ -339,5 +342,80 @@ strong{
     }
     .top .txt{
         padding: 3vw 5vw;
+    }
+    .category{
+       flex-direction: column;
+       align-items: center;
+    }
+    .category li{
+        width: 50%;
+        margin: 5px 2%;
+    }
+    .riri>div{
+        margin-left: 0;
+        margin-top: 50%;
+        height: 10vh
+    }
+    .riri .img{
+        width: 60%;
+        height: 500%;
+    }
+    .riri .txt {
+        width: 100%;
+        margin: 0;
+        margin-left: 0;
+    }
+    .riri h2{
+        margin-left: 40%;
+    }
+    strong{
+        margin-left: 40%;
+    }
+    .riri .txt div{
+        margin-left: 0;
+        margin: 15px;
+    }
+    .riri .txt div p:first-of-type{
+        margin-top: 10%;
+    }
+    .photowall{
+        margin-top: 70%;
+    }
+    .photowall .wrap{
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .photowall .wrap div{
+        margin: 10px 0;
+    }
+    .wrap div:nth-child(1){
+        height: 60%;
+    }
+    .wrap div:nth-child(2){
+        height: 100%;
+        transform: translate(25%, 0);
+    }
+    .wrap div:nth-child(3){
+        width: 50%;
+        transform: translate(0, 0);
+    }
+    .wrap div:nth-child(4){
+        width: 100%;
+        transform: translate(10%, 0);
+    }
+    .photowall>div:nth-child(2) {
+        width: 100%;
+        margin-top: 5%;
+    }
+    .reco{
+        margin-top: 50%;
+    }
+    .more p{
+        display:none;
+    }
+    .more a{
+        display: none;
     }
 }

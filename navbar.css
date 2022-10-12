@@ -19,6 +19,7 @@ html {
 body{
     color: var(--color_gray);
     font-family: "Noto Sans TC" , serif;
+    overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, nav, ul, th{
     font-family: 'Noto Serif TC', serif;
@@ -112,7 +113,8 @@ header label img{
         width: 100vw;
         height: 60vh;
         top: 100%;
-        animation: navopen .3s ease-out;
+        /* animation: navopen .3s ease-out; */
+        /* animation: navclose .3s ease-out; */
     }
     @keyframes navopen{
         0%{
@@ -128,8 +130,13 @@ header label img{
             opacity: 1;
         }
     }
+    input:not(:checked)~nav{
+        animation-direction: alternate-reverse;
+        
+    }
     input:checked ~ nav{
         display: block;
+        animation: navopen .3s ease-out;
     }
     header label{
         display: block;

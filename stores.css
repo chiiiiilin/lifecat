@@ -87,12 +87,16 @@ h3{
 }
 .storespictures .img{
     box-shadow: 2px 2px 4px rgba(158, 158, 158, 0.3);
+    width: 100%;
+}
+#smallPanel img{
     cursor: pointer;
 }
-.storespictures .img:hover{
+#smallPanel img:hover{
     box-shadow: 2px 2px 4px rgba(26, 25, 25, 0.3);
 }
-.storespictures .img{
+#largeImg{
+    height: 60vh;
     width: 100%;
 }
 .storespictures .row-cols-4{

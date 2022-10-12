@@ -145,7 +145,11 @@ h1, h2{
     display: block;
 }
 .paymentcard li+li+li input{
-    width: 10%;
+    width: 15%;
+    margin: 0;
+}
+.paymentcard li+li+li input:first-of-type{
+    margin-left: 15px;
 }
 .infocard p, .paymentcard p{
     margin: 0 15px;

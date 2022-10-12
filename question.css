@@ -1,6 +1,3 @@
-body{
-    overflow-x: hidden;
-}
 .main_nav li:last-child a{
     border-bottom: solid 9px var(--color_greengray);
 }
