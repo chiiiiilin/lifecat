@@ -154,7 +154,6 @@ main .container{
     max-width: 1200px;
     margin: auto;
     text-align: center;
-    position: relative;
     margin-top: -100%;
     transform: translate(0, 100%);
 }
@@ -195,7 +194,7 @@ main .card{
 .more{
   display: flex;
   width: 12%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-left: 85%;
 }
 .more p{
@@ -217,22 +216,27 @@ main .card{
 }
  .idea{
     margin-top: 60%;
-    background-image: url(pictures/bgimage3.svg);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: 0 100%;
  }
  .idea .txt{
-    margin-left: 60%;
-
+    background-image: url(pictures/bgimage3.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    padding: 10% 0;
+    transform: translate(0,-50%);
  }
- .idea .txt p{
+ .idea .txt>p{
     font-size: 1.2rem;
     line-height: 1.6;
     margin: 10px 10% 10px 0;
+    margin-left: 60%;
     font-family: 'Noto Serif TC', serif;
  }
- .idea img:not(:nth-child(4)){
+ .ideaimg{
+    width: 100%;
+    z-index: 1;
+    position: relative;
+ }
+ .ideaimg img:not(:nth-child(4)){
     width: 10%;
  }
  .idea img:nth-of-type(1){
@@ -257,9 +261,6 @@ main .card{
     transform: translate(25%, -15%);
     filter:drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
  }
- .idea .more{
-  width: 10%;
- }
  .design {
     text-align: center;
     margin: 10% 0;
@@ -278,7 +279,6 @@ main .card{
     margin: 20px 0;
     overflow: hidden;
     position: relative;
-    width: 100%;
   }
 
   .slider .slide-track {
@@ -481,5 +481,48 @@ main .card{
     }
     .top .card:hover p{
       opacity: 0;
+    }
+    .space .txt strong {
+      writing-mode: lr;
+      margin-top: 0;
+      letter-spacing: 0;
+      font-weight: 700;
+  }
+    main .container{
+      transform: translate(0, 60%);
+    }
+    .more{
+      width: 30%;
+      margin: 8% auto;
+    }
+    .idea{
+      margin-top: 100%;
+    }
+    .idea img:nth-child(4) {
+      width: 20%;
+    }
+    .idea .txt{
+      background-size: 150%;
+    }
+    .idea .txt>p{
+      margin-left: 5%;
+    }
+    .ideaimg img:not(:nth-child(4)){
+      width: 15%;
+   }
+    .idea img:nth-child(4){
+      width: 60%;
+    }
+    .design{
+      margin-top: -30%;
+    }
+    .design p{
+      letter-spacing: 0;
+    }
+    .slider{
+      height: 40vh;
+    }
+    .slider::before, .slider::after {
+      width: 40px;
     }
   }
