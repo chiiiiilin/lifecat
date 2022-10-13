@@ -328,6 +328,9 @@ p{
     .info .txt {
         margin-top: 0;
     }
+    .payment{
+        width: 90%;
+    }
     .payment .title {
         margin-left: 0;
     }

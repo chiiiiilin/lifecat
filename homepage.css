@@ -34,7 +34,7 @@ body{
     position:relative;
     display: flex;
     overflow-x: scroll;
-    padding-top: 15%;
+    padding-top: 25%;
 }
 .wrap::-webkit-scrollbar{
     height: 8px;
@@ -85,6 +85,7 @@ body{
     max-width: 1200px;
     margin: auto;
     margin-top: 10%;
+    display: flex;
 }
 .space .img{
     width: 40%;
@@ -95,8 +96,6 @@ body{
     background-repeat: no-repeat;
 }
 .space .txt{
-    margin-left: 10%;
-    margin-top: 10%;
     font-size: 1.4rem;
     width: 50%;
 }
@@ -427,32 +426,60 @@ main .card{
   }@media screen and (max-width: 779px){
     .top{
       background-size: contain;
-      height: 50vh;
-      flex-direction: column;
+      height: 30vh;
       background-position: top;
       z-index: -1;
+      justify-content: space-between;
+      /* background-attachment: unset; */
     }
     .top .txt{
-      margin-left: 6%;
-      margin-top: 40%;
+      margin-left: 5%;
+      margin-top: 100%;
+      font-weight: 700;
     }
     .top h1{
-      /* font-size: 5vmin;
+      /* display: none; */
       writing-mode: lr;
-      letter-spacing: 5px; */
-      display: none;
+      letter-spacing: 5px;
+      z-index: 1;
     }
     .top p{
       font-size: 20vmin;
-      letter-spacing: 0.3rem;
-      color: var(--color_gray);
-      top: 30%;
+      top: 40%;
       left: 0;
       margin-left: 5%;
       width: 25%;
+      letter-spacing: 1.2rem;
+      color: var(--color_green);
       font-weight: 900;
+      text-shadow: 1px 1px 1px rgb(212, 211, 211);
     }
     .wrap{
-      display: none;
+      flex-direction: column;
+      width: 40%;
+      height: 45vh;
+      margin-top: 25%;
+    }
+    .space{
+      height: 80vh;
+      margin-top: 100%;
+      flex-direction: column;
+    }
+    .space .img{
+      background-attachment: unset;
+      width: 100%;
+      height: 550px;
+      background-size: cover;
+    }
+    .space .txt{
+      width: 100%;
+      text-align: center;
+    }
+    .top .wrap .card {
+        width: auto;
+        height: 100px;
+    }
+    .top .card:hover p{
+      opacity: 0;
     }
   }
