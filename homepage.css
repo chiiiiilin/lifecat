@@ -520,7 +520,7 @@ main .card{
       letter-spacing: 0;
     }
     .slider{
-      height: 40vh;
+      /* height: 40vh; */
     }
     .slider::before, .slider::after {
       width: 40px;
