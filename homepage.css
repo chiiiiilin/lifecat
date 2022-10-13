@@ -204,12 +204,18 @@ main .card{
 .more_go span{
   background-color: var(--color_yellow);
   color: white;
-  padding: 80%;
+  padding: 10px;
   border-radius: 50%;
+  transition: .5s;
 }
 .more:hover .more_go{
-  transform: translate(100%, 0);
+  transform: translate(30%, 0);
   transition: .3s;
+}
+.more:hover .more_go span{
+  background-color: transparent;
+  border: solid 2px var(--color_yellow);
+  color: var(--color_yellow);
 }
 .more:hover p{
   color: var(--color_yellow);
@@ -518,9 +524,6 @@ main .card{
     }
     .design p{
       letter-spacing: 0;
-    }
-    .slider{
-      /* height: 40vh; */
     }
     .slider::before, .slider::after {
       width: 40px;
