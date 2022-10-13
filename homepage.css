@@ -1,5 +1,5 @@
 body{
-    padding-top: 120px;
+    padding-top: 60px;
 }
 .top{
     display: flex;
@@ -9,6 +9,7 @@ body{
     background-repeat: no-repeat;
     padding: 5% 0;
     background-attachment: fixed;
+    border-radius: 20px 20px 300px 300px;
 }
 .top .txt{
   margin-left: 15%;
@@ -31,11 +32,9 @@ body{
 }
 .wrap{
     position:relative;
-    top: 65%;
-    left: 50px;
-    width: 55%;
     display: flex;
     overflow-x: scroll;
+    padding-top: 15%;
 }
 .wrap::-webkit-scrollbar{
     height: 8px;
@@ -195,43 +194,28 @@ main .card{
     font-weight: 900;
 }
 .more{
-    text-align: right;
-    display: flex;
-    justify-content: flex-end;
-    margin-left: 88%;
- }
- .more p{
-     font-size: 1.2rem;
-     font-weight: 500;
-     display: inline-block;
-     position: absolute; 
-     transform: translate(-150%, 55%);
-     z-index: 1;
- }
- .more a{
-     font-weight: 500;
-     display: inline-block;
-     font-size: 1.2rem;
-     transition: color,.5s;
- }
- .more_go{
-     background-color: var(--color_yellow);
-     border-radius: 50%;
-     padding: 50%;
-     width: 100%;
-     box-shadow: 2px 2px 4px rgba(26, 25, 25, 0.3);
-     transition: width,1s;
-     margin: 0 0 0 auto;
-     float: right;
-     
- }
- .more:hover .more_go{
-     width: 980%;
-     border-radius: 50px;
- }
- .more:hover a{
-    color: white;
- }
+  display: flex;
+  width: 12%;
+  justify-content: space-between;
+  margin-left: 85%;
+}
+.more p{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.more_go span{
+  background-color: var(--color_yellow);
+  color: white;
+  padding: 80%;
+  border-radius: 50%;
+}
+.more:hover .more_go{
+  transform: translate(100%, 0);
+  transition: .3s;
+}
+.more:hover p{
+  color: var(--color_yellow);
+}
  .idea{
     margin-top: 60%;
     background-image: url(pictures/bgimage3.svg);
@@ -275,7 +259,7 @@ main .card{
     filter:drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
  }
  .idea .more{
-    padding: 15px 0;
+  width: 10%;
  }
  .design {
     text-align: center;
@@ -437,4 +421,38 @@ main .card{
   }
   .reco_cats .img:hover .txt{
     opacity: .9;
+  }
+  @media screen and (max-width: 1179px){
+
+  }@media screen and (max-width: 779px){
+    .top{
+      background-size: contain;
+      height: 50vh;
+      flex-direction: column;
+      background-position: top;
+      z-index: -1;
+    }
+    .top .txt{
+      margin-left: 6%;
+      margin-top: 40%;
+    }
+    .top h1{
+      /* font-size: 5vmin;
+      writing-mode: lr;
+      letter-spacing: 5px; */
+      display: none;
+    }
+    .top p{
+      font-size: 20vmin;
+      letter-spacing: 0.3rem;
+      color: var(--color_gray);
+      top: 30%;
+      left: 0;
+      margin-left: 5%;
+      width: 25%;
+      font-weight: 900;
+    }
+    .wrap{
+      display: none;
+    }
   }

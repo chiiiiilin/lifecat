@@ -19,7 +19,7 @@
     box-shadow: 2px 2px 4px rgba(26, 25, 25, 0.3);
 }
 .itempictures .col-12 .img{
-    height: 25vh;
+    height: 55vh;
     width: 100%;
 }
 .itempictures .row-cols-4{
@@ -309,14 +309,10 @@ p{
         background-color: var(--color_greengray);
         color: white;
     }
-    
 }
 @media screen and (max-width: 779px){
     .itempictures{
         width: 100%;
-    }
-    .itempictures .col-12 .img {
-        height: 55vh;
     }
     .iteminfo{
         width: 100%;
