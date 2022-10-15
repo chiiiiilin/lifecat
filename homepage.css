@@ -193,8 +193,8 @@ main .card{
 }
 .more{
   display: flex;
-  width: 12%;
-  justify-content: space-evenly;
+  width: 15%;
+  justify-content: flex-start;
   margin-left: 85%;
 }
 .more p{
@@ -207,6 +207,7 @@ main .card{
   padding: 10px;
   border-radius: 50%;
   transition: .5s;
+  margin: 10px;
 }
 .more:hover .more_go{
   transform: translate(30%, 0);
@@ -369,7 +370,7 @@ main .card{
   }
   .reco_cats .img{
     width: 33%;
-    height: 550px;
+    height: 80vh;
     margin: 0.333333%;
     background-size: 100%;
     filter: grayscale(80%);
@@ -378,6 +379,7 @@ main .card{
     flex-direction: column;
     transition: .5s;
     position: relative;
+    background-size: cover;
   }
   .reco_cats .img:hover{
     filter: grayscale(0);
@@ -428,8 +430,6 @@ main .card{
     opacity: .9;
   }
   @media screen and (max-width: 1179px){
-
-  }@media screen and (max-width: 779px){
     .top{
       background-size: contain;
       height: 30vh;
@@ -498,8 +498,9 @@ main .card{
       transform: translate(0, 60%);
     }
     .more{
-      width: 30%;
+      width: 20%;
       margin: 8% auto;
+      justify-content: space-evenly;
     }
     .idea{
       margin-top: 100%;
@@ -527,5 +528,38 @@ main .card{
     }
     .slider::before, .slider::after {
       width: 40px;
+    }
+    .col-8{
+      padding-top: 40%;
+    }
+    .reco .bgimg{
+      height: 70vh;
+    }
+    .reco_cats .img{
+      height: 30vh;
+    }
+  }@media screen and (max-width: 779px){
+    .more{
+      width: 40%;
+    }
+    .col-8{
+      padding-top: 30%;
+    }
+    h2{
+      margin: 20px 0;
+    }
+    .reco .txt .col-8 p{
+      font-size: 1rem;
+      line-height: 1.2;
+      margin: 0;
+    }
+    .reco .bgimg {
+      height: 45vh;
+  }
+    .reco_cats .img{
+      height: 20vh;
+    }
+    .reco_cats h3{
+      font-size: 1rem;
     }
   }
