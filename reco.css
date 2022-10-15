@@ -280,24 +280,30 @@ strong{
 }
 .more{
     display: flex;
-    width: 12%;
-    justify-content: space-between;
+    width: 15%;
+    justify-content: flex-start;
     margin-left: 85%;
   }
   .more p{
     font-size: 1.2rem;
     font-weight: 500;
-    transition: 1s;
   }
   .more_go span{
     background-color: var(--color_yellow);
     color: white;
-    padding: 80%;
+    padding: 10px;
     border-radius: 50%;
+    transition: .5s;
+    margin: 10px;
   }
   .more:hover .more_go{
-    transform: translate(100%, 0);
+    transform: translate(30%, 0);
     transition: .3s;
+  }
+  .more:hover .more_go span{
+    background-color: transparent;
+    border: solid 2px var(--color_yellow);
+    color: var(--color_yellow);
   }
   .more:hover p{
     color: var(--color_yellow);

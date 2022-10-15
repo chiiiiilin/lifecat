@@ -185,7 +185,7 @@ main .card{
     font-size: 1.2rem;
     font-weight: 500;
 }
-.card .txt p:nth-child(3){
+.card .txt p:last-child{
     font-size: 1.6rem;
     color: var(--color_yellow);
     line-height: 1.6;
@@ -554,7 +554,7 @@ main .card{
       margin: 0;
     }
     .reco .bgimg {
-      height: 45vh;
+      height: 50vh;
   }
     .reco_cats .img{
       height: 20vh;
