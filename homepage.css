@@ -1,6 +1,8 @@
+html{
+  overflow-x: hidden;
+}
 body{
     padding-top: 60px;
-    overflow-x: hidden;
 }
 .top{
     display: flex;
