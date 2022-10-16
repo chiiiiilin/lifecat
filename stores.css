@@ -15,6 +15,9 @@ h3{
     font-size: 1.6rem;
     line-height: 2;
 }
+.top, .stores{
+    overflow-x: hidden;
+}
 .top h1:nth-child(1){
     color: var(--color_greengray);
     transform: translate(15%, -120%);

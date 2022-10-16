@@ -499,7 +499,8 @@ main .card{
     }
     .more{
       width: 20%;
-      margin: 8% auto;
+      margin: 8%;
+      margin-left: 40%;
       justify-content: space-evenly;
     }
     .idea{

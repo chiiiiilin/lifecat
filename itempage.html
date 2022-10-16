@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="itempage.css">
     <link rel="stylesheet" href="navbar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //加入購物車
+            $(".buybtn").click(function(){
+                $(this).val("已加入購物車~(=^‥^)/").addClass(".buybtn");
+            })
+            //字數剩餘提示
+            let textMax = $("#talk").attr("maxlength")
+            $("#feedback").html(`剩餘 <span">${textMax}</span> 字`)
+            $("#talk").keyup(function(){
+                let textLength = $(this).val().length
+                $("#feedback").html(`剩餘<span>${textMax - textLength}</span>字`)
+            })
+        })
+          
+    </script>
 </head>
 <body>
     <header>
@@ -107,7 +124,7 @@
                                         NT$ <span>2200</span>  <span>2000</span>
                                     </p>
                                 </div>
-                                <input type="button" value="加入購物車">
+                                <input type="button" class="buybtn" value="加入購物車">
                             </div>
                         </div>
                     </div>
@@ -254,7 +271,10 @@
                     </div>
                 </div>
                 <div class="saySomething">
-                    <input type="text" placeholder="我也有話想說~!">
+                    <div>
+                        <textarea id="talk" rows="6" cols="30" maxlength="200"></textarea>
+                        <p id="feedback"></p>
+                    </div>
                     <input type="submit" value="送出">
                 </div>
             </div>

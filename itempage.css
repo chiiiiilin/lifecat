@@ -11,11 +11,10 @@
     width: 80%;
     margin: auto;
 }
-.itempictures .img{
-    box-shadow: 2px 2px 4px rgba(158, 158, 158, 0.3);
+.itempictures img:not(#largeImg){
     cursor: pointer;
 }
-.itempictures .img:hover{
+.itempictures img:not(#largeImg):hover{
     box-shadow: 2px 2px 4px rgba(26, 25, 25, 0.3);
 }
 .itempictures .col-12 .img{
@@ -119,7 +118,7 @@ p{
 .add span:nth-of-type(2){
     color: var(--color_yellow);
 }
-.iteminfo>input{
+.buybtn{
     margin-top: 5%;
     background-color: var(--color_yellow);
     border-radius: 5px;
@@ -129,15 +128,15 @@ p{
     color: white;
     font-size: 1.2rem;
 }
-.iteminfo>input:hover{
+.buybtn:hover{
     background-color: rgba(0,0,0,0);
     border: solid 1px var(--color_yellow);
     color: var(--color_yellow);
     cursor: pointer;
 }
-.iteminfo>input:active{
+/* .buybtn:active{
     box-shadow: inset 2px 2px 2px var(--color_yellow);
-}
+} */
 .category{
     display: flex;
     /* justify-content: space-evenly; */
@@ -268,27 +267,24 @@ p{
     margin-top: 5%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
-.saySomething input:first-child{
+.saySomething div{
     width: 80%;
-    height: 80px;
+}
+.saySomething textarea{
+    width: 100%;
     background-color: inherit;
     border: solid 3px var(--color_brightyellow);
     outline: none;
     letter-spacing: 2px;
     transition: color, .5s;
-    margin: 0 5%;
     box-shadow: 2px 2px 2px var(--color_yellow);
 
 }
-.saySomething input:first-child:hover{
-    background-color: var(--color_brightyellow);
-    
-}
-.saySomething input:last-child{
+.saySomething input{
     height: 40px;
     background-color: var(--color_yellow);
-    outline: none;
     border: solid .5px var(--color_yellow);
     border-radius: 5px;
     letter-spacing: 2px;
@@ -297,11 +293,11 @@ p{
     font-weight: 500;
     cursor: pointer;
 }
-.saySomething input:last-child:hover{
+.saySomething input:hover{
     color: var(--color_yellow);
     background-color: transparent;
 }
-.saySomething input:last-child:active{
+.saySomething input:active{
     box-shadow: inset 2px 2px 2px var(--color_yellow);
 }
 @media  screen and (max-width: 1179px) {
@@ -351,5 +347,8 @@ p{
     }
     .saySomething{
         width: 90%;
+    }
+    .saySomething div{
+        width: 60%;
     }
 }

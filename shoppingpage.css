@@ -180,11 +180,11 @@ main .wrap{
 .card:hover .txt{
     visibility: hidden;
 }
-.card:hover .add{
+.card:hover .buybtn{
     opacity: 1;
     color: white;
 }
-.card .add:hover{
+.card .buybtn:hover{
     background-color: var(--color_yellow);
 }
 .card .txt{
@@ -204,14 +204,18 @@ main .wrap{
     line-height: 1.6;
     font-weight: 900;
 }
-.card .add{
+.card .buybtn{
     padding: 5%;
-    margin-top: -15%;
+    width: 100%;
+    transform: translate(0, -100%);
+    border: none;
+    font-size: 1.2rem;
     background-color: rgb(247, 192, 110);
     color: inherit;
     opacity: 0;
     transition: opacity .5s, color, .2s;
     border-radius: 0 0 10px 10px;
+    cursor: pointer;
 }
 @media  screen and (max-width: 1023px) {
     .main_nav li:first-child {

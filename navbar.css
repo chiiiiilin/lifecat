@@ -12,7 +12,7 @@
     background-color:var(--color_brightyellow);
   }
 html {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     font-size: 15px;
     scroll-behavior: smooth;
 }
