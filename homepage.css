@@ -1,5 +1,6 @@
 body{
     padding-top: 60px;
+    overflow-x: hidden;
 }
 .top{
     display: flex;
@@ -544,7 +545,7 @@ main .card{
       width: 40%;
     }
     .col-8{
-      padding-top: 30%;
+      padding-top: 25%;
     }
     h2{
       margin: 20px 0;
