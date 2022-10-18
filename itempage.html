@@ -12,6 +12,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
+
+            //數量加減
+            let num = $("#num").val();
+            $("#num_minus").click(function(){
+                if(num <= 1){
+                    num = 1;
+                }else{
+                    num = parseInt(num) - 1;
+                }
+                $("#num").val(num);
+            })
+            $("#num_plus").click(function(){
+                num = parseInt(num) + 1;
+                $("#num").val(num);
+            });
+
             //加入購物車
             $(".buybtn").click(function(){
                 $(this).val("已加入購物車~(=^‥^)/").addClass(".buybtn");
@@ -106,23 +122,24 @@
                                     <p>NT$5500</p>
                                     <p>數量</p>
                                     <div class="amout">
-                                        <span id="num_minus" class="num_minus">一</span>
-                                        <input type="text" class="input_num" id="input_num" value="1" min="1">
-                                        <span id="num_plus" class="num_plus">十</span>
+                                        <span class="num_minus" id="num_minus">一</span>
+                                        <input type="text" class="num" id="num" value="1">
+                                        <span class="num_plus" id= "num_plus">十</span>
                                     </div>
                                 </div>
                                 <p>優惠加購</p>
                                 <div class="add">
-                                    <label for="checkbox">
+                                    <label>
                                         <input type="checkbox">
+                                        <div class="img">
+                                            <img src="pictures/item7.png" alt="加購星星跳台">
+                                        </div>
+                                        <p>
+                                            星星跳台(加購價限一個)<br>
+                                            NT$ <span>2200</span>  <span>2000</span>
+                                        </p>
                                     </label>
-                                    <div class="img">
-                                        <img src="pictures/item7.png" alt="加購星星跳台">
-                                    </div>
-                                    <p>
-                                        星星跳台(加購價限一個)<br>
-                                        NT$ <span>2200</span>  <span>2000</span>
-                                    </p>
+                                    
                                 </div>
                                 <input type="button" class="buybtn" value="加入購物車">
                             </div>
@@ -369,25 +386,6 @@
             }
         }
         window.addEventListener("load", init, false);
-        //購物數量
-        var num_plus = document.getElementById("num_plus");
-        var num_minus = document.getElementById("num_minus");
-        var input_num = document.getElementById("input_num");
-
-        num_plus.onclick = function() {
-
-            input_num.value = parseInt(input_num.value) + 1;
-        }
-
-        num_minus.onclick = function() {
-
-            if(input_num.value <= 1) {
-                input_num.value = 1;
-            } else {
-
-                input_num.value = parseInt(input_num.value) - 1;
-            }
-        }
     </script>
 </body>
 </html>

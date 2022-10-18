@@ -441,7 +441,7 @@ main .card{
       letter-spacing: 5px;
       z-index: 1;
     }
-    .top p{
+    .top p:not(.card p){
       font-size: 20vmin;
       top: 40%;
       left: 0;
@@ -477,8 +477,9 @@ main .card{
         width: auto;
         height: 100px;
     }
-    .top .card:hover p{
-      opacity: 0;
+    .top .card:active p{
+      opacity: 1;
+      margin-left: 0;
     }
     .space .txt strong {
       writing-mode: lr;
@@ -537,7 +538,7 @@ main .card{
     }
     .reco_cats .txt{
       width: 90%;
-      transform: translate(0, 150%);
+      transform: translate(0, 190%);
     }
   }@media screen and (max-width: 779px){
     .more{

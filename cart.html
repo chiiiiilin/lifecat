@@ -9,7 +9,55 @@
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="navbar.css">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            const setFee = () => {  //取得運費的值
+                fee = $(":checked").val();
+                $('#num_fee').text('NT$ ' + fee);
+                check()
+            }
+
+            $('input[name="fee"]')[0].checked = true;  //預設自取0元
+            setFee();
+
+            //數量加減
+            var num = $("#num").val();
+            var itemPrice = $('#itemprice').text();
+            var price = $('#num_price').text('NT$ '+ itemPrice);
+            var fee = $(":checked").val();
+            var totalPrice = $('#total_price').text('NT$' + itemPrice)
+
+
+            $('.fee').click(setFee)
+            
+            function check(){      //總計
+                var price = itemPrice * num;
+                $('#num_price').text('NT$ '+ price);
+
+                var totalPrice = price + parseInt(fee);
+                $('#total_price').text('NT$' + totalPrice);
+            }
+
+            $("#num_minus").click(function(){  //數量
+                if(num <= 1){
+                    num = 1;
+                }else{
+                    num = parseInt(num) - 1;
+                }
+                $('#num').val(num);
+                check();
+            })
+            $("#num_plus").click(function(){
+                num ++;
+                $('#num').val(num);
+                
+                check();
+            });
+        })
+          
+    </script>
 </head>
 <body>
     <header>
@@ -57,10 +105,10 @@
                             </div>
                             <div class="itemname"><a href="itempage.html">月亮跳台</a></div>
                         </li>
-                        <li class="itemprice">NT$5500</li>
+                        <li class="itemprice" id="itemprice">5500</li>
                         <li class="itemamout">
                             <span id="num_minus">-</span>
-                            <input type="text" class="input_num" id="input_num" value="1" min="1">
+                            <input type="text" class="num" id="num" value="1">
                             <span id="num_plus">+</span>
                         </li>
                         <li class="itemdel">
@@ -73,27 +121,28 @@
             </div>
             <div class="card_foot">
                 <div class="fee">
-                    <label><input type="radio" name="deliveryFee">台北概念店自取，運費 0 元</label>
-                    <label><input type="radio" name="deliveryFee">宅配，運費 120 元</label>
-                    <label><input type="radio" name="deliveryFee">宅配(加安裝)，運費 600 元</label>
+                    <label><input type="radio" name="fee" value="0">台北概念店自取，運費 0 元</label>
+                    <label><input type="radio" name="fee" value="120">宅配，運費 120 元</label>
+                    <label><input type="radio" name="fee" value="600">宅配(加安裝)，運費 600 元</label>
                 </div>
                 <div class="total">
                     <ul>
                         <li>
                             <p>小計</p>
-                            <p>NT$8500</p>
+                            <p id="num_price"></p>
                         </li>
                         <li>
                             <p>運費</p>
-                            <p>NT$120</p>
+                            <p id="num_fee"></p>
                         </li>
                         <li>
                             <p>總金額</p>
-                            <p>NT$8620</p>
+                            <p id="total_price"></p>
                         </li>
                     </ul>
                 </div>
             </div>
+            <input type="submit" value="確認">
         </section>
         
         <section class="card infocard">
@@ -164,25 +213,6 @@
     </main>
     
     <script>
-        //數量
-        var num_plus = document.getElementById("num_plus");
-        var num_minus = document.getElementById("num_minus");
-        var input_num = document.getElementById("input_num");
-
-        num_plus.onclick = function() {
-
-            input_num.value = parseInt(input_num.value) + 1;
-        }
-
-        num_minus.onclick = function() {
-
-            if(input_num.value <= 1) {
-                input_num.value = 1;
-            } else {
-
-                input_num.value = parseInt(input_num.value) - 1;
-            }
-        }
         //信用卡卡號自動換格
         function next(obj) {  
 	    if (obj.value.length == obj.maxLength) {  
@@ -192,9 +222,6 @@
 	        obj.focus();  
 	    }         
 	}  
-	 
-	document.forms[0].N1.focus();  
-
     </script>
 </body>
 </html>

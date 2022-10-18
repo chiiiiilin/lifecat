@@ -106,6 +106,7 @@ p{
 }
 .add label{
     margin-right: 10px;
+    display: flex;
 }
 .add .img{
     width: 15%;
