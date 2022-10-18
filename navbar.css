@@ -12,18 +12,25 @@
     background-color:var(--color_brightyellow);
   }
 html {
-    /* overflow-x: hidden; */
     font-size: 15px;
     scroll-behavior: smooth;
 }
 body{
     color: var(--color_gray);
-    font-family: "Noto Sans TC" , serif;
+    /* font-family: "Noto Sans TC" , serif; */
     overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, nav, ul, th{
     font-family: 'Noto Serif TC', serif;
 }
+input {
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    appearance: none;
+}
+.hover {
+    -webkit-touch-callout: none;        
+    }
 a{
     color: inherit;
     text-decoration: none;
@@ -72,8 +79,6 @@ body::-webkit-scrollbar-thumb:hover{
 header label{
     height: 100%;
     width: 30px;
-    /* margin-top: auto; */
-    /* margin-right: 50px; */
     float: right;
     display: none;
 }
@@ -127,10 +132,6 @@ header label img{
             height: 60vh;
             opacity: 1;
         }
-    }
-    input:not(:checked)~nav{
-        animation-direction: alternate-reverse;
-        
     }
     input:checked ~ nav{
         display: block;

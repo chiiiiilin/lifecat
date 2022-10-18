@@ -163,7 +163,7 @@ h3{
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(60px);
-    background-color: rgba(243, 243, 243, 0.75);
+    background-color: rgba(243, 243, 243, 0.9);
     border-radius: 10px;
     box-shadow: 0 0 10px #d9d9d9;
     padding: 5%;
