@@ -241,9 +241,18 @@ main .wrap{
     .card{
         height: 28vh;
     }
-    .card:focus{
-        box-shadow: 0 0 10px #ababab;
-        background-color: rgba(116, 125, 120, 0.6);
+    .card:active .item img:nth-child(1){
+        opacity: 0;
+    }
+    .card:active .item img:nth-child(2){
+        opacity: 1;
+    }
+    .card:active .txt{
+        visibility: hidden;
+    }
+    .card:active .buybtn{
+        opacity: 1;
+        color: white;
     }
     main .wrap {
         width: 80%;
