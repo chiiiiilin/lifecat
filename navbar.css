@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, nav, ul, th{
     src: local(Helvetica), local(Segoe UI);
     unicode-range: U+00-024F;
 }
-input[type="button"] {
+input[type="button"], input[type="submit"] {
     -webkit-appearance: none; 
     -moz-appearance: none;    
     appearance: none;
@@ -169,6 +169,9 @@ header label img{
         order: 1;
         margin-top: 10%;
     }
+    .main_nav li{
+        line-height: 80px;
+    }
     nav a{
         font-size: 4vmin;
     }
@@ -196,6 +199,11 @@ header label img{
     }
     
 }
+@media screen and (max-width: 779px){
+    .main_nav li{
+        line-height: 60px;
+    }
+}
 @media screen and (min-width: 1024px){
     .navbar nav{
         display: flex;
@@ -206,6 +214,9 @@ header label img{
     .navbar ul{
         display: flex;
         justify-content: space-evenly;
+    }
+    .main_nav li{
+        line-height: 60px;
     }
     .main_nav_icon img{
         height: 25px;

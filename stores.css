@@ -190,6 +190,9 @@ h3{
         background-color:  var(--color_greengray);
         color: white;
     }
+    #largeImg{
+        height: 20vh;
+    }
  }
  @media screen and (max-width: 767px){
     body{
@@ -224,6 +227,9 @@ h3{
     }
     .storespictures{
         width: 100%;
+    }
+    #largeImg{
+        height: 100%;
     }
     .storesinfo{
         padding: 5%;
