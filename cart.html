@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="navbar.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="all.js"></script>
     <script>
         $(document).ready(function(){
-
+            
+            //算錢
             const setFee = () => {  //取得運費的值
                 fee = $(":checked").val();
                 $('#num_fee').text('NT$ ' + fee);
@@ -22,30 +24,38 @@
             $('input[name="fee"]')[0].checked = true;  //預設自取0元
             setFee();
 
-            //數量加減
-            let num = $("#num").val();
-            let itemPrice = $('#itemprice').text();
-            let price = $('#num_price').text('NT$ '+ itemPrice);
-            let fee = $(":checked").val();
-            let totalPrice = $('#total_price').text('NT$' + itemPrice)
+           var num = $("#num").val();
+           var itemPrice = $('#itemprice').text();
+           var price = $('#num_price').text('NT$ '+ itemPrice);
+           var fee = $(":checked").val();
+           var discount = $("#discount").text();
+           var totalPrice = $('#total_price').text('NT$' + itemPrice)
 
 
-            $('.fee').click(setFee)
+            $('.fee').click(setFee);
             
             function check(){      //總計
-                let price = itemPrice * num;
+               var price = itemPrice * num;
                 $('#num_price').text('NT$ '+ price);
-
-                let totalPrice = price + parseInt(fee);
+                if(price >= 10000){
+                    var discount = -Math.abs(fee);
+                    
+                    $("#discount").text('NT$' + discount);
+                }else if (price < 10000){
+                    var discount = 0;
+                }
+               var totalPrice = price + parseInt(fee) + discount;
                 $('#total_price').text('NT$' + totalPrice);
             }
 
             $("#num_minus").click(function(){  //數量
                 if(num <= 1){
                     num = 1;
+                    discount = 0;
                 }else{
                     num = parseInt(num) - 1;
                 }
+                $('#discount').text("");
                 $('#num').val(num);
                 check();
             })
@@ -134,6 +144,10 @@
                         <li>
                             <p>運費</p>
                             <p id="num_fee"></p>
+                        </li>
+                        <li>
+                            <p>優惠</p>
+                            <p id="discount"></p>
                         </li>
                         <li>
                             <p>總金額</p>
