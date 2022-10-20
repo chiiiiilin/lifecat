@@ -144,8 +144,12 @@ h1, h2{
     margin: 15px 5px;
     display: block;
 }
-.paymentcard li+li+li input{
+.paymentcard input[name="cardnumber"],.paymentcard input[name="cardcvv"]{
     width: 15%;
+    margin: 0;
+}
+.paymentcard input[name="carddate"]{
+    width: 10%;
     margin: 0;
 }
 .paymentcard li+li+li input:first-of-type{

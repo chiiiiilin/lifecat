@@ -13,7 +13,7 @@
     <script src="all.js"></script>
     <script>
         $(document).ready(function(){
-            
+
             //算錢
             const setFee = () => {  //取得運費的值
                 fee = $(":checked").val();
@@ -21,7 +21,7 @@
                 check()
             }
 
-            $('input[name="fee"]')[0].checked = true;  //預設自取0元
+            $('input[name="fee"]')[1].checked = true;  //預設超取120元
             setFee();
 
            var num = $("#num").val();
@@ -64,6 +64,13 @@
                 $('#num').val(num);
                 
                 check();
+            });
+
+            //信用卡卡號自動換格
+            
+            $('input').keyup(function(e){   
+                if($(this).val().length == $(this).attr('maxlength'))   
+                $(this).next(':input').focus();   
             });
         })
           
@@ -205,18 +212,19 @@
                     </li>
                     <li>
                         <p>信用卡卡號</p>
-                        <input type="text" name="N1" maxlength="4" size="4" placeholder="0000" onKeyUp="next(this)">-  
-                    	<input type="text" name="N2" maxlength="4" size="4" placeholder="0000" onKeyUp="next(this)">-  
-                    	<input type="text" name="N3" maxlength="4" size="4" placeholder="0000" onKeyUp="next(this)">-  
-                    	<input type="text" name="N4" maxlength="4" size="4" placeholder="0000" onKeyUp="next(this)">
+                        <input type="text" maxlength="4" size="4" placeholder="0000" name="cardnumber">-  
+                    	<input type="text" maxlength="4" size="4" placeholder="0000" name="cardnumber">-  
+                    	<input type="text" maxlength="4" size="4" placeholder="0000" name="cardnumber">-  
+                    	<input type="text" maxlength="4" size="4" placeholder="0000" name="cardnumber">
                     </li>
                     <li>
                         <p>有效日期</p>
-                        <input type="text" placeholder="MM/YY" maxlength="4">
+                        <input type="text" placeholder="MM" maxlength="2" name="carddate">/
+                        <input type="text" placeholder="YY" maxlength="2" name="carddate">
                     </li>
                     <li>
                         <p>安全碼</p>
-                        <input type="text" placeholder="000" maxlength="3">
+                        <input type="text" placeholder="000" maxlength="3" name="cardcvv">
                     </li>
                 
             </div>
@@ -225,17 +233,5 @@
             </div>
         </section>
     </main>
-    
-    <script>
-        //信用卡卡號自動換格
-        function next(obj) {  
-	    if (obj.value.length == obj.maxLength) {  
-	        do {  
-	            obj = obj.nextSibling;  
-	        } while (obj.nodeName != "INPUT");  
-	        obj.focus();  
-	    }         
-	}  
-    </script>
 </body>
 </html>

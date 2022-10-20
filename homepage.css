@@ -111,6 +111,7 @@ body{
     writing-mode: vertical-lr;
     margin-top: 10%;
     letter-spacing: 1.5rem;
+    font-weight: 700;
 }
 main{
     margin-top: 100px;
@@ -485,7 +486,6 @@ main .card{
       writing-mode: lr;
       margin-top: 0;
       letter-spacing: 0;
-      font-weight: 700;
   }
     main .container{
       transform: translate(0, 60%);
@@ -546,6 +546,9 @@ main .card{
     }
     .col-8{
       padding-top: 25%;
+    }
+    main .card {
+      padding: 5% 5% 0 5%;
     }
     .reco .txt h2{
       margin: 10px 0;

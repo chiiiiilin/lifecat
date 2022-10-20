@@ -1,5 +1,5 @@
 $().ready(function(){
-
+    //navbar收合
     $(window).scroll(function() {
         let before = $(this).scrollTop();
         $(window).scroll(function(){
@@ -12,8 +12,9 @@ $().ready(function(){
                 before = after;
             }
         })
-        
     })
+    //觸控裝置hover
+    document.body.addEventListener('touchstart', function(){ });
 
     //點小圖看大圖
    function showLarge(e){
