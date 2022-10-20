@@ -223,9 +223,6 @@ input[type="submit"]:active{
     .itemdel{
         width: 10%;
     }
-    .itemdel img{
-        width: 20%;
-    }
     .total{
         width: 100%;
     }

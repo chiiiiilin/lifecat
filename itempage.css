@@ -226,11 +226,9 @@ p{
     font-weight: 500;
 }
 .comment{
+    padding: 0;
     padding-top: 5%;
     margin: 5% 0;
-}
-.comment .col{
-    padding: 0;
 }
 .comment .title div{
     background-color: var(--color_brightyellow);
@@ -248,19 +246,15 @@ p{
     
 }
 .oneComment{
-    width: 70%;
+    width: 50%;
+    height: 10vh;
     margin: auto;
     margin-top: 5%;
-}
-
-.oneComment img{
-    width: 40%;
-    float: right;
-    object-fit: contain;
-}
-.oneComment h4{
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    line-height: 1.6;
+    padding-left: 10%;
+    background-image: url(pictures/nekofoot.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .saySomething{
     width: 60%;

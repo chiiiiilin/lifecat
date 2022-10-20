@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="navbar.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
+        $().ready(function(){
 
             //數量加減
             let num = $("#num").val();
@@ -39,6 +39,23 @@
                 let textLength = $(this).val().length
                 $("#feedback").html(`剩餘<span>${textMax - textLength}</span>字`)
             })
+
+            //留言
+            $(":submit").click(function(){
+                let ul = $("#comments");
+                let text = $("#talk").val();
+
+                if(text == ""){
+                    alert("請輸入留言~(=^‥^)/");
+                    return false;
+                }else{
+                    let li = document.createElement('li');
+                    li.className = "oneComment";
+                    li.innerText = text;
+                    ul.append(li);
+                }
+            })
+            
         })
           
     </script>
@@ -251,42 +268,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="oneComment">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="pictures/nekofoot.png" alt="">
-                        </div>
-                        <div class="col-9">
-                            <h4>貓貓蟲</h4>
-                            <p>這個好棒!看貓咪很舒服我也很開心!</p>
-                            <p>現在只後悔沒有早點買!早買早享受，一分錢一分貨!衝阿</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="oneComment">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="pictures/nekofoot.png" alt="">
-                        </div>
-                        <div class="col-9">
-                            <h4>軟綿貓</h4>
-                            <p>剛收到包裹的時候嚇了一跳，那麼大個，還是實木的!裝上後的效果不錯，適合我房間的風格，只是真的大了一點，但我的貓好像很滿意，我只能說非常推薦!</p>
-                            <p>現在只後悔沒有多買幾個!畢竟貓奴錢包有點薄，等下個月再來!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="oneComment">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="pictures/nekofoot.png" alt="">
-                        </div>
-                        <div class="col-9">
-                            <h4>貓條</h4>
-                            <p>現在每天都可以賞月了(其實是賞貓)</p>
-                            <p>再多買幾個星星我就有一個銀河系在房間了!好夢幻呀</p>
-                        </div>
-                    </div>
-                </div>
+                <ul id="comments">
+                    <li class="oneComment">
+                        這個好棒!看貓咪很舒服我也很開心!<br>
+                        現在只後悔沒有早點買!早買早享受，一分錢一分貨!衝阿
+                    </li>
+                    <li class="oneComment">
+                        剛收到包裹的時候嚇了一跳，那麼大個，還是實木的!裝上後的效果不錯，適合我房間的風格，只是真的大了一點，但我的貓好像很滿意，我只能說非常推薦!<br>
+                        現在只後悔沒有多買幾個!畢竟貓奴錢包有點薄，等下個月再來!
+                    </li>
+                    <li class="oneComment">
+                        現在每天都可以賞月了(其實是賞貓)<br>
+                        再多買幾個星星我就有一個銀河系在房間了!好夢幻呀
+                    </li>
+                </ul>
                 <div class="saySomething">
                     <div>
                         <textarea id="talk" rows="6" cols="30" maxlength="200"></textarea>
