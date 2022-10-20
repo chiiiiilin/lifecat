@@ -326,9 +326,6 @@ main .card{
     height: 450px;
     width: 350px;
   }
-  .slide{
-    box-shadow: 4px 4px 10px #818181;
-  }
   .slide img{
     width: 100%;
     height: 100%;
@@ -549,6 +546,21 @@ main .card{
     }
     main .card {
       padding: 5% 5% 0 5%;
+    }
+    .slider .slide-track{
+      width: calc(155px * 16);
+    }
+    .slider .slide {
+      height: 200px;
+      width: 150px;
+    }
+    @keyframes scroll{
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-155px * 8));
+      }
     }
     .reco .txt h2{
       margin: 10px 0;
