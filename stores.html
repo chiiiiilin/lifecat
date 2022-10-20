@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>貓體工學|實體概念店</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="stores.css">
     <link rel="stylesheet" href="grid.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="all.js"></script>
 </head>
 <body>
     <header>
@@ -61,7 +62,7 @@
             <div class="container">
                 <div class="row row-cols-1 row-cols-md-2">
                     <div class="col">
-                        <div data-aos="fade-up" data-aos-duration="3000" class="storespictures">
+                        <div class="storespictures">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="img"><img id="largeImg" src="pictures/storesimg.jfif" alt="貓體工學概念店"></div>
@@ -69,10 +70,10 @@
                             </div>
                             <div class="row row-cols-4 row-cols-md-4" id="smallPanel">
                                 <div class="col">
-                                    <div class="img"><img src="pictures/storesimg2.jfif" alt=""></div>
+                                    <div class="img"><img src="pictures/storesimg.jfif" alt=""></div>
                                 </div>
                                 <div class="col">
-                                    <div class="img"><img src="pictures/storesimg3.jfif" alt=""></div>
+                                    <div class="img"><img src="pictures/storesimg2.jfif" alt=""></div>
                                 </div>
                                 <div class="col">
                                     <div class="img"><img src="pictures/storesimg4.jfif" alt=""></div>
@@ -84,7 +85,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div data-aos="fade-up" data-aos-duration="3000" class="storesinfo">
+                        <div class="storesinfo">
                             <h2>貓體工學概念店</h2>
                             <span></span>
                             <div class="place">
@@ -128,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="3000" class="introduce">
+                <div class="introduce">
                     <div class="row row-cols-1 row-cols-md-2">
                         <div class="col">
                             <div class="txt">
@@ -275,25 +276,5 @@
             </div>
         </div>
     </footer>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({duracion: 3000,});
-    </script>
-
-    <script>
-        //點小圖換大圖
-        function showLarge(e){
-          let small = e.target;
-          document.getElementById("largeImg").src = small.src;
-        }
-        
-        function init(){
-            let imgs = document.querySelectorAll("#smallPanel img");
-            for(let i=0; i<imgs.length; i++){
-                imgs[i].onclick = showLarge;
-            }
-        }
-        window.addEventListener("load", init, false);
-        </script>
 </body>
 </html>

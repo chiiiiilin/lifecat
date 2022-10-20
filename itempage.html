@@ -10,55 +10,7 @@
     <link rel="stylesheet" href="itempage.css">
     <link rel="stylesheet" href="navbar.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
-        $().ready(function(){
-
-            //數量加減
-            let num = $("#num").val();
-            $("#num_minus").click(function(){
-                if(num <= 1){
-                    num = 1;
-                }else{
-                    num = parseInt(num) - 1;
-                }
-                $("#num").val(num);
-            })
-            $("#num_plus").click(function(){
-                num = parseInt(num) + 1;
-                $("#num").val(num);
-            });
-
-            //加入購物車
-            $(".buybtn").click(function(){
-                $(this).val("已加入購物車~(=^‥^)/").addClass(".buybtn");
-            })
-            //字數剩餘提示
-            let textMax = $("#talk").attr("maxlength")
-            $("#feedback").html(`剩餘 <span">${textMax}</span> 字`)
-            $("#talk").keyup(function(){
-                let textLength = $(this).val().length
-                $("#feedback").html(`剩餘<span>${textMax - textLength}</span>字`)
-            })
-
-            //留言
-            $(":submit").click(function(){
-                let ul = $("#comments");
-                let text = $("#talk").val();
-
-                if(text == ""){
-                    alert("請輸入留言~(=^‥^)/");
-                    return false;
-                }else{
-                    let li = document.createElement('li');
-                    li.className = "oneComment";
-                    li.innerText = text;
-                    ul.append(li);
-                }
-            })
-            
-        })
-          
-    </script>
+    <script src="all.js"></script>
 </head>
 <body>
     <header>
@@ -274,7 +226,7 @@
                         現在只後悔沒有早點買!早買早享受，一分錢一分貨!衝阿
                     </li>
                     <li class="oneComment">
-                        剛收到包裹的時候嚇了一跳，那麼大個，還是實木的!裝上後的效果不錯，適合我房間的風格，只是真的大了一點，但我的貓好像很滿意，我只能說非常推薦!<br>
+                        是實木的!裝上後的效果不錯，適合我房間的風格，我的貓好像很滿意，我只能說非常推薦!<br>
                         現在只後悔沒有多買幾個!畢竟貓奴錢包有點薄，等下個月再來!
                     </li>
                     <li class="oneComment">
@@ -367,20 +319,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        //點小圖看大圖
-        function showLarge(e){
-          let small = e.target;
-          document.getElementById("largeImg").src = small.src;
-        }
-        
-        function init(){
-            let imgs = document.querySelectorAll("#smallPanel img");
-            for(let i=0; i<imgs.length; i++){
-                imgs[i].onclick = showLarge;
-            }
-        }
-        window.addEventListener("load", init, false);
-    </script>
 </body>
 </html>

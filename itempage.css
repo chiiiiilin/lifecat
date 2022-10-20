@@ -255,6 +255,7 @@ p{
     background-image: url(pictures/nekofoot.png);
     background-size: contain;
     background-repeat: no-repeat;
+    word-wrap: break-word;
 }
 .saySomething{
     width: 60%;
@@ -336,9 +337,8 @@ p{
     }
     .oneComment{
         width: 100%;
-    }
-    .oneComment img {
-        width: 60%;
+        padding-left: 30%;
+        margin: 10px;
     }
     .saySomething{
         width: 90%;
