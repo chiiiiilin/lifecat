@@ -343,8 +343,8 @@ main .card{
     margin: auto;
     color: white;
   }
-  .reco .txt h2{
-    margin-top: 60%;
+  .reco .txt .col-8{
+    padding-top: 40%;
   }
   .reco .txt .col-8 p{
     font-size: 1.2rem;
