@@ -15,15 +15,12 @@
     <script>
         //loadingpage
        window.onload = function(){
-            setTimeout(function(){
-                $('.loadingpage').fadeOut(2000);
-                $(".bar").attr("style", "animation: bar 2s ease;");
-            }, 1500)
-
+            $('.loadingpage').fadeOut(2000);
+            $(".bar").attr("style", "animation: bar 2s ease;");
             setTimeout(function(){
                 $('.loadingwrapper').remove();
-            },3500)
-                }
+            },2000)
+        }
     </script>
 </head>
 <body>
