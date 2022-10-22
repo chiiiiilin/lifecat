@@ -14,13 +14,18 @@
     <script src="all.js"></script>
     <script>
         //loadingpage
-       window.onload = function(){
-            $('.loadingpage').fadeOut(2000);
-            $(".bar").attr("style", "animation: bar 2s ease;");
+       $(document).ready(function(){
+           
             setTimeout(function(){
-                $('.loadingwrapper').remove();
-            },2000)
-        }
+                $('.loadingpage').fadeOut(3000);
+                $(".bar").attr("style", "animation: bar 2s ease;");
+        },2000)
+            
+
+        setTimeout(function(){
+            $('.loadingwrapper').remove();
+        },5000)
+        })
     </script>
 </head>
 <body>
