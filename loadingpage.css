@@ -151,11 +151,20 @@
     margin-left: -2px;
     border-radius: 5px;
 }
+.loadingcat{
+    width: auto;
+    height: 60vh;
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+}
 .loading{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-30px, -50px);
+    transform: translate(-50%, -70%);
 }
 .loadingwrapper{
     width: 100%;
@@ -178,9 +187,7 @@
     height: 100%;
     position: absolute;
 }
-/*
- * Animation
- */
+
 @-webkit-keyframes line-spin-clockwise-fade {
     50% {
         opacity: .2;
@@ -224,7 +231,7 @@
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 1023px){
     .loadingpage{
         background-image: url(pictures/loadingpagemobile.jpg);
         background-position: center;
