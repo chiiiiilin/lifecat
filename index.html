@@ -431,16 +431,17 @@
         //loadingpage
        $(document).ready(function(){
             setTimeout(function(){
-                $('.loadingpage').fadeOut(1500)
+                $('.loadingpage').fadeOut(1500);
                 $(".bar").attr("style", "animation: bar 1.5s ease;");
-            }, 500)
+            }, 1500)
+            
             setTimeout(function(){
                 $(".bar").css("width", "0%");
-            }, 1500);
+            }, 3000);
 
             setTimeout(function(){
-                $(".loadingwrapper").remove();
-            }, 2000);
+                $('.loadingwrapper').remove(3000);
+            })
                 })
     </script>
 </body>

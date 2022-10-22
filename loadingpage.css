@@ -227,5 +227,6 @@
 @media screen and (max-width: 767px){
     .loadingpage{
         background-image: url(pictures/loadingpagemobile.jpg);
+        background-position: center;
     }
 }
