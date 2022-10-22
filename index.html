@@ -12,6 +12,19 @@
     <link rel="stylesheet" href="loadingpage.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="all.js"></script>
+    <script>
+        //loadingpage
+       window.onload = function(){
+            setTimeout(function(){
+                $('.loadingpage').fadeOut(1500);
+                $(".bar").attr("style", "animation: bar 1.5s ease;");
+            }, 1000)
+
+            setTimeout(function(){
+                $('.loadingwrapper').remove();
+            },2500)
+                }
+    </script>
 </head>
 <body>
     <!-- loadingpage -->
@@ -431,22 +444,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        //loadingpage
-       $(document).ready(function(){
-            setTimeout(function(){
-                $('.loadingpage').fadeOut(1500);
-                $(".bar").attr("style", "animation: bar 1.5s ease;");
-            }, 500)
-            
-            setTimeout(function(){
-                $(".bar").css("width", "0%");
-            }, 2000);
-
-            setTimeout(function(){
-                $('.loadingwrapper').remove();
-            },2000)
-                })
-    </script>
 </body>
 </html>
