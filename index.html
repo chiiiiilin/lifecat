@@ -9,10 +9,29 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="homepage.css">
     <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="loadingpage.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="all.js"></script>
 </head>
 <body>
+    <!-- loadingpage -->
+    <div class="loadingwrapper">
+        <div class="loadingpage">
+            <div class="loading la-line-spin-clockwise-fade la-2x">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="bar"></div>
+        </div>
+        
+    </div>
+    <!-- 正文 -->
     <header>
         <div class="navbar">
             <label for="switch" class="hb"><img src="pictures/hb.svg" alt="選單"></label>
@@ -408,9 +427,21 @@
             </div>
         </div>
     </footer>
-
     <script>
-        document.body.addEventListener('touchstart', function(){ });
+        //loadingpage
+       $(document).ready(function(){
+            setTimeout(function(){
+                $('.loadingpage').fadeOut(1500)
+                $(".bar").attr("style", "animation: bar 1.5s ease;");
+            }, 500)
+            setTimeout(function(){
+                $(".bar").css("width", "0%");
+            }, 1500);
+
+            setTimeout(function(){
+                $(".loadingwrapper").remove();
+            }, 2000);
+                })
     </script>
 </body>
 </html>

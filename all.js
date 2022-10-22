@@ -1,14 +1,14 @@
-$().ready(function(){
+$(document).ready(function(){
     //navbar收合
     $(window).scroll(function() {
         let before = $(this).scrollTop();
         $(window).scroll(function(){
             let after = $(this).scrollTop();
-            if(after > before){
-                $('.navbar').slideUp(500);
+            if(after - before > 100){
+                $('.navbar').slideUp(800);
                 before = after;
-            }else if (before > after){
-                $('.navbar').slideDown(500);
+            }else if (before - after > 100){
+                $('.navbar').slideDown(800);
                 before = after;
             }
         })
@@ -72,7 +72,7 @@ $().ready(function(){
            ul.append(li);
        }
 
-       $("#talk").val() = "";    //為啥沒用啦???
+       $("#talk").val();    //為啥沒用啦???
    })
    
 })
