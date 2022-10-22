@@ -546,6 +546,7 @@ main .card{
     }
     main .card {
       padding: 5% 5% 0 5%;
+      height: 100%;
     }
     .slider .slide-track{
       width: calc(155px * 16);
