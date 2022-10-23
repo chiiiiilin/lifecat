@@ -236,4 +236,7 @@
         background-image: url(pictures/loadingpagemobile.jpg);
         background-position: center;
     }
+    .loadingcat{
+        height: 55vh;
+    }
 }
