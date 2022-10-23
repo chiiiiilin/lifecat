@@ -72,7 +72,7 @@ $(document).ready(function(){
            ul.append(li);
        }
 
-       $("#talk").val();    //為啥沒用啦???
+       $("#talk").val() = " ";    //為啥沒用啦???
    })
    
 })
