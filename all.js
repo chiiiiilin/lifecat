@@ -31,18 +31,18 @@ $(document).ready(function(){
    window.addEventListener("load", init, false); 
 
    //數量加減
-   let num = $("#num").val();
-   $("#num_minus").click(function(){
+   let num = $(".num").val();
+   $(".num_minus").click(function(){
        if(num <= 1){
            num = 1;
        }else{
            num = parseInt(num) - 1;
        }
-       $("#num").val(num);
+       $(".num").val(num);
    })
-   $("#num_plus").click(function(){
+   $(".num_plus").click(function(){
        num = parseInt(num) + 1;
-       $("#num").val(num);
+       $(".num").val(num);
    });
 
    //加入購物車

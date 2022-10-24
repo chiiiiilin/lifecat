@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>貓體工學| 購物車</title>
+    <link rel="shortcut icon" href="pictures/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="cart.css">
@@ -57,7 +58,7 @@
             <div class="card_body">
                 <div class="cart_content">
                     <ol id="item_group">
-                        <li class="item">
+                        <li class="item displayCart">
                             <ul>
                                 <li class="iteminfo">
                                     <div class="itempic">
@@ -67,9 +68,9 @@
                                 </li>
                                 <li class="itemprice" id="itemprice">5500</li>
                                 <li class="itemamout">
-                                    <span id="num_minus">-</span>
-                                    <input type="text" class="num" id="num" value="1">
-                                    <span id="num_plus">+</span>
+                                    <span class="num_minus">-</span>
+                                    <input type="text" class="num" value="1">
+                                    <span class="num_plus">+</span>
                                 </li>
                                 <li class="itemdel">
                                     <a href="">
@@ -78,6 +79,27 @@
                                 </li>
                             </ul>
                         </li>
+                        <!-- <li class="item displayCart cartdisp">
+                            <ul class="cartlist">
+                                <li class="iteminfo">
+                                    <div class="itempic forImage">
+                                        <img src="${item.image}" alt="">
+                                    </div>
+                                    <div class="itemname forName"><a href="itempage.html">${item.name}</a></div>
+                                </li>
+                                <li class="itemprice forPrice">${item.price}</li>
+                                <li class="itemamout">
+                                    <span class="num_minus">-</span>
+                                    <input type="text" class="num forQuantity" value="${item.quantity}">
+                                    <span class="num_plus">+</span>
+                                </li>
+                                <li class="itemdel remove Item">
+                                    <a href="">
+                                        <img src="pictures/deleateIcon.svg" alt="移除">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li> -->
                     </ol>
                 </div>
             </div>
