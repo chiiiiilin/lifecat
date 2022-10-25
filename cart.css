@@ -85,6 +85,9 @@ h1, h2{
     outline: none;
     text-align: center;
 }
+.itemamout .num{
+    width: 15px;
+}
 .itemamout span{
     padding: 20% 50%;
     vertical-align: middle;
