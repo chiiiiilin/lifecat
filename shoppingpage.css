@@ -198,11 +198,14 @@ main .wrap{
     font-size: 1.2rem;
     font-weight: 500;
 }
-.card .txt p:nth-last-child(1){
+.card .txt p:nth-last-child(1), .card .txt p:nth-last-child(1)::before{
     font-size: 1.6rem;
     color: var(--color_yellow);
     line-height: 1.6;
     font-weight: 900;
+}
+.card .txt p:nth-last-child(1)::before{
+    content: "NT$";
 }
 .card .buybtn{
     padding: 5%;
