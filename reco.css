@@ -257,6 +257,7 @@ strong{
     box-shadow: 0 0 10px #d9d9d9;
     padding: 10% 10% 0 10%;
     height: 75%;
+    animation: cardmove 1s alternate infinite;
 }
 .card:hover{
     box-shadow: 0 0 10px #ababab;

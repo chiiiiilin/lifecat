@@ -52,6 +52,17 @@ body::-webkit-scrollbar-thumb{
 body::-webkit-scrollbar-thumb:hover{
     background: linear-gradient(45deg, #bac6c0, #c4d8d1);
 }
+@keyframes cardmove{
+    0%{
+        transform: rotate(-2deg);
+    }
+    50%{
+        tranform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(2deg);
+    }
+  }
 @media screen and (max-width: 1023px){
     html{
         font-size: 12px;

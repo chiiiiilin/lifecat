@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     //navbar收合
     $(window).scroll(function() {
         let before = $(this).scrollTop();
@@ -13,6 +14,7 @@ $(document).ready(function(){
             }
         })
     })
+
     //觸控裝置hover
     document.body.addEventListener('touchstart', function(){ });
 
@@ -70,9 +72,12 @@ $(document).ready(function(){
            li.className = "oneComment";
            li.innerText = text;
            ul.append(li);
+				            
        }
 
-       $("#talk").val() = " ";    //為啥沒用啦???
+       $("#talk").val("");  //清空 textarea，更新剩餘數字
+       textMax = $("#talk").attr("maxlength");
+       $("#feedback").html(`剩餘 <span">${textMax}</span> 字`)
    })
    
 })

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    //做不出來ㄉ加入購物車==氣鼠
+    //做不出來ㄉ加入購物車==
 //     const btn = document.getElementsByClassName('buybtn');
 //     const products = [];
 //     for(i=0;i<btn.length;i++){

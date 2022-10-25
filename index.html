@@ -14,19 +14,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="all.js"></script>
     <script>
+        
+    $(document).ready(function(){
         //loadingpage
-       $(document).ready(function(){
-           
-            setTimeout(function(){
-                $('.loadingpage').fadeOut(3000);
-                $(".bar").attr("style", "animation: bar 2s ease;");
+        setTimeout(function(){  
+            $('.loadingpage').fadeOut(3000);
+            $(".bar").attr("style", "animation: bar 2s ease;");
         },2000)
             
 
         setTimeout(function(){
             $('.loadingwrapper').remove();
         },5000)
-        })
+
+         //主頁top橫向卷軸
+         let wrap = document.querySelector('#topcardwrap');
+            wrap.addEventListener('wheel',(event) => {
+            event.preventDefault();
+            wrap.scrollLeft += event.deltaY;
+        });
+    })
+
+       
     </script>
 </head>
 <body>
@@ -89,7 +98,7 @@
                 <h1>貓體工學</h1>
                 <p>Life with my cats.</p>
             </div>
-            <div class="wrap">
+            <div class="wrap" id="topcardwrap">
                     <a href="itempage.html">
                         <div class="card">
                             <div class="item">
