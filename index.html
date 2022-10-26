@@ -14,9 +14,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="all.js"></script>
     <script>
-        
+    
     $(document).ready(function(){
-        //loadingpage
+        // loadingpage
         setTimeout(function(){  
             $('.loadingpage').fadeOut(3000);
             $(".bar").attr("style", "animation: bar 2s ease;");
@@ -26,7 +26,6 @@
         setTimeout(function(){
             $('.loadingwrapper').remove();
         },5000)
-
          //主頁top橫向卷軸
          let wrap = document.querySelector('#topcardwrap');
             wrap.addEventListener('wheel',(event) => {
@@ -40,8 +39,8 @@
 </head>
 <body>
     <!-- loadingpage -->
-    <div class="loadingwrapper">
-        <div class="loadingpage">
+    <div class="loadingwrapper" >
+        <div class="loadingpage" id="loadingpage">
             <img src="pictures/loadingcat.png" class="loadingcat">
             <div class="loading la-line-spin-clockwise-fade la-2x">
                 <div></div>
@@ -457,5 +456,6 @@
             </div>
         </div>
     </footer>
+    <!-- <script src="loadingpage.js"></script> -->
 </body>
 </html>
