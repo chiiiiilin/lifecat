@@ -5,11 +5,11 @@ $(document).ready(function(){
         let before = $(this).scrollTop();
         $(window).scroll(function(){
             let after = $(this).scrollTop();
-            if(after - before > 100){
-                $('.navbar').slideUp(800);
+            if(after - before > 500){
+                $('.navbar').fadeOut(500);
                 before = after;
-            }else if (before - after > 100){
-                $('.navbar').slideDown(800);
+            }else if (before - after > 500){
+                $('.navbar').fadeIn(500);
                 before = after;
             }
         })

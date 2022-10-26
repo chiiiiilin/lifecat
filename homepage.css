@@ -311,6 +311,9 @@ main .card{
     width: calc(360px * 16);
     justify-content: space-between;
   }
+  .slider .slide-track:hover{
+    animation-play-state: paused;
+  }
   @keyframes scroll{
     0% {
       transform: translateX(0);
