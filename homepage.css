@@ -251,28 +251,39 @@ main .card{
  .ideaimg img:not(:nth-child(4)){
     width: 10%;
     opacity: 1;
+    visibility: hidden;
  }
  .idea img:nth-of-type(1){
     transform: translate(55%, -100%)rotate(-20deg);
+    animation: catfoot 3s alternate infinite;
  }
  .idea img:nth-of-type(2){
     transform: translate(55%, -330%)rotate(20deg);
+    animation: catfoot 3s 1s alternate infinite;
  }
  .idea img:nth-of-type(3){
     transform: translate(85%, -180%)rotate(-10deg);
+    animation: catfoot 3s 1.5s alternate infinite;
  }
  .idea img:nth-of-type(5){
     transform: translate(65%, -530%)rotate(30deg);
+    animation: catfoot 3s 3s alternate infinite;
  }
  .idea img:nth-of-type(6){
     transform: translate(-85%, -330%)rotate(-15deg);
+    animation: catfoot 3s 4s alternate infinite;
  }
  .idea img:nth-of-type(7){
     transform: translate(-5%, -230%)rotate(20deg);
+    animation: catfoot 3s 3.5s alternate infinite;
 }
  .idea img:nth-child(4){
     transform: translate(25%, -15%);
     filter:drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+ }
+ @keyframes catfoot{
+  0%{visibility: hidden; opacity: 0;}
+  100%{visibility: visible; opacity: 1;}
  }
  .design {
     text-align: center;
