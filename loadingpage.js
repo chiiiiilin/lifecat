@@ -9,15 +9,15 @@
             return decodeURIComponent(cookiePair[1]);
         }
     }
-    return null;
+    console.log(cookiePair[1]);
     }
 
     function checkCookie() {
     var user = getCookie("lifecat");
     if (user == "ya") {
-        document.getElementById("loadingwrapper").style.display="none";
+        $('.loadingwrapper').css('display','none');
     }else {
-        window.addEventListener("load",()=>{
+        $(document).ready(function(){
             document.cookie = `lifecat = ya; max-age = ${15*60}`;
              //loadingpage
             setTimeout(function(){  
