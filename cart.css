@@ -1,27 +1,28 @@
-body{
+body {
     background-image: url(pictures/cart2.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
     background-position: left;
 }
-.main_nav_icon li:last-child a{
+.main_nav_icon li:last-child a {
     border-bottom: solid 9px var(--color_greengray);
 }
-main{
+main {
     margin-left: 10%;
     margin-top: 5%;
 }
-section+h2{
+section + h2 {
     margin-top: 3%;
 }
-.card{
+.card {
     width: 50%;
     box-shadow: 0 0 10px #d9d9d9;
     backdrop-filter: blur(10px);
     border-radius: 10px;
 }
-h1, h2{
+h1,
+h2 {
     padding: 0 20px;
     margin: 20px 0;
     /* text-align: center; */
@@ -29,104 +30,107 @@ h1, h2{
     border-left: solid 4px var(--color_yellow);
     font-weight: 700;
 }
-.card{
+.card {
     background-color: rgba(255, 255, 255, 0.75);
     padding: 25px 20px;
     margin-top: 20px;
 }
-.cartcard tr th:first-child{
+.cartcard tr th:first-child {
     width: 30%;
 }
-.cartcard tr th+th{
+.cartcard tr th + th {
     width: 20%;
 }
-.card_body{
+.card_body {
     margin: auto;
 }
-.cartcard .card_body ul{
+.cartcard .card_body ul {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.cartcard .card_body ul:last-child{
-    border-bottom: solid .3px gray;
-}
-.cartcard li, .itemname{
+.cartcard li,
+.itemname {
     margin: auto;
 }
+.oneItem {
+    padding: 15px 0;
+}
 
-.iteminfo{
+.iteminfo {
     display: flex;
-    width: 40%;
-}
-.iteminfo .itempic{
     width: 50%;
-    /* float: right; */
 }
-.itempic img{
+.iteminfo .itempic {
+    width: 30%;
+}
+.itempic img {
     object-fit: contain;
     width: 100%;
     height: 100%;
 }
-
-.itemamout{
+.itemtotal::before{
+    content: 'NT$ '
+}
+.itemamout {
     height: 5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-radius: 3px;
     user-select: none;
 }
-.itemamout input{
-    background-color: transparent;
-    height: 10px;
-    width: 10px;
-    border: 0;
-    outline: none;
-    text-align: center;
-}
 .itemamout .num{
-    width: 15px;
+    background-color: transparent;
+    width: 10px;
+    border:none;
 }
-.itemamout span{
-    padding: 20% 50%;
+.itemamout span {
+    margin: 0 50%;
     vertical-align: middle;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 900;
     cursor: pointer;
 }
+.itemprice{
+    display:none;
+}
 
-.itemamout span:hover, td a:hover{
+.itemamout span:hover,
+td a:hover {
     color: var(--color_yellow);
 }
 
-.itemdel img{
+.itemdel img {
     width: 50%;
     float: right;
 }
-.card_foot{
+.card_foot {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
-.total, .card_foot label{
+.total,
+.card_foot label {
     display: block;
     font-size: 1rem;
     line-height: 1.6;
 }
-.total, .fee{
-    width: 30%;
+.total,
+.fee {
+    width: 50%;
     margin: 20px;
 }
-.total ul li:last-child{
+.total ul li:last-child {
     font-size: 1.2em;
     line-height: 2;
 }
-.total li{
+.total li {
     display: flex;
     justify-content: space-between;
 }
-.infocard li+li input, .paymentcard li+li+li input, input[type="submit"]{
+.infocard li + li input,
+.paymentcard li + li + li input,
+input[type="submit"] {
     background-color: inherit;
     border-radius: 5px;
     width: 80%;
@@ -135,103 +139,108 @@ h1, h2{
     outline: none;
     border: none;
 }
-::placeholder{
-    opacity: .6;
+::placeholder {
+    opacity: 0.6;
 }
-.infocard .card_body li:last-child input{
+.infocard .card_body li:last-child input {
     width: 80%;
 }
-.infocard li label, .paymentcard li label{
+.infocard li label,
+.paymentcard li label {
     margin: 15px 5px;
     display: block;
 }
-.paymentcard input[name="cardnumber"],.paymentcard input[name="cardcvv"]{
+.paymentcard input[name="cardnumber"],
+.paymentcard input[name="cardcvv"] {
     width: 15%;
     margin: 0;
 }
-.paymentcard input[name="carddate"]{
+.paymentcard input[name="carddate"] {
     width: 10%;
     margin: 0;
 }
-.paymentcard li+li+li input:first-of-type{
+.paymentcard li + li + li input:first-of-type {
     margin-left: 15px;
 }
-.infocard p, .paymentcard p{
+.infocard p,
+.paymentcard p {
     margin: 0 15px;
-    padding: 10px; 
+    padding: 10px;
 }
-.infocard li+li input:focus, .paymentcard li+li+li input:focus{
-    box-shadow: 2px 2px 2px  rgba(212, 212, 212, 0.8)
+.infocard li + li input:focus,
+.paymentcard li + li + li input:focus {
+    box-shadow: 2px 2px 2px rgba(212, 212, 212, 0.8);
 }
-input[type="submit"]{
+input[type="submit"] {
     width: 15%;
-    border: solid .5px var(--color_yellow);
+    border: solid 0.5px var(--color_yellow);
     background-color: var(--color_yellow);
-    color: white
+    color: white;
 }
-.cartcard input[type="submit"]{
+.cartcard input[type="submit"] {
     margin-top: 5%;
 }
-input[type="submit"]:hover{
+input[type="submit"]:hover {
     background-color: transparent;
     color: var(--color_yellow);
 }
-input[type="submit"]:active{
+input[type="submit"]:active {
     box-shadow: inset 2px 2px 2px var(--color_yellow);
 }
 
-@media  screen and (max-width: 1023px) {
-    body{
+@media screen and (max-width: 1023px) {
+    body {
         background-position: bottom;
-        background-color: #E5EEF3;
+        background-color: #e5eef3;
         background-attachment: fixed;
     }
-    main{
+    main {
         padding: 10% 5% 50% 5%;
         margin-left: 0;
     }
-    .card{
+    .card {
         width: 90%;
         padding: 5%;
     }
-    .infocard .card_foot input, .paymentcard .card_foot input{
+    .infocard .card_foot input,
+    .paymentcard .card_foot input {
         width: fit-content;
         height: 5vh;
     }
-    .card_foot{
+    .card_foot {
         flex-direction: column;
     }
-    .fee{
+    .fee {
         width: 90%;
     }
-    .total{
+    .total {
         margin-left: 25px;
     }
-    .iteminfo{
+    .iteminfo {
         width: 70%;
     }
-    .iteminfo .itemname{
-        width: 30%;
+    .iteminfo .itemname {
+        width: 15%;
+    }
+    .itemname a {
+        font-size: 1.2rem;
+    }
+    .itemtotal {
+        width: 15%;
+        font-size: 1.2rem;
         margin-left: 5%;
     }
-    .itemname a{
-        font-size: 1.2rem;
-    }
-    .itemprice{
-        width: 20%;
-        font-size: 1.2rem;
-    }
-    .itemamout{
-        width: 25%;
+    .itemamout {
+        width: 10%;
         order: 1;
     }
-    .itemdel{
+    .itemdel {
         width: 10%;
     }
-    .total{
+    .total {
         width: 100%;
     }
-    .total ul{
+    .total ul {
         width: 40%;
     }
 }

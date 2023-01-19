@@ -47,10 +47,7 @@ $(document).ready(function(){
        $(".num").val(num);
    });
 
-   //加入購物車
-   $(".buybtn").click(function(){
-       $(this).val("已加入購物車~(=^‥^)/").addClass(".buybtn");
-   })
+
    //字數剩餘提示
    let textMax = $("#talk").attr("maxlength")
    $("#feedback").html(`剩餘 <span">${textMax}</span> 字`)

@@ -11,12 +11,9 @@
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="navbar.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="all.js"></script>
-    <script src="cart.js"></script>
-    <script>
-        
-          
-    </script>
+    <!-- <script src="all.js"></script> -->
+    <!-- <script src="cart.js"></script> -->
+   
 </head>
 <body>
     <header>
@@ -58,42 +55,21 @@
             <div class="card_body">
                 <div class="cart_content">
                     <ol id="item_group">
-                        <li class="item displayCart">
-                            <ul>
-                                <li class="iteminfo">
-                                    <div class="itempic">
-                                        <img src="pictures/item5use.webp" alt="">
-                                    </div>
-                                    <div class="itemname"><a href="itempage.html">月亮跳台</a></div>
-                                </li>
-                                <li class="itemprice" id="itemprice">5500</li>
-                                <li class="itemamout">
-                                    <span class="num_minus">-</span>
-                                    <input type="text" class="num" value="1">
-                                    <span class="num_plus">+</span>
-                                </li>
-                                <li class="itemdel">
-                                    <a href="">
-                                        <img src="pictures/deleateIcon.svg" alt="移除">
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
                         <!-- <li class="item displayCart cartdisp">
                             <ul class="cartlist">
                                 <li class="iteminfo">
-                                    <div class="itempic forImage">
-                                        <img src="${item.image}" alt="">
+                                    <div class="itempic">
+                                        <img src="{img}" alt="">
                                     </div>
-                                    <div class="itemname forName"><a href="itempage.html">${item.name}</a></div>
+                                    <div class="itemname"><a href="itempage.html">{name}</a></div>
                                 </li>
-                                <li class="itemprice forPrice">${item.price}</li>
+                                <li class="itemtotal">{total}</li>
                                 <li class="itemamout">
                                     <span class="num_minus">-</span>
-                                    <input type="text" class="num forQuantity" value="${item.quantity}">
+                                    <div class="number">1</div>
                                     <span class="num_plus">+</span>
                                 </li>
-                                <li class="itemdel remove Item">
+                                <li class="itemdel remove Item" id="{id}" data-del="{del}">
                                     <a href="">
                                         <img src="pictures/deleateIcon.svg" alt="移除">
                                     </a>
@@ -200,5 +176,7 @@
             </div>
         </section>
     </main>
+    <script src="all.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>

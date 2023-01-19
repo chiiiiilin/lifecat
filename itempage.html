@@ -1,321 +1,475 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>貓體工學| 月亮跳台</title>
-    <link rel="shortcut icon" href="pictures/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="grid.css">
-    <link rel="stylesheet" href="itempage.css">
-    <link rel="stylesheet" href="navbar.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="all.js"></script>
-</head>
-<body>
-    <header>
-        <div class="navbar">
-            <label for="switch" class="hb"><img src="pictures/hb.svg" alt="選單"></label>
-            <input type="checkbox" id="switch">
-            <a href="index.html">
-                <div class="logo">
-                    <img src="pictures/logologo.svg" alt="貓體工學">
-                </div>
-            </a>
-            <nav>
-                <ul class="main_nav">
-                    <li><a href="shoppingpage.html">所有商品</a></li>
-                    <li><a href="stores.html">實體概念店</a></li>
-                    <li><a href="reco.html">貓星人的推薦</a></li>
-                    <li><a href="question.html">常見問題</a></li>
-                </ul>
-                <ul class="main_nav_icon">
-                    <li><a href="account.html">
-                        <div class="img">
-                            <img src="pictures/profileIcon.svg" alt="會員登入">
-                        </div>
-                        <p>會員登入</p>
-                    </a></li>
-                    <li><a href="cart.html">
-                        <div class="img">
-                            <img src="pictures/cartIcon.svg" alt="購物車">
-                        </div>
-                        <p>購物車</p>
-                    </a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <article>
-        <main>
-            <section class="top">
-                <div class="container">
-                    <div class="row row-cols-1 row-cols-md-2">
-                        <div class="col">
-                            <div class="itempictures">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="img"><img id="largeImg" src="pictures/luna1.jfif" alt="貓體工學月亮跳台"></div>
-                                    </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no"
+        />
+        <title>貓體工學| 月亮跳台</title>
+        <link
+            rel="shortcut icon"
+            href="pictures/favicon.ico"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="grid.css" />
+        <link rel="stylesheet" href="itempage.css" />
+        <link rel="stylesheet" href="navbar.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="all.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <label for="switch" class="hb"
+                    ><img src="pictures/hb.svg" alt="選單"
+                /></label>
+                <input type="checkbox" id="switch" />
+                <a href="index.html">
+                    <div class="logo">
+                        <img src="pictures/logologo.svg" alt="貓體工學" />
+                    </div>
+                </a>
+                <nav>
+                    <ul class="main_nav">
+                        <li><a href="shoppingpage.html">所有商品</a></li>
+                        <li><a href="stores.html">實體概念店</a></li>
+                        <li><a href="reco.html">貓星人的推薦</a></li>
+                        <li><a href="question.html">常見問題</a></li>
+                    </ul>
+                    <ul class="main_nav_icon">
+                        <li>
+                            <a href="account.html">
+                                <div class="img">
+                                    <img
+                                        src="pictures/profileIcon.svg"
+                                        alt="會員登入"
+                                    />
                                 </div>
-                                <div class="row row-cols-4 row-cols-md-4" id="smallPanel">
-                                    <div class="col">
-                                        <div class="img"><img src="pictures/luna4.jfif" alt=""></div>
+                                <p>會員登入</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cart.html">
+                                <div class="img">
+                                    <img
+                                        src="pictures/cartIcon.svg"
+                                        alt="購物車"
+                                    />
+                                </div>
+                                <p>購物車</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <article>
+            <main>
+                <section class="top">
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-md-2">
+                            <div class="col">
+                                <div class="itempictures">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="img">
+                                                <img
+                                                    id="largeImg"
+                                                    src="pictures/luna1.jfif"
+                                                    alt="貓體工學月亮跳台"
+                                                />
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col">
-                                        <div class="img"><img src="pictures/luna5.jfif" alt=""></div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="img"><img src="pictures/luna2.jpg" alt=""></div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="img"><img src="pictures/luna3.jpg" alt=""></div>
+                                    <div
+                                        class="row row-cols-4 row-cols-md-4"
+                                        id="smallPanel"
+                                    >
+                                        <div class="col">
+                                            <div class="img">
+                                                <img
+                                                    src="pictures/luna4.jfif"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="img">
+                                                <img
+                                                    src="pictures/luna5.jfif"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="img">
+                                                <img
+                                                    src="pictures/luna2.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="img">
+                                                <img
+                                                    src="pictures/luna3.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col">
+                                <div class="iteminfo">
+                                    <h1>月亮跳台</h1>
+                                    <p>
+                                        類型: 鎖牆式貓跳台<br />
+                                        適用對象: 全年齡貓(一般貓)<br />
+                                        商品材質: 松木商品尺寸: 寬100x
+                                        踏板深度30 x 高100cm<br />
+                                        商品重量: 4.5kg<br />
+                                        商品耐重: 15kg<br />
+                                        ＊內附安裝五金: 水泥牆適用。<br />
+                                    </p>
+                                    <div class="free">
+                                        <p>全館滿一萬元，享免運優惠</p>
+                                    </div>
+                                    <div class="price">
+                                        <p>NT$5500</p>
+                                        <p>數量</p>
+                                        <div class="amout">
+                                            <span
+                                                class="num_minus"
+                                                id="num_minus"
+                                                >一</span
+                                            >
+                                            <input
+                                                type="text"
+                                                class="num"
+                                                id="num"
+                                                value="1"
+                                            />
+                                            <span class="num_plus" id="num_plus"
+                                                >十</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <p>優惠加購</p>
+                                    <div class="add">
+                                        <label>
+                                            <input type="checkbox" />
+                                            <div class="img">
+                                                <img
+                                                    src="pictures/item7.png"
+                                                    alt="加購星星跳台"
+                                                />
+                                            </div>
+                                            <p>
+                                                星星跳台(加購價限一個)<br />
+                                                NT$ <span>2200</span>
+                                                <span>2000</span>
+                                            </p>
+                                        </label>
+                                    </div>
+                                    <input
+                                        type="button"
+                                        class="buybtn"
+                                        value="加入購物車"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <ul class="category">
+                <li>
+                    <a href="#info_information">商品描述</a>
+                </li>
+                <li>
+                    <a href="#payment">送貨及付款方式</a>
+                </li>
+                <li>
+                    <a href="#comment">評價與回饋</a>
+                </li>
+            </ul>
+            <section class="info">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-2">
+                        <div class="col">
+                            <div class="img">
+                                <img
+                                    src="pictures/luna6.jpg"
+                                    alt="月亮跳台使用情境"
+                                />
+                            </div>
+                        </div>
+                        <div class="col" id="info_information">
+                            <div class="txt">
+                                <p>
+                                    <span>
+                                        來自月球的喵星人<br />
+                                        造型設計來自貓喜愛攀高的習性。
+                                    </span>
+                                </p>
+                                <p>
+                                    造型簡約向兩端收束成月亮造型，<br />
+                                    一方面留有能讓貓舒適休憩的寬度,
+                                    又不使造形顯得沈重。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2">
+                        <div class="col" id="info_information">
+                            <div class="txt">
+                                <p>
+                                    整座月亮跳台以松木實木製作，木材質輕、富彈性，<br />
+                                    跳板下方設置結構加強承重功能，能直接懸掛於牆面，<br />
+                                    讓貓玩耍、休憩，也方便飼主日常清潔打掃。
+                                </p>
+                                <p>
+                                    跳版面刻有溝槽，除增加摩擦力確保安全外，<br />
+                                    也讓貓更容易留下自己的氣味,讓貓咪更喜歡待在月亮上面。
+                                </p>
+                                <p>
+                                    為了讓貓星人可以更自在的在上方打滾、休憩，<br />
+                                    月亮跳台的尺寸是依照貓的身長去規劃，<br />
+                                    這也就是為什麼月亮跳台如此巨大的原因！
+                                </p>
+                            </div>
                         </div>
                         <div class="col">
-                            <div class="iteminfo">
-                                <h1>月亮跳台</h1>
-                                <p>類型: 鎖牆式貓跳台<br>
-                                    適用對象: 全年齡貓(一般貓)<br>
-                                    商品材質: 松木商品尺寸: 寬100x 踏板深度30 x 高100cm<br>
-                                    商品重量: 4.5kg<br>
-                                    商品耐重: 15kg<br>
-                                    ＊內附安裝五金: 水泥牆適用。<br>
-                                </p>
-                                <div class="free">
-                                    <p>全館滿一萬元，享免運優惠</p>
-                                </div>
-                                <div class="price">
-                                    <p>NT$5500</p>
-                                    <p>數量</p>
-                                    <div class="amout">
-                                        <span class="num_minus" id="num_minus">一</span>
-                                        <input type="text" class="num" id="num" value="1">
-                                        <span class="num_plus" id= "num_plus">十</span>
-                                    </div>
-                                </div>
-                                <p>優惠加購</p>
-                                <div class="add">
-                                    <label>
-                                        <input type="checkbox">
-                                        <div class="img">
-                                            <img src="pictures/item7.png" alt="加購星星跳台">
-                                        </div>
-                                        <p>
-                                            星星跳台(加購價限一個)<br>
-                                            NT$ <span>2200</span>  <span>2000</span>
-                                        </p>
-                                    </label>
-                                    
-                                </div>
-                                <input type="button" class="buybtn" value="加入購物車">
+                            <div class="img">
+                                <img
+                                    src="pictures/luna7.jpg"
+                                    alt="月亮跳台尺寸說明"
+                                />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-        </main>
-        <ul class="category">
-            <li>
-                <a href="#info_information">商品描述</a>
-            </li>
-            <li>
-                <a href="#payment">送貨及付款方式</a>
-            </li>
-            <li>
-                <a href="#comment">評價與回饋</a>
-            </li>
-        </ul>
-        <section class="info">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-md-2">
-                    <div class="col">
-                        <div class="img">
-                            <img src="pictures/luna6.jpg" alt="月亮跳台使用情境">
-                        </div>
-                    </div>
-                    <div class="col" id="info_information">
-                        <div class="txt">
-                            <p>
-                                <span>
-                                    來自月球的喵星人<br>
-                                    造型設計來自貓喜愛攀高的習性。
-                                </span>
-                            </p>
-                            <p>
-                                造型簡約向兩端收束成月亮造型，<br>
-                                一方面留有能讓貓舒適休憩的寬度, 又不使造形顯得沈重。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-md-2">
-                    <div class="col" id="info_information">
-                        <div class="txt">
-                            <p>
-                                整座月亮跳台以松木實木製作，木材質輕、富彈性，<br>
-                                跳板下方設置結構加強承重功能，能直接懸掛於牆面，<br>
-                                讓貓玩耍、休憩，也方便飼主日常清潔打掃。
-                            </p>
-                            <p>
-                                跳版面刻有溝槽，除增加摩擦力確保安全外，<br>
-                                也讓貓更容易留下自己的氣味,讓貓咪更喜歡待在月亮上面。       
-                            </p>
-                            <p>
-                                為了讓貓星人可以更自在的在上方打滾、休憩，<br>
-                                月亮跳台的尺寸是依照貓的身長去規劃，<br>
-                                這也就是為什麼月亮跳台如此巨大的原因！
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="img">
-                            <img src="pictures/luna7.jpg" alt="月亮跳台尺寸說明">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="payment" id="payment">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-md-2">
-                    <div class="col">
-                        <div class="title">
-                            <div>
-                                <h2>送貨及付款方式</h2>
+            <section class="payment" id="payment">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-2">
+                        <div class="col">
+                            <div class="title">
+                                <div>
+                                    <h2>送貨及付款方式</h2>
+                                </div>
+                                <img src="pictures/orangecat.png" alt="" />
                             </div>
-                            <img src="pictures/orangecat.png" alt="">
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="txt">
-                            <h3>送貨方式</h3>
-                            <ul>
-                                <li>貨運宅配【150元】(限台灣本島）</li>
-                                <li>香港、澳門、新加坡地區 ( 順豐速運-貨到支付運費 )</li>
-                            </ul>
-                            <h3>付款方式</h3>
-                            <ul>
-                                <li>信用卡(支援Visa, Master, JCB)</li>
-                                <li>信用卡3期分期付款(僅支援台灣部分銀行發行之信用卡，訂單金額滿NT$12,000可使用)</li>
-                                <li>ATM 虛擬代碼繳費(需持代碼至實體ATM或網路銀行繳費)</li>
-                                <li>詳細資訊請見<a href="question.html#payment">常見問題</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="comment" id="comment">
-            <div class="container">
-                <div class="row row-cols-1">
-                    <div class="col">
-                        <div class="title">
-                            <div>
-                                <h2>評論與回饋</h2>
+                        <div class="col">
+                            <div class="txt">
+                                <h3>送貨方式</h3>
+                                <ul>
+                                    <li>貨運宅配【150元】(限台灣本島）</li>
+                                    <li>
+                                        香港、澳門、新加坡地區 (
+                                        順豐速運-貨到支付運費 )
+                                    </li>
+                                </ul>
+                                <h3>付款方式</h3>
+                                <ul>
+                                    <li>信用卡(支援Visa, Master, JCB)</li>
+                                    <li>
+                                        信用卡3期分期付款(僅支援台灣部分銀行發行之信用卡，訂單金額滿NT$12,000可使用)
+                                    </li>
+                                    <li>
+                                        ATM
+                                        虛擬代碼繳費(需持代碼至實體ATM或網路銀行繳費)
+                                    </li>
+                                    <li>
+                                        詳細資訊請見<a
+                                            href="question.html#payment"
+                                            >常見問題</a
+                                        >
+                                    </li>
+                                </ul>
                             </div>
-                            <img src="pictures/blackcat.png" alt="">
                         </div>
                     </div>
                 </div>
-                <ul id="comments">
-                    <li class="oneComment">
-                        這個好棒!看貓咪很舒服我也很開心!<br>
-                        現在只後悔沒有早點買!早買早享受，一分錢一分貨!衝阿
-                    </li>
-                    <li class="oneComment">
-                        是實木的!裝上後的效果不錯，適合我房間的風格，我的貓好像很滿意，我只能說非常推薦!<br>
-                        現在只後悔沒有多買幾個!畢竟貓奴錢包有點薄，等下個月再來!
-                    </li>
-                    <li class="oneComment">
-                        現在每天都可以賞月了(其實是賞貓)<br>
-                        再多買幾個星星我就有一個銀河系在房間了!好夢幻呀
-                    </li>
-                </ul>
-                <div class="saySomething">
-                    <div>
-                        <textarea id="talk" rows="6" cols="30" maxlength="200"></textarea>
-                        <p id="feedback"></p>
-                    </div>
-                    <input type="submit" value="送出">
-                </div>
-            </div>
-        </section>
-    </article>
-    <footer>
-        <div class="container">
-            <div class="footer_nav">
-                <div class="row row-cols-md-5 row-cols-3">
-                    <div class="col">
-                        <div class="footer_icon">
-                            <a href="">
-                                <img src="pictures/istagramIcon.png" alt="貓體工學instagram">
-                            </a>
-                            <a href="">
-                                <img src="pictures/facebookIcon.png" alt="貓體工學facebook">
-                            </a>
-                            <a href="">
-                                <img src="pictures/lineIcon.png" alt="貓體工學line@">
-                            </a>
-                        </div>
-                        <div class="footer_info">
-                            <p>(02)1234-5678</p>
-                            <p><span>weekday</span> 10:00~18:00</p>
-                            <p><span>weekend</span> 10:00~22:00</p>
-                            <p>lifecat0701@gmail.com</p>
+            </section>
+            <section class="comment" id="comment">
+                <div class="container">
+                    <div class="row row-cols-1">
+                        <div class="col">
+                            <div class="title">
+                                <div>
+                                    <h2>評論與回饋</h2>
+                                </div>
+                                <img src="pictures/blackcat.png" alt="" />
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <nav>
-                            <h5>所有商品</h5>
-                            <ul>
-                                <li><a href="shoppingpage.html">貓跳台</a></li>
-                                <li><a href="">貓砂櫃</a></li>
-                                <li><a href="">生活小物</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col">
-                        <nav>
-                            <h5>實體概念店</h5>
-                            <ul>
-                                <li><a href="stores.html#stores">位置資訊</a></li>
-                                <li><a href="stores.html#ideas">產品理念</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col">
-                        <nav>
-                            <h5>貓星人推薦</h5>
-                            <ul>
-                                <li><a href="reco.html">貍貍是隻貓｜鎖牆式貓跳台</a></li>
-                                <li><a href="">奶茶不能喝｜落地式貓跳台</a></li>
-                                <li><a href="">妞妞扭一扭｜貓砂櫃</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col">
-                        <nav>
-                            <h5>常見問題</h5>
-                            <ul>
-                                <li><a href="question.html#payment">貨運及付款資訊</a></li>
-                                <li><a href="question.html#return">退換貨政策</a></li>
-                                <li><a href="question.html#form">訂製申請表單</a></li>
-                            </ul>
-                        </nav>
+                    <ul id="comments">
+                        <li class="oneComment">
+                            這個好棒!看貓咪很舒服我也很開心!<br />
+                            現在只後悔沒有早點買!早買早享受，一分錢一分貨!衝阿
+                        </li>
+                        <li class="oneComment">
+                            是實木的!裝上後的效果不錯，適合我房間的風格，我的貓好像很滿意，我只能說非常推薦!<br />
+                            現在只後悔沒有多買幾個!畢竟貓奴錢包有點薄，等下個月再來!
+                        </li>
+                        <li class="oneComment">
+                            現在每天都可以賞月了(其實是賞貓)<br />
+                            再多買幾個星星我就有一個銀河系在房間了!好夢幻呀
+                        </li>
+                    </ul>
+                    <div class="saySomething">
+                        <div>
+                            <textarea
+                                id="talk"
+                                rows="6"
+                                cols="30"
+                                maxlength="200"
+                            ></textarea>
+                            <p id="feedback"></p>
+                        </div>
+                        <input type="submit" value="送出" />
                     </div>
                 </div>
+            </section>
+        </article>
+        <footer>
+            <div class="container">
+                <div class="footer_nav">
+                    <div class="row row-cols-md-5 row-cols-3">
+                        <div class="col">
+                            <div class="footer_icon">
+                                <a href="">
+                                    <img
+                                        src="pictures/istagramIcon.png"
+                                        alt="貓體工學instagram"
+                                    />
+                                </a>
+                                <a href="">
+                                    <img
+                                        src="pictures/facebookIcon.png"
+                                        alt="貓體工學facebook"
+                                    />
+                                </a>
+                                <a href="">
+                                    <img
+                                        src="pictures/lineIcon.png"
+                                        alt="貓體工學line@"
+                                    />
+                                </a>
+                            </div>
+                            <div class="footer_info">
+                                <p>(02)1234-5678</p>
+                                <p><span>weekday</span> 10:00~18:00</p>
+                                <p><span>weekend</span> 10:00~22:00</p>
+                                <p>lifecat0701@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <nav>
+                                <h5>所有商品</h5>
+                                <ul>
+                                    <li>
+                                        <a href="shoppingpage.html">貓跳台</a>
+                                    </li>
+                                    <li><a href="">貓砂櫃</a></li>
+                                    <li><a href="">生活小物</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col">
+                            <nav>
+                                <h5>實體概念店</h5>
+                                <ul>
+                                    <li>
+                                        <a href="stores.html#stores"
+                                            >位置資訊</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="stores.html#ideas">產品理念</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col">
+                            <nav>
+                                <h5>貓星人推薦</h5>
+                                <ul>
+                                    <li>
+                                        <a href="reco.html"
+                                            >貍貍是隻貓｜鎖牆式貓跳台</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="">奶茶不能喝｜落地式貓跳台</a>
+                                    </li>
+                                    <li><a href="">妞妞扭一扭｜貓砂櫃</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col">
+                            <nav>
+                                <h5>常見問題</h5>
+                                <ul>
+                                    <li>
+                                        <a href="question.html#payment"
+                                            >貨運及付款資訊</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="question.html#return"
+                                            >退換貨政策</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="question.html#form"
+                                            >訂製申請表單</a
+                                        >
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="notice">
+                    <p>本網站為緯育TibaMe前端設計工程師班學員專題作品，</p>
+                    <p>本平台僅供學習、展示之用，無法進行購買流程。</p>
+                    <p>如有侵權疑慮，請洽緯育Tibame，將由專人協助處理</p>
+                    <p>
+                        參考來源:
+                        <a href="https://www.myzoostudio.com/">MYZOO動物緣</a
+                        >、<a href="https://www.paipaipets-lab.com/"
+                            >拍拍paipai-lab</a
+                        >
+                    </p>
+                </div>
             </div>
-            <div class="notice">
-                <p>本網站為緯育TibaMe前端設計工程師班學員專題作品，</p>
-                <p>本平台僅供學習、展示之用，無法進行購買流程。</p>
-                <p>如有侵權疑慮，請洽緯育Tibame，將由專人協助處理</p>
-                <p>參考來源: <a href="https://www.myzoostudio.com/">MYZOO動物緣</a>、<a href="https://www.paipaipets-lab.com/">拍拍paipai-lab</a></p>
-            </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+
+        <script>
+            let num = $(".num").val();
+            $(".num_minus").click(function () {
+                if (num <= 1) {
+                    num = 1;
+                } else {
+                    num = parseInt(num) - 1;
+                }
+                $("#discount").text("");
+                $(".num").val(num);
+                check();
+            });
+            $(".num_plus").click(function () {
+                num++;
+                $(".num").val(num);
+
+                check();
+            });
+        </script>
+    </body>
 </html>

@@ -15,31 +15,31 @@
     <script src="all.js"></script>
     <script>
     
-    $(document).ready(function(){
+    // $(document).ready(function(){
         // loadingpage
-        setTimeout(function(){  
-            $('.loadingpage').fadeOut(3000);
-            $(".bar").attr("style", "animation: bar 2s ease;");
-        },2000)
+        // setTimeout(function(){  
+        //     $('.loadingpage').fadeOut(3000);
+        //     $(".bar").attr("style", "animation: bar 2s ease;");
+        // },2000)
 
-        setTimeout(function(){
-            $('.loadingwrapper').remove();
-        },5000)
+        // setTimeout(function(){
+        //     $('.loadingwrapper').remove();
+        // },5000)
         
          //主頁top橫向卷軸
-         let wrap = document.querySelector('#topcardwrap');
-            wrap.addEventListener('wheel',(event) => {
-            event.preventDefault();
-            wrap.scrollLeft += event.deltaY;
-        });
-    })
+        //  let wrap = document.querySelector('#topcardwrap');
+        //     wrap.addEventListener('wheel',(event) => {
+        //     event.preventDefault();
+        //     wrap.scrollLeft += event.deltaY;
+        // });
+    // })
 
        
     </script>
 </head>
 <body>
     <!-- loadingpage -->
-    <div class="loadingwrapper" >
+    <!-- <div class="loadingwrapper" >
         <div class="loadingpage" id="loadingpage">
             <img src="pictures/loadingcat.png" class="loadingcat">
             <div class="loading la-line-spin-clockwise-fade la-2x">
@@ -56,7 +56,7 @@
             <div class="bar"></div>
         </div>
         
-    </div>
+    </div> -->
     <!-- 正文 -->
     <header>
         <div class="navbar">
